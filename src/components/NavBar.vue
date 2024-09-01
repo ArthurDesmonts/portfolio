@@ -13,7 +13,6 @@
 
 <style scoped>
 /* CSS */
-/*  MyIcon purple color car */
 MyIcon {
   color: purple;
 }
