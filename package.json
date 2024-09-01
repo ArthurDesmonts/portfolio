@@ -1,5 +1,5 @@
 {
-  "name": "portefolio",
+  "name": "portfolio",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist -r https://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@github.com/ArthurDesmonts/portfolio.git"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^3.4.29"
