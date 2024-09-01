@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://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@github.com/ArthurDesmonts/portfolio.git"
   },
   "dependencies": {
     "vue": "^3.4.29"
