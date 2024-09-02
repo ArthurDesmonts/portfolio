@@ -10,7 +10,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "vue": "^3.4.38",
+    "vue3-toggle": "^0.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

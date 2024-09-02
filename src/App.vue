@@ -1,17 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import NavBar from "@/components/NavBar.vue";
-
-const isDarkTheme = ref(false);
-
-const toggleTheme = () => {
-  isDarkTheme.value = !isDarkTheme.value;
-  if (isDarkTheme.value) {
-    document.body.classList.add('dark-theme');
-  } else {
-    document.body.classList.remove('dark-theme');
-  }
-};
+import ToggleButton from "@/components/toggleButton.vue";
 </script>
 
 <template>
@@ -30,7 +20,6 @@ const toggleTheme = () => {
     <h2><MyIcon>#</MyIcon> Me Contacter</h2>
     <p>Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
     <button>Me Contacter</button>
-    <button @click="toggleTheme">Theme sombre</button>
   </div>
 </template>
 
