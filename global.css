@@ -9,6 +9,11 @@ body {
 }
 
 body.dark-theme {
-    --background-color: #121212;
+    --background-color: #282b32;
     --text-color: #ffffff;
+}
+
+.bodyElements {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
