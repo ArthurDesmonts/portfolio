@@ -12,3 +12,8 @@ body.dark-theme {
     --background-color: #121212;
     --text-color: #ffffff;
 }
+
+.bodyElements {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

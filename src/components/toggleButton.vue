@@ -1,7 +1,19 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const checked = ref(false);
+
+const toggleTheme = () => {
+  if (checked.value) {
+    document.body.classList.add('dark-theme');
+  } else {
+    document.body.classList.remove('dark-theme');
+  }
+};
+
+watch(checked, (newVal) => {
+  toggleTheme();
+});
 </script>
 
 <template>
