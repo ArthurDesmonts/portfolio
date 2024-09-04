@@ -9,7 +9,7 @@ body {
 }
 
 body.dark-theme {
-    --background-color: #121212;
+    --background-color: #282b32;
     --text-color: #ffffff;
 }
 

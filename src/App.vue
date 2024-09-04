@@ -25,7 +25,7 @@ import NavBar from "@/components/NavBar.vue";
 <style scoped>
 /* CSS */
 MyIcon {
-  color: purple;
+  color: #c16ed2;
 }
 
 .container {

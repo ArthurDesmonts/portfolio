@@ -34,7 +34,7 @@ watch(checked, (newVal) => {
 }
 
 .toggle-container-checked {
-  background-color: purple;
+  background-color: #c16ed2;
 }
 
 .toggle-button {

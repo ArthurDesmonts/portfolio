@@ -19,7 +19,7 @@ import ToggleButton from "@/components/toggleButton.vue";
 <style scoped>
 /* CSS */
 MyIcon {
-  color: purple;
+  color: #c16ed2;
 }
 
 ul {
