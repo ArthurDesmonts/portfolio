@@ -4,6 +4,7 @@
 
 <template>
   <div class="circle">
+    <div class="inner-circle"></div>
     <img class="profilPic" src="@/assets/profilPic.png" alt="profilPicture">
   </div>
 </template>
@@ -18,6 +19,8 @@
   justify-content: center;
   align-items: center;
   margin-right: 15%;
+  position: relative;
+  overflow: hidden;
 }
 
 .profilPic {
@@ -26,5 +29,28 @@
   object-fit: cover;
   border-bottom-left-radius: 210px;
   border-bottom-right-radius: 300px;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.circle:hover .profilPic {
+  transform: scale(1.05);
+}
+
+.inner-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #e9f288;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.circle:hover .inner-circle {
+  transform: translate(-80px, 50px);
 }
 </style>
