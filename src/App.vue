@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import NavBar from "@/components/NavBar.vue";
+import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import NavBar from "@/components/NavBar.vue";
         Ce que j'aime à travers le développement, c'est avant tout l'élaboration de solutions créatives résultant d'une contrainte. J'aime me creuser la tête pour parvenir à atteindre mes objectifs. Je suis enthousiaste et adore travailler avec des personnes passionnées.
 
       </p>
+      <ProfilPicComponent></ProfilPicComponent>
     </div>
     <hr class="separateur">
     <div class="contact">

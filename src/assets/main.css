@@ -10,6 +10,7 @@ body {
   color: var(--text-color);
   max-width: 80%;
   margin: 0 auto;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-theme {
@@ -20,6 +21,7 @@ body.dark-theme {
 .bodyElements {
   background-color: var(--background-color);
   color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (max-width: 768px) {

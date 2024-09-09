@@ -1,17 +1,24 @@
 <script setup>
 
 import ToggleButton from "@/components/toggleButton.vue";
+import {ref} from "vue";
+
+const isDarkTheme = ref(false);
+
+const toggleTheme = () => {
+  isDarkTheme.value = !isDarkTheme.value;
+};
 </script>
 
 <template>
-  <div class="menu">
+  <div :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
-      <li><p>Arthur Desmonts</p></li>
+      <li class="phoneHided"><p>Arthur Desmonts</p></li>
       <li class="phoneHided"><MyIcon>#</MyIcon> Accueil</li>
       <li class="phoneHided"><MyIcon>#</MyIcon> Qui suis-je?</li>
       <li class="phoneHided"><MyIcon>#</MyIcon> Mes Projets</li>
       <li class="phoneHided"><MyIcon>#</MyIcon> Me Contacter</li>
-      <li class="phoneHided"><toggle-button class="toggle"></toggle-button></li>
+      <li class="phoneHided"><toggle-button class="toggle" @click="toggleTheme"></toggle-button></li>
     </ul>
   </div>
 </template>
@@ -40,11 +47,21 @@ p{
 
 .menu {
   position: fixed;
-  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 10px;
   top: 0;
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
+  transition: background-color 0.3s;
+}
+
+.menu.light-theme {
+  background-color: #ffffff;
+}
+
+.menu.dark-theme {
+  background-color: #282b32;
 }
 
 @media (max-width: 768px) {
