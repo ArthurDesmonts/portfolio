@@ -3,19 +3,18 @@
 </script>
 
 <template>
-  <div class="profilPic">
-    <img src="@/assets/profilPic.jpg" alt="profilPic" />
-  </div>
+  <img class="profilPic" src="@/assets/profilPic.png" alt="profilPicture">
 </template>
 
 <style scoped>
 
 .profilPic {
-  width: 100%;
-  max-width: 100px;
-  height: auto;
-  border-radius: 50%;
-  margin: 0 auto;
+  width: auto;
+  height: 400px;
+  border-radius: 10%;
+  border: red 2px solid;
+  object-fit: cover;
+  margin-right: 15%;
 }
 
 </style>

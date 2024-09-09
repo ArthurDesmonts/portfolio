@@ -9,23 +9,25 @@ import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
   <div class="container">
     <NavBar></NavBar>
     <div class="HeadLine">
-      <h1>Arthur Desmonts, <MyIcon>développeur Full-Stack.</MyIcon></h1>
-      <p class="subTitle">Diplômé d'un BUT Informatique (BAC +3) - parcours
-        réalisation d'applications :
-        conception, développement,
-        validation</p>
+      <div>
+        <h1>Arthur Desmonts, <MyIcon>développeur Full-Stack.</MyIcon></h1>
+        <p class="subTitle">Diplômé d'un BUT Informatique (BAC +3) - parcours
+          réalisation d'applications :
+          conception, développement,
+          validation</p>
+      </div>
+      <ProfilPicComponent class="profilPic"></ProfilPicComponent>
     </div>
     <hr class="separateur">
     <div class="presentation">
       <h2><MyIcon>#</MyIcon> Qui suis-je?</h2>
-      <p class="justify-content">Bonjour, Je suis Arthur.
+        <p class="justify-content descriptionBox">Bonjour, Je suis Arthur.
 
-        Je suis alternant en développement mobile, passionné de développement. J'ai obtenu un but informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en base de données et en programmation orientée objet.
+          Je suis alternant en développement mobile, passionné de développement. J'ai obtenu un but informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en base de données et en programmation orientée objet.
 
-        Ce que j'aime à travers le développement, c'est avant tout l'élaboration de solutions créatives résultant d'une contrainte. J'aime me creuser la tête pour parvenir à atteindre mes objectifs. Je suis enthousiaste et adore travailler avec des personnes passionnées.
+          Ce que j'aime à travers le développement, c'est avant tout l'élaboration de solutions créatives résultant d'une contrainte. J'aime me creuser la tête pour parvenir à atteindre mes objectifs. Je suis enthousiaste et adore travailler avec des personnes passionnées.
 
-      </p>
-      <ProfilPicComponent></ProfilPicComponent>
+        </p>
     </div>
     <hr class="separateur">
     <div class="contact">
@@ -43,11 +45,15 @@ MyIcon {
 }
 
 .container {
-  padding: 10em 1em 0 1em;
+  padding: 5em 1em 0 1em;
 }
 
 .HeadLine {
+  padding-top: 10px;
   margin-left: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .justify-content {
