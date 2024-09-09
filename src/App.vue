@@ -97,6 +97,11 @@ MyIcon {
   .HeadLine {
     margin-left: 0;
     text-align: center;
+    flex-direction: column;
+  }
+
+  .profilPic {
+    margin: 1em;
   }
 
   .presentation {
