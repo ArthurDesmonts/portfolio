@@ -7,11 +7,11 @@ import ToggleButton from "@/components/toggleButton.vue";
   <div class="menu">
     <ul>
       <li><p>Arthur Desmonts</p></li>
-      <li><MyIcon>#</MyIcon> Accueil</li>
-      <li><MyIcon>#</MyIcon> Qui suis-je?</li>
-      <li><MyIcon>#</MyIcon> Mes Projets</li>
-      <li><MyIcon>#</MyIcon> Me Contacter</li>
-      <li><toggle-button class="toggle"></toggle-button></li>
+      <li class="phoneHided"><MyIcon>#</MyIcon> Accueil</li>
+      <li class="phoneHided"><MyIcon>#</MyIcon> Qui suis-je?</li>
+      <li class="phoneHided"><MyIcon>#</MyIcon> Mes Projets</li>
+      <li class="phoneHided"><MyIcon>#</MyIcon> Me Contacter</li>
+      <li class="phoneHided"><toggle-button class="toggle"></toggle-button></li>
     </ul>
   </div>
 </template>
@@ -76,6 +76,10 @@ p{
 
   .toggle {
     visibility: hidden;
+  }
+
+  .phoneHided {
+    display: none;
   }
 }
 </style>
