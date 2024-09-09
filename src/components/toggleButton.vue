@@ -1,7 +1,7 @@
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 
-const checked = ref(false);
+const checked = ref(true);
 
 const toggleTheme = () => {
   if (checked.value) {
@@ -11,9 +11,13 @@ const toggleTheme = () => {
   }
 };
 
-watch(checked, (newVal) => {
-  toggleTheme();
-});
+  watch(checked, (newVal) => {
+    toggleTheme();
+  });
+
+  onMounted(() => {
+    toggleTheme();
+  });
 </script>
 
 <template>

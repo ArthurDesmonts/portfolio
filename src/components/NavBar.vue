@@ -3,7 +3,7 @@
 import ToggleButton from "@/components/toggleButton.vue";
 import {ref} from "vue";
 
-const isDarkTheme = ref(false);
+const isDarkTheme = ref(true);
 
 const toggleTheme = () => {
   isDarkTheme.value = !isDarkTheme.value;
@@ -54,6 +54,7 @@ p{
   left: 50%;
   transform: translateX(-50%);
   transition: background-color 0.3s;
+  z-index: 2;
 }
 
 .menu.light-theme {

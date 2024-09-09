@@ -1,9 +1,12 @@
 <script setup>
 
+function redirectToLinkedIn() {
+  window.location.href = 'https://www.linkedin.com/in/arthur-desmonts-53a78b259/';
+}
 </script>
 
 <template>
-  <div class="circle">
+  <div class="circle" @click="redirectToLinkedIn">
     <div class="inner-circle"></div>
     <img class="profilPic" src="@/assets/profilPic.png" alt="profilPicture">
   </div>
@@ -21,6 +24,7 @@
   margin-right: 15%;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .profilPic {
