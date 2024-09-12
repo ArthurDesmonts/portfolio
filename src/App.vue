@@ -2,6 +2,22 @@
 import { ref } from "vue";
 import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
+
+const email = "arthur.desmonts@gmail.com";
+
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(email).then(() => {
+    document.getElementById("email-event").innerHTML = "Email copié dans le presse-papier";
+    setTimeout(() => {
+      document.getElementById("email-event").innerHTML = "";
+    }, 1800);
+  }).catch(err => {
+    document.getElementById("email-event").innerHTML = "Erreur lors de la copie de l'email";
+    setTimeout(() => {
+      document.getElementById("email-event").innerHTML = "";
+    }, 1800);
+  });
+};
 </script>
 
 <template>
@@ -33,7 +49,10 @@ import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
     <div class="contact">
       <h2><MyIcon>#</MyIcon> Me Contacter</h2>
       <p class="justify-content">Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
-      <button class="innerParagraphButton">Me Contacter</button>
+      <div class="mail-succes-listener">
+        <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
+        <p id="email-event" class="event-content"></p>
+      </div>
     </div>
   </div>
 </template>
@@ -89,6 +108,31 @@ MyIcon {
   font-style: italic;
 }
 
+button {
+  background-color: #c16ed2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #a44c9e;
+}
+
+.mail-succes-listener {
+  display: flex;
+  align-items: center;
+}
+
+.event-content {
+  margin-left: 1em;
+  font-weight: bold;
+  color: #c16ed2;
+}
 @media (max-width: 768px) {
   .container {
     padding: 1em;
@@ -114,6 +158,15 @@ MyIcon {
 
   .separateur {
     margin: 1em;
+  }
+
+  .innerParagraphButton {
+    margin : 1em;
+  }
+
+  .mail-succes-listener {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
 </style>
