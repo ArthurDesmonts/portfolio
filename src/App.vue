@@ -26,7 +26,7 @@ const copyToClipboard = () => {
     <NavBar></NavBar>
     <div class="HeadLine">
       <div>
-        <h1>Arthur Desmonts, <MyIcon>développeur Full-Stack.</MyIcon></h1>
+        <h1>Arthur Desmonts, 20 Ans, <MyIcon>développeur Full-Stack.</MyIcon></h1>
         <p class="subTitle">Diplômé d'un BUT Informatique (BAC +3) - parcours
           réalisation d'applications :
           conception, développement,
@@ -37,18 +37,24 @@ const copyToClipboard = () => {
     <hr class="separateur">
     <div class="presentation">
       <h2><MyIcon>#</MyIcon> Qui suis-je?</h2>
-        <p class="justify-content descriptionBox">Bonjour, Je suis Arthur.
+      <div class="description-split">
+        <p class="justify-content descriptionBox">Bonjour, je m'appelle Arthur.
 
-          Je suis alternant en développement mobile, passionné de développement. J'ai obtenu un but informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en base de données et en programmation orientée objet.
+          Je suis développeur Web orienté Full-Stack. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en bases de données et dans le domaine du développement applicatif.
 
-          Ce que j'aime à travers le développement, c'est avant tout l'élaboration de solutions créatives résultant d'une contrainte. J'aime me creuser la tête pour parvenir à atteindre mes objectifs. Je suis enthousiaste et adore travailler avec des personnes passionnées.
-
+          J'ai perfectionné ces compétences au cours d'une année d'alternance dans une équipe de développeurs mobiles. J'ai pu travailler aussi bien sur Android que sur iOS. J'ai également eu l'occasion de contribuer à des projets de développement Web, plus particulièrement sur un long projet en Vue.js.
         </p>
+        <p class="justify-content descriptionBox">
+          Durant cette année, j'ai également manipulé plusieurs librairies d'imagerie, telles qu'OpenCV, MLKit ou encore Apple Vision. Enfin, j'ai clôturé cette expérience avec un projet utilisant de l'OCR (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
+
+          Ce que j'aime dans le développement, c'est avant tout l'élaboration de solutions créatives. J'aime me creuser la tête pour atteindre mes objectifs. Je suis enthousiaste et j'adore travailler avec des personnes passionnées. Je pense être parfaitement autonome dans mon travail, même si j'apprécie les retours sur ce que je peux améliorer.
+        </p>
+      </div>
     </div>
     <hr class="separateur">
     <div class="contact">
       <h2><MyIcon>#</MyIcon> Me Contacter</h2>
-      <p class="justify-content">Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
+      <p class="justify-content">Je recherche actuellement un emploi dans le domaine du développement Web. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
       <div class="mail-succes-listener">
         <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
         <p id="email-event" class="event-content"></p>
@@ -78,12 +84,13 @@ MyIcon {
 .justify-content {
   text-align: justify;
   padding : 1em;
+  font-size: 16px;
 }
 
 .presentation {
   margin-top: 2em;
-  margin-right: 60%;
   margin-left: 2em;
+  margin-right: 2em;
 }
 
 .contact {
@@ -97,6 +104,12 @@ MyIcon {
   margin-left: 5em;
   margin-right: 5em;
   border: 1px solid #c16ed2;
+}
+
+.description-split {
+  display: flex;
+  justify-content: space-between;
+  gap: 4em;
 }
 
 .innerParagraphButton {
@@ -167,6 +180,11 @@ button:hover {
   .mail-succes-listener {
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  .description-split {
+    flex-direction: column;
+    gap: 1em;
   }
 }
 </style>
