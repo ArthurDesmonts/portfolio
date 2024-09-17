@@ -52,6 +52,16 @@ const copyToClipboard = () => {
       </div>
     </div>
     <hr class="separateur">
+    <div class="presentation">
+      <h2><MyIcon>#</MyIcon> Mes Loisirs</h2>
+      <p>La pratique sportive (running et cyclisme) :</p>
+      <p>Passionné de cyclisme sur route, je trouve dans ce sport un excellent
+        moyen de me détendre, de me vider l’esprit, et de maintenir ma forme
+        physique.</p>
+      <p>Le sport (cyclisme, f1, e-sport) :</p>
+      <p>J'aime suivre plusieurs créateurs de contenu liés au sport d'endurance, mais également, je suis les différents exploits de cyclisme professionnel. J'apprécie également suivre de temps à autre quelques grands prix de F1. Enfin, j'ai découvert pendant le confinement l'esport, discipline que je suis activement depuis cette période.</p>
+    </div>
+    <hr class="separateur">
     <div class="contact">
       <h2><MyIcon>#</MyIcon> Me Contacter</h2>
       <p class="justify-content">Je recherche actuellement un emploi dans le domaine du développement Web. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
