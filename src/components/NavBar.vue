@@ -14,11 +14,11 @@ const toggleTheme = () => {
   <div :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
       <li class="phoneHided"><p>Arthur Desmonts</p></li>
-      <li class="phoneHided"><MyIcon>#</MyIcon> Accueil</li>
-      <li class="phoneHided"><MyIcon>#</MyIcon> Qui suis-je?</li>
-      <li class="phoneHided"><MyIcon>#</MyIcon> Mes Projets</li>
-      <li class="phoneHided"><MyIcon>#</MyIcon> Me Contacter</li>
-      <li class="phoneHided"><toggle-button class="toggle" @click="toggleTheme"></toggle-button></li>
+      <li class="phoneHided hover-allowed"><MyIcon>#</MyIcon> Accueil</li>
+      <li class="phoneHided hover-allowed"><MyIcon>#</MyIcon> Qui suis-je?</li>
+      <li class="phoneHided hover-allowed"><MyIcon>#</MyIcon> Mes Projets</li>
+      <li class="phoneHided hover-allowed"><MyIcon>#</MyIcon> Me Contacter</li>
+      <li class="phoneHided hover-allowed"><toggle-button class="toggle" @click="toggleTheme"></toggle-button></li>
     </ul>
   </div>
 </template>
@@ -55,6 +55,23 @@ p{
   transform: translateX(-50%);
   transition: background-color 0.3s;
   z-index: 2;
+}
+
+@keyframes underlineAnimation {
+  from {
+    text-decoration-color: transparent;
+    text-underline-offset: 0;
+  }
+  to {
+    text-decoration-color: #c16ed2;
+    text-underline-offset: 5px;
+  }
+}
+
+.hover-allowed:hover {
+  color: #c16ed2;
+  text-decoration: underline;
+  animation: underlineAnimation 0.3s forwards;
 }
 
 .menu.light-theme {
