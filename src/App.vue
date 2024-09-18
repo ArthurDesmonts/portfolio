@@ -237,6 +237,10 @@ button:hover {
     margin: 0;
   }
 
+  .loisir {
+    margin: 0;
+  }
+
   .separateur {
     margin: 1em;
   }
@@ -258,6 +262,39 @@ button:hover {
   .card-alignement {
     flex-direction: column;
     gap: 1em;
+  }
+
+  .double-container {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .justify-content::before,
+  .justify-content::after {
+    content: '“';
+    font-size: 1.5em;
+    color: #c16ed2;
+    position: absolute;
+    font-weight: bold;
+  }
+
+  .justify-content::before {
+    left: -0.1em;
+    top: -0.1em;
+  }
+
+  .justify-content::after {
+    content: '”';
+    right: -0.1em;
+    bottom: -0.1em;
+  }
+
+  .no-after::after {
+    content: none;
+  }
+
+  .no-before::before {
+    content: none;
   }
 }
 </style>
