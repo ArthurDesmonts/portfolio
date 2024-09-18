@@ -2,19 +2,20 @@
 
 const props = defineProps({
   titleText: String,
-  html: String
+  html: String,
+  image: String
 });
 
 
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" :class="{ 'has-background': image }" :style="image ? { backgroundImage: `url(${image})` } : {}">
     <div class="card-header">
-      <h2 v-html="this.titleText"></h2>
+      <h2 v-html="titleText"></h2>
     </div>
     <div class="card-body">
-      <p v-html="this.html"></p>
+      <p v-html="html"></p>
     </div>
   </div>
 </template>
@@ -25,6 +26,8 @@ const props = defineProps({
   border: 1px solid #c16ed2;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
 }
 
 .card-header {
@@ -40,4 +43,5 @@ const props = defineProps({
 card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 </style>

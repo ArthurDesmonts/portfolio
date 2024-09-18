@@ -63,13 +63,21 @@ const copyToClipboard = () => {
       </div>
     </div>
     <hr class="separateur">
-    <div class="contact">
-      <h2><MyIcon>#</MyIcon> Me Contacter</h2>
-      <p class="justify-content">Je recherche actuellement un emploi dans le domaine du développement Web. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
-      <div class="mail-succes-listener">
-        <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
-        <p id="email-event" class="event-content"></p>
-      </div>
+    <div class="double-container">
+        <div class="loisir">
+          <h2><MyIcon>#</MyIcon> Loisirs</h2>
+          <p class="justify-content">Passionné de cyclisme sur route, je trouve dans ce sport un excellent
+            moyen de me détendre, de me vider l’esprit, et de maintenir ma forme
+            physique.</p>
+        </div>
+        <div class="contact">
+          <h2><MyIcon>#</MyIcon> Me Contacter</h2>
+          <p class="justify-content">Je recherche actuellement un emploi dans le domaine du développement Web. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
+          <div class="mail-succes-listener">
+            <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
+            <p id="email-event" class="event-content"></p>
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -136,15 +144,18 @@ MyIcon {
 
 .contact {
   margin-top: 2em;
-  margin-left: 60%;
   margin-right: 2em;
+  margin-left: 15%;
+}
+
+.loisir {
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 10%;
 }
 
 .separateur {
-  margin-top: 4em;
-  margin-bottom: 4em;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin: 4em 5em;
   border: 1px solid #c16ed2;
 }
 
@@ -195,6 +206,14 @@ button:hover {
   font-weight: bold;
   color: #c16ed2;
 }
+
+.double-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1em;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 1em;

@@ -58,7 +58,7 @@ p{
 }
 
 .menu.light-theme {
-  background-color: #ffffff;
+  background-color: #f7f2f0;
 }
 
 .menu.dark-theme {
