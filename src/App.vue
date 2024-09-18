@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
+import Card from "@/components/Card.vue";
 
 const email = "arthur.desmonts@gmail.com";
 
@@ -38,13 +39,13 @@ const copyToClipboard = () => {
     <div class="presentation">
       <h2><MyIcon>#</MyIcon> Qui suis-je?</h2>
       <div class="description-split">
-        <p class="justify-content descriptionBox">Bonjour, je m'appelle Arthur.
+        <p class="justify-content descriptionBox no-after">Bonjour, je m'appelle Arthur.
 
           Je suis développeur Web orienté Full-Stack. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en bases de données et dans le domaine du développement applicatif.
 
           J'ai perfectionné ces compétences au cours d'une année d'alternance dans une équipe de développeurs mobiles. J'ai pu travailler aussi bien sur Android que sur iOS. J'ai également eu l'occasion de contribuer à des projets de développement Web, plus particulièrement sur un long projet en Vue.js.
         </p>
-        <p class="justify-content descriptionBox">
+        <p class="justify-content descriptionBox no-before">
           Durant cette année, j'ai également manipulé plusieurs librairies d'imagerie, telles qu'OpenCV, MLKit ou encore Apple Vision. Enfin, j'ai clôturé cette expérience avec un projet utilisant de l'OCR (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
 
           Ce que j'aime dans le développement, c'est avant tout l'élaboration de solutions créatives. J'aime me creuser la tête pour atteindre mes objectifs. Je suis enthousiaste et j'adore travailler avec des personnes passionnées. Je pense être parfaitement autonome dans mon travail, même si j'apprécie les retours sur ce que je peux améliorer.
@@ -53,13 +54,13 @@ const copyToClipboard = () => {
     </div>
     <hr class="separateur">
     <div class="presentation">
-      <h2><MyIcon>#</MyIcon> Mes Loisirs</h2>
-      <p>La pratique sportive (running et cyclisme) :</p>
-      <p>Passionné de cyclisme sur route, je trouve dans ce sport un excellent
-        moyen de me détendre, de me vider l’esprit, et de maintenir ma forme
-        physique.</p>
-      <p>Le sport (cyclisme, f1, e-sport) :</p>
-      <p>J'aime suivre plusieurs créateurs de contenu liés au sport d'endurance, mais également, je suis les différents exploits de cyclisme professionnel. J'apprécie également suivre de temps à autre quelques grands prix de F1. Enfin, j'ai découvert pendant le confinement l'esport, discipline que je suis activement depuis cette période.</p>
+      <h2><MyIcon>#</MyIcon> Mes projets</h2>
+      <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
+      <div class="card-alignement">
+        <Card titleText="Imagerie" html="TODO"></Card>
+        <Card titleText="OCR" html="TODO"></Card>
+        <Card titleText="Vue.js" html="TODO"></Card>
+      </div>
     </div>
     <hr class="separateur">
     <div class="contact">
@@ -92,9 +93,39 @@ MyIcon {
 }
 
 .justify-content {
+  margin-top: 1em;
   text-align: justify;
-  padding : 1em;
+  padding: 1em;
   font-size: 16px;
+  position: relative;
+}
+
+.justify-content::before,
+.justify-content::after {
+  content: '“';
+  font-size: 2em;
+  color: #c16ed2;
+  position: absolute;
+  font-weight: bold;
+}
+
+.justify-content::before {
+  left: -0.5em;
+  top: -0.5em;
+}
+
+.justify-content::after {
+  content: '”';
+  right: -0.5em;
+  bottom: -0.5em;
+}
+
+.no-after::after {
+  content: none;
+}
+
+.no-before::before {
+  content: none;
 }
 
 .presentation {
@@ -110,7 +141,8 @@ MyIcon {
 }
 
 .separateur {
-  margin-top: 2em;
+  margin-top: 4em;
+  margin-bottom: 4em;
   margin-left: 5em;
   margin-right: 5em;
   border: 1px solid #c16ed2;
@@ -149,6 +181,13 @@ button:hover {
 .mail-succes-listener {
   display: flex;
   align-items: center;
+}
+
+.card-alignement {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
 }
 
 .event-content {
@@ -193,6 +232,11 @@ button:hover {
   }
 
   .description-split {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .card-alignement {
     flex-direction: column;
     gap: 1em;
   }
