@@ -1,4 +1,6 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
   titleText: String,
@@ -6,12 +8,26 @@ const props = defineProps({
   image: String
 });
 
+const imageUrl = ref('');
+const isPng = ref(false);
 
+onMounted(async () => {
+  try {
+    const imagePath = new URL(`../assets/${props.image}`, import.meta.url).href;
+    imageUrl.value = await resizeImage(imagePath);
+    // Check if a white background is required for eye comfort
+    if (props.image.toLowerCase().endsWith('.png') || props.image.toLowerCase().endsWith('.svg')) {
+      isPng.value = true;
+    }
+  } catch (error) {
+    console.error('Error resizing image:', error);
+  }
+});
 </script>
 
 <template>
-  <div class="card" :class="{ 'has-background': image }" :style="image ? { backgroundImage: `url(${image})` } : {}">
-    <div class="card-header">
+  <div class="card" :class="{ 'png-background': isPng }">
+    <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 v-html="titleText"></h2>
     </div>
     <div class="card-body">
@@ -22,7 +38,7 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  width: 300px;
+  width: 245px;
   border: 1px solid #c16ed2;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -34,14 +50,31 @@ const props = defineProps({
   padding: 1rem;
   border-bottom: 1px solid #c16ed2;
   text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 205px;
+  border-radius: 5px;
+}
+
+.card-header h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .card-body {
   padding: 1rem;
 }
 
-card:hover {
+.card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.png-background .card-header {
+  background-color: white;
+}
 </style>

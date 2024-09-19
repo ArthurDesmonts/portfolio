@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
 
+
 const email = "arthur.desmonts@gmail.com";
 
 const copyToClipboard = () => {
@@ -57,9 +58,9 @@ const copyToClipboard = () => {
       <h2><MyIcon>#</MyIcon> Mes projets</h2>
       <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
       <div class="card-alignement">
-        <Card titleText="Imagerie" html="TODO"></Card>
-        <Card titleText="OCR" html="TODO"></Card>
-        <Card titleText="Vue.js" html="TODO"></Card>
+        <Card titleText="Imagerie" html="TODO" image="openCv.png"></Card>
+        <Card titleText="OCR" html="TODO" image="mlkit.png"></Card>
+        <Card titleText="Vue.js" html="TODO" image="logo.svg"></Card>
       </div>
     </div>
     <hr class="separateur">
