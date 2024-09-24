@@ -3,6 +3,7 @@ import { ref } from "vue";
 import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
+import Footer from "@/components/Footer.vue";
 
 
 const email = "arthur.desmonts@gmail.com";
@@ -23,7 +24,6 @@ const copyToClipboard = () => {
 </script>
 
 <template>
-
   <div class="container">
     <NavBar></NavBar>
     <div class="HeadLine">
@@ -80,6 +80,7 @@ const copyToClipboard = () => {
           </div>
         </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 

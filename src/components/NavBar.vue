@@ -13,6 +13,8 @@ const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 };
 </script>
@@ -21,7 +23,7 @@ const scrollToSection = (sectionId) => {
   <div :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
       <li class="phoneHided"><p>Arthur Desmonts</p></li>
-      <li class="phoneHided hover-allowed" @click="scrollToSection('accueil')"><MyIcon>#</MyIcon> Accueil</li>
+      <li class="phoneHided hover-allowed" @click="scrollToSection()"><MyIcon>#</MyIcon> Accueil</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><MyIcon>#</MyIcon> Qui suis-je?</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><MyIcon>#</MyIcon> Mes Projets</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('contact')"><MyIcon>#</MyIcon> Me Contacter</li>
