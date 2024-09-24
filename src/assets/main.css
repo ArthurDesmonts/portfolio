@@ -11,6 +11,12 @@ body {
   max-width: 80%;
   margin: 0 auto;
   transition: background-color 0.3s, color 0.3s;
+
+  background-image: url('@/assets/background.png');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center -120px;
+  width: 100%;
 }
 
 body.dark-theme {
