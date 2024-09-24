@@ -24,6 +24,16 @@ body.dark-theme {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.footer {
+  background-color: var(--background-color);
+  color: #6b6e6c;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   body {
     max-width: 100%;
