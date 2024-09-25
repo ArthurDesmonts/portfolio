@@ -24,7 +24,7 @@ function redirectToLinkedIn() {
   margin-right: 15%;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  cursor: url("@/assets/linkedin-Logo.png"), auto;
 }
 
 .profilPic {
