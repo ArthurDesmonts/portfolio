@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import {ref, onMounted, watch, computed, onUnmounted} from 'vue';
 import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
@@ -10,6 +10,7 @@ const props = defineProps({
 
 const imageUrl = ref('');
 const isPng = ref(false);
+const themeBackgroundClass = ref('');
 
 onMounted(async () => {
   try {
@@ -22,15 +23,18 @@ onMounted(async () => {
   } catch (error) {
     console.error('Error resizing image:', error);
   }
-});
 
-const applyThemeBackgroundCard = () => {
-  if (document.body.classList.contains('dark-theme')) {
-    return 'dark-background';
-  } else {
-    return 'light-background';
-  }
-};
+  //Change the class of the card depending on the theme selected
+  themeBackgroundClass.value = document.body.classList.contains('dark-theme') ? 'dark-background' : 'light-background';
+
+  const observer = new MutationObserver(() => {
+    themeBackgroundClass.value = document.body.classList.contains('dark-theme') ? 'dark-background' : 'light-background';
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+
+});
 </script>
 
 <template>
@@ -38,7 +42,7 @@ const applyThemeBackgroundCard = () => {
     <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 v-html="titleText"></h2>
     </div>
-    <div class="card-body" :class="applyThemeBackgroundCard()">
+    <div class="card-body" :class="themeBackgroundClass">
       <p v-html="html"></p>
     </div>
   </div>
@@ -78,13 +82,15 @@ const applyThemeBackgroundCard = () => {
 }
 
 .dark-background {
-  background-color: #333;
+  background-color: #3c424d;
   color: white;
+  transition: background-color 0.2s;
 }
 
 .light-background {
-  background-color: white;
+  background-color: #e1e3e1;
   color: black;
+  transition: background-color 0.2s;
 }
 
 .card:hover {
