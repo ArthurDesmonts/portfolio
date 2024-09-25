@@ -23,6 +23,14 @@ onMounted(async () => {
     console.error('Error resizing image:', error);
   }
 });
+
+const applyThemeBackgroundCard = () => {
+  if (document.body.classList.contains('dark-theme')) {
+    return 'dark-background';
+  } else {
+    return 'light-background';
+  }
+};
 </script>
 
 <template>
@@ -30,7 +38,7 @@ onMounted(async () => {
     <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 v-html="titleText"></h2>
     </div>
-    <div class="card-body">
+    <div class="card-body" :class="applyThemeBackgroundCard()">
       <p v-html="html"></p>
     </div>
   </div>
@@ -67,6 +75,16 @@ onMounted(async () => {
 
 .card-body {
   padding: 1rem;
+}
+
+.dark-background {
+  background-color: #333;
+  color: white;
+}
+
+.light-background {
+  background-color: white;
+  color: black;
 }
 
 .card:hover {

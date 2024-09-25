@@ -28,7 +28,7 @@ const copyToClipboard = () => {
     <NavBar></NavBar>
     <div class="HeadLine">
       <div>
-        <h1>Arthur Desmonts, 20 Ans, <MyIcon>développeur Full-Stack.</MyIcon></h1>
+        <h1>Arthur Desmonts, 20 Ans, <span class="icon">développeur Full-Stack.</span></h1>
         <p class="subTitle">Diplômé d'un BUT Informatique (BAC +3) - parcours
           réalisation d'applications :
           conception, développement,
@@ -38,7 +38,7 @@ const copyToClipboard = () => {
     </div>
     <hr id="about" class="separateur">
     <div class="presentation">
-      <h2><MyIcon>#</MyIcon> Qui suis-je?</h2>
+      <h2><span class="icon">#</span> Qui suis-je?</h2>
       <div class="description-split">
         <p class="justify-content descriptionBox no-after">Bonjour, je m'appelle Arthur.
 
@@ -55,7 +55,7 @@ const copyToClipboard = () => {
     </div>
     <hr id="project" class="separateur">
     <div class="presentation">
-      <h2><MyIcon>#</MyIcon> Mes projets</h2>
+      <h2><span class="icon">#</span> Mes projets</h2>
       <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
       <div class="card-alignement">
         <Card titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone." image="openCv.png"></Card>
@@ -66,13 +66,13 @@ const copyToClipboard = () => {
     <hr class="separateur">
     <div id="hobbies" class="double-container">
         <div class="loisir">
-          <h2><MyIcon>#</MyIcon> Loisirs</h2>
+          <h2><span class="icon">#</span> Loisirs</h2>
           <p class="justify-content">Passionné de cyclisme sur route, je trouve dans ce sport un excellent
             moyen de me détendre, de me vider l’esprit, et de maintenir ma forme
             physique.</p>
         </div>
         <div id="contact" class="contact">
-          <h2><MyIcon>#</MyIcon> Me Contacter</h2>
+          <h2><span class="icon">#</span> Me Contacter</h2>
           <p class="justify-content">Je recherche actuellement un emploi dans le domaine du développement Web. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
           <div class="mail-succes-listener">
             <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
@@ -86,7 +86,7 @@ const copyToClipboard = () => {
 
 <style scoped>
 /* CSS */
-MyIcon {
+.icon {
   color: #c16ed2;
 }
 

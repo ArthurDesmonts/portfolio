@@ -23,18 +23,17 @@ const scrollToSection = (sectionId) => {
   <div :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
       <li class="phoneHided"><p>Arthur Desmonts</p></li>
-      <li class="phoneHided hover-allowed" @click="scrollToSection()"><MyIcon>#</MyIcon> Accueil</li>
-      <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><MyIcon>#</MyIcon> Qui suis-je?</li>
-      <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><MyIcon>#</MyIcon> Mes Projets</li>
-      <li class="phoneHided hover-allowed" @click="scrollToSection('contact')"><MyIcon>#</MyIcon> Me Contacter</li>
+      <li class="phoneHided hover-allowed" @click="scrollToSection()"><span class="icon">#</span> Accueil</li>
+      <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><span class="icon">#</span> Qui suis-je?</li>
+      <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><span class="icon">#</span> Mes Projets</li>
+      <li class="phoneHided hover-allowed" @click="scrollToSection('contact')"><span class="icon">#</span> Me Contacter</li>
       <li class="phoneHided hover-allowed"><toggle-button class="toggle" @click="toggleTheme"></toggle-button></li>
     </ul>
   </div>
 </template>
-
 <style scoped>
 /* CSS */
-MyIcon {
+.icon {
   color: #c16ed2;
 }
 
