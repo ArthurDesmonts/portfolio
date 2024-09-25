@@ -1,5 +1,5 @@
 <script setup>
-import {ref, onMounted, watch, computed, onUnmounted} from 'vue';
+import {ref, onMounted} from 'vue';
 import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
