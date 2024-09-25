@@ -21,6 +21,19 @@ const copyToClipboard = () => {
     }, 1800);
   });
 };
+
+
+const handleCardExpansion = (titleText) => {
+  document.querySelectorAll('.card').forEach(card => {
+    if (titleText === "reset") {
+      card.style.display = 'block';
+      return;
+    }
+    if (card.querySelector('h2').innerText !== titleText) {
+      card.style.display = 'none';
+    }
+  });
+};
 </script>
 
 <template>
@@ -58,9 +71,9 @@ const copyToClipboard = () => {
       <h2><span class="icon">#</span> Mes projets</h2>
       <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
       <div class="card-alignement">
-        <Card titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone." image="openCv.png"></Card>
-        <Card titleText="OCR" html="Utilisation d'un OCR sur des documents scannés, interprétation des résultats, algorithme de reconnaissance des erreurs." image="mlkit.png"></Card>
-        <Card titleText="Vue.js" html="Élaboration de différentes interfaces, test des limites du framework, rédaction d'une documentation complète pour des novices." image="logo.svg"></Card>
+        <Card @expand-card="handleCardExpansion($event)" titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone." image="openCv.png"></Card>
+        <Card @expand-card="handleCardExpansion($event)" titleText="OCR" html="Utilisation d'un OCR sur des documents scannés, interprétation des résultats, algorithme de reconnaissance des erreurs." image="mlkit.png"></Card>
+        <Card @expand-card="handleCardExpansion($event)" titleText="Vue.js" html="Élaboration de différentes interfaces, test des limites du framework, rédaction d'une documentation complète pour des novices." image="logo.svg"></Card>
       </div>
     </div>
     <hr class="separateur">

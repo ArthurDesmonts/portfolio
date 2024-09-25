@@ -1,12 +1,19 @@
 <script setup>
-import {ref, onMounted} from 'vue';
+import {ref, onMounted, defineEmits} from 'vue';
 import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
   titleText: String,
   html: String,
-  image: String
+  image: String,
+  subTitle: String,
+  firstBlock: String,
+  secondBlock: String,
+  listeOfCompetences: String,
+  thirdBlock: String
 });
+
+const emitExpand = defineEmits(['expandCard']);
 
 const imageUrl = ref('');
 const isPng = ref(false);
@@ -32,20 +39,42 @@ onMounted(async () => {
   });
 
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
-
 });
+
+
+// Card content
+
+const showCardContent = ref(false);
+const developCard = () => {
+  showCardContent.value = !showCardContent.value;
+  if (showCardContent.value) {
+    emitExpand('expandCard', props.titleText);
+  }
+};
+
+const closeCard = () => {
+  showCardContent.value = false;
+  emitExpand('expandCard', "reset");
+};
 </script>
 
 <template>
-  <div class="card" :class="{ 'png-background': isPng }">
-    <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
+  <div class="card" :class="{ 'png-background': isPng, 'expanded': showCardContent }">
+    <div v-if="showCardContent === false" class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 v-html="titleText"></h2>
     </div>
     <div class="card-body" :class="themeBackgroundClass">
       <div class="bottom-right">
         <p v-html="html"></p>
-        <button class="innerParagraphButton">Voir</button>
+        <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
+        <div v-if="showCardContent">
+          <p v-html="subTitle"></p>
+          <p v-html="firstBlock"></p>
+          <p v-html="secondBlock"></p>
+          <p v-html="listeOfCompetences"></p>
+          <p v-html="thirdBlock"></p>
+          <button class="innerParagraphButton" @click="closeCard()">Fermer</button>
+        </div>
       </div>
     </div>
   </div>
@@ -59,6 +88,11 @@ onMounted(async () => {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-size: cover;
   background-position: center;
+}
+
+.card.expanded {
+  width: 100%;
+  z-index: 10;
 }
 
 .card-header {
