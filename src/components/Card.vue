@@ -9,7 +9,7 @@ const props = defineProps({
   subTitle: String,
   firstBlock: String,
   secondBlock: String,
-  listeOfCompetences: String,
+  listOfSkills: String,
   thirdBlock: String
 });
 
@@ -56,6 +56,11 @@ const closeCard = () => {
   showCardContent.value = false;
   emitExpand('expandCard', "reset");
 };
+
+const positionOfContent = () => {
+  return showCardContent.value ? 'expanded-display-pos' : 'bottom-right';
+};
+
 </script>
 
 <template>
@@ -64,14 +69,14 @@ const closeCard = () => {
       <h2 v-html="titleText"></h2>
     </div>
     <div class="card-body" :class="themeBackgroundClass">
-      <div class="bottom-right">
-        <p v-html="html"></p>
+      <div :class="positionOfContent">
+        <p v-show="showCardContent === false" v-html="html"></p>
         <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
-        <div v-if="showCardContent">
+        <div class="expanded-display-pos" v-if="showCardContent">
           <p v-html="subTitle"></p>
           <p v-html="firstBlock"></p>
           <p v-html="secondBlock"></p>
-          <p v-html="listeOfCompetences"></p>
+          <p v-html="listOfSkills"></p>
           <p v-html="thirdBlock"></p>
           <button class="innerParagraphButton" @click="closeCard()">Fermer</button>
         </div>
@@ -154,4 +159,9 @@ const closeCard = () => {
   align-items: flex-end;
 }
 
+.expanded-display-pos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 </style>

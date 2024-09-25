@@ -71,9 +71,19 @@ const handleCardExpansion = (titleText) => {
       <h2><span class="icon">#</span> Mes projets</h2>
       <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
       <div class="card-alignement">
-        <Card @expand-card="handleCardExpansion($event)" titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone." image="openCv.png"></Card>
-        <Card @expand-card="handleCardExpansion($event)" titleText="OCR" html="Utilisation d'un OCR sur des documents scannés, interprétation des résultats, algorithme de reconnaissance des erreurs." image="mlkit.png"></Card>
-        <Card @expand-card="handleCardExpansion($event)" titleText="Vue.js" html="Élaboration de différentes interfaces, test des limites du framework, rédaction d'une documentation complète pour des novices." image="logo.svg"></Card>
+        <Card @expand-card="handleCardExpansion($event)" titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone." image="openCv.png"
+              subTitle="Utilisation de OpenCV"
+              first-block="Pour être plus précis, j'ai réalisé un détourage automatique à partir de la caméra d'un smartphone. C'est-à-dire que sur une photo, j'ai utilisé les différentes méthodes que propose OpenCV pour faire des traitements optiques.
+              Cela dans le but de faire gagner du temps à l'utilisateur qui doit prendre de nombreuses photos tout au long de la journée (contexte de déplacement avec durée limitée), mais également de confort (suppression d'une tâche manuelle répétitive)."
+              second-block="J'ai notamment axé mon développement sur les points suivants :"
+              listOfSkills="– Développement de l'interface utilisateur – Création de l'algorithme principal – Optimisation de l'algorithme, amélioration des performances – Conversion vers iOS (l'application métier étant en natif)"
+              third-block="Comme dit précédemment, je ne peux pas fournir de preuve physique de ce projet, appartenant à mon ancienne entreprise. Néanmoins, je peux conclure sur le fait que ce projet fut ma première expérience en terme de projet professionnel avec des exigences. J'ai fait face à un algorithme assez complexe vis-à-vis des exigences imposées. Enfin, j'ai eu un réel aperçu de la résolution de bugs et de l'optimisation de performances."></Card>
+        <Card @expand-card="handleCardExpansion($event)" titleText="OCR" html="Utilisation d'un OCR sur des documents scannés, interprétation des résultats, algorithme de reconnaissance des erreurs." image="mlkit.png"
+              subTitle = "Utilisation de MLKit et Apple Vision"
+        ></Card>
+        <Card @expand-card="handleCardExpansion($event)" titleText="Vue.js" html="Élaboration de différentes interfaces, test des limites du framework, rédaction d'une documentation complète pour des novices." image="logo.svg"
+              subTitle="Développement d'interfaces avec Vue.js"
+        ></Card>
       </div>
     </div>
     <hr class="separateur">
