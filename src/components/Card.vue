@@ -1,5 +1,5 @@
 <script setup>
-import {ref, onMounted, defineEmits} from 'vue';
+import {ref, onMounted} from 'vue';
 import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
@@ -45,11 +45,10 @@ onMounted(async () => {
 // Card content
 
 const showCardContent = ref(false);
+
 const developCard = () => {
-  showCardContent.value = !showCardContent.value;
-  if (showCardContent.value) {
-    emitExpand('expandCard', props.titleText);
-  }
+  showCardContent.value = true;
+  emitExpand('expandCard', props.titleText);
 };
 
 const closeCard = () => {
@@ -57,29 +56,24 @@ const closeCard = () => {
   emitExpand('expandCard', "reset");
 };
 
-const positionOfContent = () => {
-  return showCardContent.value ? 'expanded-display-pos' : 'bottom-right';
-};
-
 </script>
-
 <template>
-  <div class="card" :class="{ 'png-background': isPng, 'expanded': showCardContent }">
+  <div class="card" :class="{ 'png-background': isPng, 'expanded': showCardContent, 'card': closeCard}">
     <div v-if="showCardContent === false" class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 v-html="titleText"></h2>
     </div>
     <div class="card-body" :class="themeBackgroundClass">
-      <div :class="positionOfContent">
+      <div class="bottom-right">
         <p v-show="showCardContent === false" v-html="html"></p>
         <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
-        <div class="expanded-display-pos" v-if="showCardContent">
-          <p v-html="subTitle"></p>
-          <p v-html="firstBlock"></p>
-          <p v-html="secondBlock"></p>
-          <p v-html="listOfSkills"></p>
-          <p v-html="thirdBlock"></p>
-          <button class="innerParagraphButton" @click="closeCard()">Fermer</button>
-        </div>
+      </div>
+      <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent}]">
+        <h2 v-html="subTitle"></h2>
+        <p class="justify-content" v-html="firstBlock"></p>
+        <p v-html="secondBlock"></p>
+        <p v-html="listOfSkills"></p>
+        <p v-html="thirdBlock"></p>
+        <button class="innerParagraphButton" @click="closeCard">Fermer</button>
       </div>
     </div>
   </div>
@@ -99,6 +93,7 @@ const positionOfContent = () => {
   width: 100%;
   z-index: 10;
 }
+
 
 .card-header {
   padding: 1rem;
@@ -159,9 +154,51 @@ const positionOfContent = () => {
   align-items: flex-end;
 }
 
+@keyframes expand {
+  0% {
+    opacity: 0;
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@keyframes collapse {
+  0% {
+    opacity: 1;
+    max-height: 500px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
 .expanded-display-pos {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.expanded-display-pos.show {
+  animation: expand 1s ease-in-out forwards;
+}
+
+.expanded-display-pos.hide {
+  animation: collapse 1s ease-in-out forwards;
+}
+
+/* expand content classes */
+.justify-content {
+  margin-top: 1em;
+  text-align: justify;
+  padding: 1em;
+  font-size: 16px;
+  position: relative;
 }
 </style>
