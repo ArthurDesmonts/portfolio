@@ -43,7 +43,10 @@ onMounted(async () => {
       <h2 v-html="titleText"></h2>
     </div>
     <div class="card-body" :class="themeBackgroundClass">
-      <p v-html="html"></p>
+      <div class="bottom-right">
+        <p v-html="html"></p>
+        <button class="innerParagraphButton">Voir</button>
+      </div>
     </div>
   </div>
 </template>
@@ -100,4 +103,21 @@ onMounted(async () => {
 .png-background .card-header {
   background-color: white;
 }
+
+.innerParagraphButton {
+  background-color: #c16ed2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 </style>
