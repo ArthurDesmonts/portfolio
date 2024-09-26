@@ -1,5 +1,5 @@
 <script setup>
-import {ref, onMounted} from 'vue';
+import { ref, onMounted } from 'vue';
 import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
@@ -18,6 +18,7 @@ const emitExpand = defineEmits(['expandCard']);
 const imageUrl = ref('');
 const isPng = ref(false);
 const themeBackgroundClass = ref('');
+const isClosing = ref(false);
 
 onMounted(async () => {
   try {
@@ -41,22 +42,25 @@ onMounted(async () => {
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 });
 
-
-// Card content
-
+//Card Content
 const showCardContent = ref(false);
 
 const developCard = () => {
   showCardContent.value = true;
+  isClosing.value = false;
   emitExpand('expandCard', props.titleText);
 };
 
 const closeCard = () => {
-  showCardContent.value = false;
-  emitExpand('expandCard', "reset");
+  isClosing.value = true;
+  setTimeout(() => {
+    showCardContent.value = false;
+    emitExpand('expandCard', "reset");
+    isClosing.value = false;
+  }, 400);
 };
-
 </script>
+
 <template>
   <div class="card" :class="{ 'png-background': isPng, 'expanded': showCardContent, 'card': closeCard}">
     <div v-if="showCardContent === false" class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
@@ -67,7 +71,7 @@ const closeCard = () => {
         <p v-show="showCardContent === false" v-html="html"></p>
         <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
       </div>
-      <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent}]">
+      <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent, hide: isClosing }]">
         <h2 v-html="subTitle"></h2>
         <p class="justify-content" v-html="firstBlock"></p>
         <p v-html="secondBlock"></p>
@@ -186,11 +190,11 @@ const closeCard = () => {
 }
 
 .expanded-display-pos.show {
-  animation: expand 1s ease-in-out forwards;
+  animation: expand 0.8s ease-in-out forwards;
 }
 
 .expanded-display-pos.hide {
-  animation: collapse 1s ease-in-out forwards;
+  animation: collapse 0.4s ease-in-out forwards;
 }
 
 /* expand content classes */
