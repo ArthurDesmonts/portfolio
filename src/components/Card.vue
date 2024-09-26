@@ -19,6 +19,7 @@ const imageUrl = ref('');
 const isPng = ref(false);
 const themeBackgroundClass = ref('');
 const isClosing = ref(false);
+const skillsList = ref([]);
 
 onMounted(async () => {
   try {
@@ -40,6 +41,11 @@ onMounted(async () => {
   });
 
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  // Transform listOfSkills into an array
+  if (props.listOfSkills) {
+    skillsList.value = props.listOfSkills.split(' - ').map(skill => skill.trim());
+  }
 });
 
 //Card Content
@@ -72,12 +78,16 @@ const closeCard = () => {
         <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
       </div>
       <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent, hide: isClosing }]">
-        <h2 v-html="subTitle"></h2>
+        <h2 class="centered" v-html="subTitle"></h2>
         <p class="justify-content" v-html="firstBlock"></p>
-        <p v-html="secondBlock"></p>
-        <p v-html="listOfSkills"></p>
-        <p v-html="thirdBlock"></p>
-        <button class="innerParagraphButton" @click="closeCard">Fermer</button>
+        <p class="justify-content" v-html="secondBlock"></p>
+        <ul>
+          <li v-for="skill in skillsList" :key="skill">{{ skill }}</li>
+        </ul>
+        <p class="justify-content" v-html="thirdBlock"></p>
+        <button class="innerParagraphButton closure-button" @click="closeCard">
+          <span class="material-icons">arrow_upward</span>
+        </button>
       </div>
     </div>
   </div>
@@ -165,14 +175,14 @@ const closeCard = () => {
   }
   100% {
     opacity: 1;
-    max-height: 500px;
+    max-height: 700px;
   }
 }
 
 @keyframes collapse {
   0% {
     opacity: 1;
-    max-height: 500px;
+    max-height: 700px;
   }
   100% {
     opacity: 0;
@@ -199,10 +209,20 @@ const closeCard = () => {
 
 /* expand content classes */
 .justify-content {
-  margin-top: 1em;
+  margin-top: 0;
   text-align: justify;
-  padding: 1em;
+  padding: 0.5em;
   font-size: 16px;
   position: relative;
+}
+
+.closure-button {
+  width: 30px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.centered {
+  text-align: center;
 }
 </style>
