@@ -250,4 +250,45 @@ const closeCard = () => {
   transform: scale(1.1);
   box-shadow: #181818 0px 0px 10px;
 }
+
+@media (max-width: 768px) {
+  @keyframes expand {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 1500px;
+    }
+  }
+
+  @keyframes collapse {
+    0% {
+      opacity: 1;
+      max-height: 1500px;
+    }
+    100% {
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+
+  .expanded-display-pos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .expanded-display-pos.show {
+    animation: expand 0.8s ease-in-out forwards;
+  }
+
+  .expanded-display-pos.hide {
+    animation: collapse 1s ease-in-out forwards;
+  }
+}
 </style>
