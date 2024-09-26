@@ -85,9 +85,11 @@ const closeCard = () => {
           <li v-for="skill in skillsList" :key="skill">{{ skill }}</li>
         </ul>
         <p class="justify-content" v-html="thirdBlock"></p>
-        <button class="innerParagraphButton closure-button" @click="closeCard">
-          <span class="material-icons">arrow_upward</span>
-        </button>
+        <div class="closure-button-container">
+          <button class="innerParagraphButton closure-button" @click="closeCard">
+            <span class="material-icons">arrow_upward</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -216,13 +218,36 @@ const closeCard = () => {
   position: relative;
 }
 
+.centered {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .closure-button {
   width: 30px;
   flex-direction: row;
   align-items: center;
 }
 
-.centered {
-  text-align: center;
+.closure-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.closure-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closure-button:hover {
+  background-color: #c16ed2;
+  transform: scale(1.1);
+  box-shadow: #181818 0px 0px 10px;
 }
 </style>
