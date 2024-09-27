@@ -70,7 +70,7 @@ const closeCard = () => {
 <template>
   <div class="card" :class="{ 'png-background': isPng, 'expanded': showCardContent, 'card': closeCard}">
     <div v-if="showCardContent === false" class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
-      <h2 v-html="titleText"></h2>
+      <h2 class="title" v-html="titleText"></h2>
     </div>
     <div class="card-body" :class="themeBackgroundClass">
       <div class="bottom-right">
@@ -104,6 +104,11 @@ const closeCard = () => {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-size: cover;
   background-position: center;
+}
+
+.title {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .card.expanded {
