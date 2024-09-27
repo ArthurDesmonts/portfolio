@@ -22,7 +22,7 @@ const scrollToSection = (sectionId) => {
 <template>
   <div :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
-      <li class="phoneHided"><p>Arthur Desmonts</p></li>
+      <li class="phoneHided no-cursor"><p>Arthur Desmonts</p></li>
       <li class="phoneHided hover-allowed" @click="scrollToSection()"><span class="icon">#</span> Accueil</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><span class="icon">#</span> Qui suis-je?</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><span class="icon">#</span> Mes Projets</li>
@@ -81,6 +81,10 @@ p{
   color: #c16ed2;
   text-decoration: underline;
   animation: underlineAnimation 0.3s forwards;
+}
+
+.no-cursor {
+  cursor: default;
 }
 
 .menu.light-theme {
