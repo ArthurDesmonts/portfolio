@@ -166,7 +166,7 @@ onMounted(() => {
   top: 0;
   left: -5px;
   width: 2px;
-  background-color: white;
+  background-color: var(--text-color);
   height: var(--before-height, 1em);
 }
 
