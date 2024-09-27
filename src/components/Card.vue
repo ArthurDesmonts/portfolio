@@ -75,7 +75,7 @@ const closeCard = () => {
     <div class="card-body" :class="themeBackgroundClass">
       <div class="bottom-right">
         <p class="short-desc" v-show="showCardContent === false" v-html="html"></p>
-        <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
+        <button id="developButton" v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
       </div>
       <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent, hide: isClosing }]">
         <h2 class="centered" v-html="subTitle"></h2>
@@ -107,8 +107,7 @@ const closeCard = () => {
 }
 
 .title {
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  display: none;
 }
 
 .card.expanded {
@@ -118,7 +117,7 @@ const closeCard = () => {
 
 .card-header {
   padding: 1rem;
-  border-bottom: 1px solid #c16ed2;
+  border-bottom: 0;
   text-align: center;
   position: relative;
   background-size: cover;
@@ -132,9 +131,7 @@ const closeCard = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
+  color: white;}
 
 .card-body {
   padding: 1rem;
