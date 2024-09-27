@@ -74,7 +74,7 @@ const closeCard = () => {
     </div>
     <div class="card-body" :class="themeBackgroundClass">
       <div class="bottom-right">
-        <p v-show="showCardContent === false" v-html="html"></p>
+        <p class="short-desc" v-show="showCardContent === false" v-html="html"></p>
         <button v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
       </div>
       <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent, hide: isClosing }]">
@@ -133,6 +133,11 @@ const closeCard = () => {
 
 .card-body {
   padding: 1rem;
+}
+
+.short-desc {
+  line-height: 1.2;
+  font-size: 16px;
 }
 
 .dark-background {
