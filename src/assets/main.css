@@ -11,6 +11,7 @@ body {
   max-width: 80%;
   margin: 0 auto;
   transition: background-color 0.3s, color 0.3s;
+  font-family: 'Open Sans', sans-serif;
 
   background-image: url('@/assets/background.png');
   background-size: cover;
@@ -19,7 +20,11 @@ body {
   width: 100%;
 }
 
-
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Consolas', monospace;

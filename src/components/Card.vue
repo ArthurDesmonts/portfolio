@@ -97,6 +97,7 @@ const closeCard = () => {
 
 <style scoped>
 .card {
+  position: relative;
   width: 245px;
   border: 2px solid #c16ed2;
   border-radius: 5px;
@@ -110,7 +111,6 @@ const closeCard = () => {
   z-index: 10;
 }
 
-
 .card-header {
   padding: 1rem;
   border-bottom: 1px solid #c16ed2;
@@ -119,6 +119,7 @@ const closeCard = () => {
   background-size: cover;
   background-position: center;
   height: 205px;
+  font-size: 20px;
 }
 
 .card-header h2 {
@@ -162,6 +163,7 @@ const closeCard = () => {
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-top: 1em;
 }
 
 .bottom-right {

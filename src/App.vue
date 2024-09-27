@@ -55,7 +55,7 @@ const handleCardExpansion = (titleText) => {
       <div class="description-split">
         <p class="justify-content descriptionBox no-after">Bonjour, je m'appelle Arthur.
 
-          Je suis développeur Web orienté Full-Stack. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en bases de données et dans le domaine du développement applicatif.
+          Je suis développeur Web orienté <span class="icon">Full-Stack </span>, avec une préférence pour le <span class="icon">Front-End</span>. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en bases de données et dans le domaine du développement applicatif.
 
           J'ai perfectionné ces compétences au cours d'une année d'alternance dans une équipe de développeurs mobiles. J'ai pu travailler aussi bien sur Android que sur iOS. J'ai également eu l'occasion de contribuer à des projets de développement Web, plus particulièrement sur un long projet en Vue.js.
         </p>
@@ -71,7 +71,7 @@ const handleCardExpansion = (titleText) => {
       <h2><span class="icon">#</span> Mes projets</h2>
       <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
       <div class="card-alignement">
-        <Card @expand-card="handleCardExpansion($event)" id="1" titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone." image="openCv.png"
+        <Card @expand-card="handleCardExpansion($event)" id="1" titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone. Suppression automatique de l'arrière-plan." image="openCv.png"
               subTitle="Utilisation de OpenCV"
               first-block="Pour être plus précis, j'ai réalisé un détourage automatique à partir de la caméra d'un smartphone. C'est-à-dire que sur une photo, j'ai utilisé les différentes méthodes que propose OpenCV pour faire des traitements optiques.
               Cela dans le but de faire gagner du temps à l'utilisateur qui doit prendre de nombreuses photos tout au long de la journée (contexte de déplacement avec durée limitée), mais également de confort (suppression d'une tâche manuelle répétitive)."
@@ -205,7 +205,7 @@ const handleCardExpansion = (titleText) => {
 }
 
 .subTitle {
-  font-size: 1em;
+  font-size: 16px;
   font-style: italic;
 }
 
