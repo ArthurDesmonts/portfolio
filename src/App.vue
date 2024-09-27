@@ -55,21 +55,22 @@ const handleCardExpansion = (titleText) => {
       <div class="description-split">
         <p class="justify-content descriptionBox no-after">Bonjour, je m'appelle Arthur.
 
-          Je suis développeur Web orienté <span class="icon">Full-Stack </span>, avec une préférence pour le <span class="icon">Front-End</span>. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en Web, en bases de données et dans le domaine du développement applicatif.
+          Je suis développeur Web orienté <span class="icon">Full-Stack</span>, avec une préférence pour le <span class="icon">Front-End</span>. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Durant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, notamment en <span class="icon">Web</span>, en <span class="icon">bases de données</span>
+          et dans le domaine du <span class="icon">développement applicatif</span>.
 
-          J'ai perfectionné ces compétences au cours d'une année d'alternance dans une équipe de développeurs mobiles. J'ai pu travailler aussi bien sur Android que sur iOS. J'ai également eu l'occasion de contribuer à des projets de développement Web, plus particulièrement sur un long projet en Vue.js.
+          J'ai perfectionné ces compétences au cours d'<span class="icon">une année d'alternance</span> dans une équipe de développeurs mobiles. J'ai pu travailler aussi bien sur <span class="icon">Android</span> que sur <span class="icon">iOS</span>. J'ai également eu l'occasion de contribuer à des projets de développement Web, plus particulièrement sur un long projet en <span class="icon">Vue.js</span>.
         </p>
         <p class="justify-content descriptionBox no-before">
-          Durant cette année, j'ai également manipulé plusieurs librairies d'imagerie, telles qu'OpenCV, MLKit ou encore Apple Vision. Enfin, j'ai clôturé cette expérience avec un projet utilisant de l'OCR (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
-
-          Ce que j'aime dans le développement, c'est avant tout l'élaboration de solutions créatives. J'aime me creuser la tête pour atteindre mes objectifs. Je suis enthousiaste et j'adore travailler avec des personnes passionnées. Je pense être parfaitement autonome dans mon travail, même si j'apprécie les retours sur ce que je peux améliorer.
+          Durant cette année, j'ai également manipulé plusieurs librairies d'<span class="icon">imagerie</span>, telles qu'<span class="icon">OpenCV</span>, <span class="icon">MLKit</span> ou encore <span class="icon">Apple Vision</span>. Enfin, j'ai clôturé cette expérience avec un projet utilisant de l'<span class="icon">OCR</span> (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
+          Ce que j'aime dans le développement, c'est avant tout l'élaboration de solutions créatives.
+          Je suis <span class="icon">enthousiaste</span> et j'adore travailler avec des personnes passionnées. Je pense être parfaitement autonome dans ma façon de travailler, même si j'apprécie les retours sur ce que je peux améliorer.
         </p>
       </div>
     </div>
     <hr id="project" class="separateur">
     <div class="presentation">
       <h2><span class="icon">#</span> Mes projets</h2>
-      <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve les plus aboutis et concrets.</p>
+      <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. De même, la plupart de mes répertoires universitaires étaient sur le serveur Git de l'université. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve <span class="icon">les plus aboutis et représentatifs de mes compétences actuelles</span>.</p>
       <div class="card-alignement">
         <Card @expand-card="handleCardExpansion($event)" id="1" titleText="Imagerie" html="Création d'un scanner de document à l'aide d'un smartphone. Suppression automatique de l'arrière-plan." image="openCv.png"
               subTitle="Utilisation de OpenCV"
@@ -100,13 +101,13 @@ const handleCardExpansion = (titleText) => {
     <div id="hobbies" class="double-container">
         <div class="loisir">
           <h2><span class="icon">#</span> Loisirs</h2>
-          <p class="justify-content">Passionné de cyclisme sur route, je trouve dans ce sport un excellent
+          <p class="justify-content">Passionné de <span class="icon">cyclisme</span> sur route, je trouve dans ce sport un excellent
             moyen de me détendre, de me vider l’esprit, et de maintenir ma forme
             physique.</p>
         </div>
         <div id="contact" class="contact">
           <h2><span class="icon">#</span> Me Contacter</h2>
-          <p class="justify-content">Je recherche actuellement un emploi dans le domaine du développement Web. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités full remote. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
+          <p class="justify-content">Je suis actuellement en <span class="icon">recherche d'un premier emploi</span> dans le domaine du développement <span class="icon">Front-End</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
           <div class="mail-succes-listener">
             <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
             <p id="email-event" class="event-content"></p>
@@ -121,6 +122,7 @@ const handleCardExpansion = (titleText) => {
 /* CSS */
 .icon {
   color: #c16ed2;
+  font-weight: bold;
 }
 
 .container {
