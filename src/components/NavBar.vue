@@ -63,6 +63,7 @@ p{
   transform: translateX(-50%);
   transition: background-color 0.3s;
   z-index: 2;
+  font-family: 'Consolas', monospace;
 }
 
 @keyframes underlineAnimation {
