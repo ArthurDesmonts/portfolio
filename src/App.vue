@@ -158,6 +158,8 @@ onMounted(() => {
   left: 0;
   margin: 0;
   padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .vertical-align::before {
