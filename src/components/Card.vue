@@ -186,7 +186,7 @@ const closeCard = () => {
 @keyframes expand {
   0% {
     opacity: 0;
-    max-height: 0;
+    max-height: 250px;
   }
   100% {
     opacity: 1;
@@ -201,7 +201,7 @@ const closeCard = () => {
   }
   100% {
     opacity: 0;
-    max-height: 0;
+    max-height: 250px;
   }
 }
 
