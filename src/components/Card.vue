@@ -155,7 +155,11 @@ const closeCard = () => {
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 4px rgba(var(--text-color-rgb), 0.5);
+}
+
+.card.expanded:hover {
+  box-shadow: none;
 }
 
 .png-background .card-header {

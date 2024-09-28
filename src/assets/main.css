@@ -3,6 +3,7 @@
 :root {
   --background-color: #f7f2f0;
   --text-color: #000000;
+  --text-color-rgb: 0, 0, 0;
 }
 
 body {
@@ -47,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 body.dark-theme {
   --background-color: #282b32;
   --text-color: #ffffff;
+  --text-color-rgb: 255, 255, 255;
 }
 
 .bodyElements {
