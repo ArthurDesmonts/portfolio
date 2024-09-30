@@ -45,7 +45,12 @@ onMounted(() => {
   const verticalAlignElements = document.querySelectorAll('.vertical-align');
   verticalAlignElements.forEach((element) => {
     const textLength = element.innerText.length;
-    const newHeight = `${textLength + 1}em`;
+    let newHeight = '';
+    if (window.innerWidth < 768) {
+      newHeight = `${textLength}em`;
+    } else {
+      newHeight = `${textLength + 1}em`;
+    }
     element.style.setProperty('--before-height', newHeight);
   });
 });
