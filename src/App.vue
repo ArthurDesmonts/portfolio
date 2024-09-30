@@ -62,7 +62,9 @@ onMounted(() => {
     <NavBar></NavBar>
     <div class="HeadLine">
       <div>
-        <h1>Arthur Desmonts, 20 Ans, <span class="icon">développeur Full-Stack.</span></h1>
+        <div class="typing-effect-container">
+          <h1>Arthur Desmonts, 20 Ans, développeur <span class="icon typing-effect">Full-Stack.</span></h1>
+        </div>
         <p class="subTitle">Diplômé d'un BUT Informatique (BAC +3) - parcours
           réalisation d'applications :
           conception, développement,
@@ -306,11 +308,34 @@ button:hover {
   gap: 1em;
 }
 
+/* type effect */
+.typing-effect-container {
+  display: flex;
+  align-items: center;
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px var(--text-color) solid;
+  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+  vertical-align: bottom;
+}
+
+@keyframes typing {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 1em;
   }
-
   .HeadLine {
     margin-left: 0;
     text-align: center;
