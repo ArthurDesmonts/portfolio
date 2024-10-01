@@ -318,8 +318,8 @@ button:hover {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px var(--text-color) solid;
-  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+  border-right: 8px var(--text-color) solid;
+  animation: typing 4s steps(80, end), blink 0.75s step-end infinite;
   vertical-align: bottom;
 }
 
