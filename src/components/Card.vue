@@ -63,6 +63,13 @@ const closeCard = () => {
     showCardContent.value = false;
     emitExpand('expandCard', "reset");
     isClosing.value = false;
+    //for phone collaspe
+    if (window.innerWidth <= 768) {
+      const cardElement = document.getElementById("card");
+      if (cardElement) {
+        cardElement.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }
   }, 400);
 };
 </script>
@@ -72,7 +79,7 @@ const closeCard = () => {
     <div v-if="showCardContent === false" class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 class="title" v-html="titleText"></h2>
     </div>
-    <div class="card-body" :class="themeBackgroundClass">
+    <div id="card" class="card-body" :class="themeBackgroundClass">
       <div class="bottom-right">
         <p class="short-desc" v-show="showCardContent === false" v-html="html"></p>
         <button id="developButton" v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
@@ -285,23 +292,6 @@ const closeCard = () => {
       opacity: 0;
       max-height: 0;
     }
-  }
-
-  .expanded-display-pos {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .expanded-display-pos.show {
-    animation: expand 0.8s ease-in-out forwards;
-  }
-
-  .expanded-display-pos.hide {
-    animation: collapse 1s ease-in-out forwards;
   }
 }
 </style>
