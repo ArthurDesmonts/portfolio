@@ -17,10 +17,20 @@ const scrollToSection = (sectionId) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 };
+
+window.onscroll = function() {
+  const menu = document.getElementById('menu');
+  if( window.scrollY > 0) {
+    menu.style.width = "100%";
+    menu.style.transition = "0.2s";
+  } else {
+    menu.style.width = "80%";
+  }
+}
 </script>
 
 <template>
-  <div :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
+  <div id="menu" :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
       <li class="phoneHided no-cursor"><p>Arthur Desmonts</p></li>
       <li class="phoneHided hover-allowed" @click="scrollToSection()"><span class="icon">#</span> Accueil</li>
@@ -64,6 +74,7 @@ p{
   transition: background-color 0.3s;
   z-index: 2;
   font-family: 'Consolas', monospace;
+  backdrop-filter: blur(10px);
 }
 
 @keyframes underlineAnimation {
@@ -88,11 +99,11 @@ p{
 }
 
 .menu.light-theme {
-  background-color: #f7f2f0;
+  background-color: rgb(247, 242, 240, 0.8);
 }
 
 .menu.dark-theme {
-  background-color: #282b32;
+  background-color: rgb(40, 43, 50, 0.8);
 }
 
 @media (max-width: 768px) {
