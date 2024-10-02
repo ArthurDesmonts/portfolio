@@ -14,7 +14,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Open Sans', sans-serif;
 
-  background-image: url('@/assets/background.png');
+  background-image: url('@/assets/background_Clear.png');
   background-size: cover;
   background-repeat: repeat;
   background-position: center -120px;

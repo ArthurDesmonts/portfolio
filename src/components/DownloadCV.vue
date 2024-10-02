@@ -2,8 +2,8 @@
 
 const downloadFile = () => {
   const link = document.createElement('a');
-  link.href = new URL('@/assets/CV_ArthurDesmonts.pdf', import.meta.url).href;
-  link.download = 'CV_ArthurDesmonts.pdf';
+  link.href = new URL('@/assets/CV Arthur Desmonts.pdf', import.meta.url).href;
+  link.download = 'CV Arthur Desmonts.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
