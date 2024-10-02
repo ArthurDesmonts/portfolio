@@ -119,6 +119,7 @@ const closeCard = () => {
 
 .card.expanded {
   width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
@@ -198,7 +199,8 @@ const closeCard = () => {
   }
   100% {
     opacity: 1;
-    max-height: 700px;
+    max-height: 2000px;
+    height: 100%;
   }
 }
 
