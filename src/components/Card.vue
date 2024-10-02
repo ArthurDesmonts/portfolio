@@ -199,7 +199,7 @@ const closeCard = () => {
   }
   100% {
     opacity: 1;
-    max-height: 2000px;
+    max-height: 3000px;
     height: 100%;
   }
 }
