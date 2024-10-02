@@ -432,5 +432,14 @@ button:hover {
   .no-before::before {
     content: none;
   }
+
+  .typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 8px var(--text-color) solid;
+    animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+    vertical-align: bottom;
+  }
 }
 </style>
