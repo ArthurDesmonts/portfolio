@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
 import Footer from "@/components/Footer.vue";
+import DownloadButton from "@/components/DownloadCV.vue";
 
 
 const email = "arthur.desmonts@gmail.com";
