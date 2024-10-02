@@ -53,7 +53,26 @@ onMounted(() => {
     }
     element.style.setProperty('--before-height', newHeight);
   });
+
+  //observer for typing animation
+  const typingEffectElement = document.querySelector('.typing-effect');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        resetTypingAnimation(entry.target);
+      }
+    });
+  });
+
+  observer.observe(typingEffectElement);
 });
+
+//for re-casting typing animation
+const resetTypingAnimation = (element) => {
+  element.style.animation = 'none';
+  element.offsetHeight; // trigger reflow
+  element.style.animation = '';
+};
 
 </script>
 

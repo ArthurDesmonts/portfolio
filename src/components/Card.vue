@@ -63,7 +63,7 @@ const closeCard = () => {
     showCardContent.value = false;
     emitExpand('expandCard', "reset");
     isClosing.value = false;
-    //for phone collaspe
+    //for phone collapse
     if (window.innerWidth <= 768) {
       const cardElement = document.getElementById("card");
       if (cardElement) {
