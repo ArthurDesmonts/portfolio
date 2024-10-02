@@ -182,6 +182,7 @@ const closeCard = () => {
   cursor: pointer;
   transition: background-color 0.2s;
   margin-top: 1em;
+  font-weight: bold;
 }
 
 .bottom-right {

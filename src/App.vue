@@ -162,6 +162,7 @@ const resetTypingAnimation = (element) => {
           <p class="justify-content">Je suis actuellement en <span class="icon">recherche d'un premier emploi</span> dans le domaine du développement <span class="icon">Front-End</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
           <div class="mail-succes-listener">
             <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
+            <DownloadButton class="innerParagraphButton contact" url='@/assets/CV_ArthurDesmonts.pdf' file-name='CV_ArthurDesmonts.pdf'></DownloadButton>
             <p id="email-event" class="event-content"></p>
           </div>
         </div>
@@ -297,6 +298,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 15px;
+  font-weight: bold;
 }
 
 button:hover {
