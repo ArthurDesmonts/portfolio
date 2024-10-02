@@ -287,6 +287,7 @@ const resetTypingAnimation = (element) => {
 .subTitle {
   font-size: 16px;
   font-style: italic;
+  margin-right: 2em;
 }
 
 button {
