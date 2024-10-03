@@ -445,6 +445,7 @@ button:hover {
   .typing-effect-container {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .typing-effect {
