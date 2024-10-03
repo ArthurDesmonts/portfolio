@@ -26,13 +26,13 @@ window.onscroll = function() {
   } else {
     menu.style.width = "80%";
   }
-}
+};
 </script>
 
 <template>
   <div id="menu" :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
-      <li class="phoneHided no-cursor"><p>Arthur Desmonts</p></li>
+      <li class="phoneHided no-cursor"><p class="restricted-display-responsive-bar">Arthur Desmonts</p></li>
       <li class="phoneHided hover-allowed" @click="scrollToSection()"><span class="icon">#</span> Accueil</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><span class="icon">#</span> Qui suis-je?</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><span class="icon">#</span> Mes Projets</li>
@@ -104,6 +104,35 @@ p{
 
 .menu.dark-theme {
   background-color: rgb(40, 43, 50, 0.8);
+}
+
+@media (max-width: 1450px) {
+  .menu {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 1em;
+    padding-right: 1em;
+  }
+
+  ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  li {
+    width: auto;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .restricted-display-responsive-bar {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
