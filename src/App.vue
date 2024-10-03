@@ -83,7 +83,7 @@ const resetTypingAnimation = (element) => {
     <div class="HeadLine">
       <div>
         <div class="typing-effect-container">
-          <h1>Arthur Desmonts, 20 Ans, développeur <span class="icon typing-effect">Full-Stack.</span></h1>
+          <h1>Arthur Desmonts, <br> Développeur <span class="icon typing-effect">Full-Stack<span class="not-icon">.</span></span></h1>
         </div>
         <p class="subTitle">Diplômé d'un BUT Informatique (BAC +3) - parcours
           réalisation d'applications :
@@ -341,9 +341,14 @@ button:hover {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 8px var(--text-color) solid;
-  animation: typing 4s steps(80, end), blink 0.75s step-end infinite;
-  vertical-align: bottom;
+  border-right: 6px var(--text-color) solid;
+  animation: typing 1.5s steps(30, end), blink 0.75s step-end infinite;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.not-icon {
+  color: var(--text-color);
 }
 
 @keyframes typing {
@@ -437,13 +442,18 @@ button:hover {
     content: none;
   }
 
+  .typing-effect-container {
+    display: flex;
+    align-items: center;
+  }
+
   .typing-effect {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 8px var(--text-color) solid;
-    animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
-    vertical-align: bottom;
+    border-right: 6px var(--text-color) solid;
+    animation: typing 1.5s steps(30, end), blink 0.75s step-end infinite;
+    vertical-align: middle;
   }
 }
 </style>
