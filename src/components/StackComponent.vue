@@ -101,6 +101,8 @@ onMounted(() => {
 
 }
 
+/* Major part from : https://codepen.io/andrew-wiggins/pen/ExVQjQv */
+
 .stair-box ul li {
   --per: 50; /* Default percentage */
   --dur: calc(calc(var(--per) / 100) * 1.5s);
@@ -178,6 +180,10 @@ onMounted(() => {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .stair-box ul li:after {
+    width: calc(calc(var(--per) * 1%) - 2px);
   }
 }
 </style>
