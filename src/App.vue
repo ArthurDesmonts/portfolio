@@ -5,6 +5,7 @@ import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
 import Footer from "@/components/Footer.vue";
 import DownloadButton from "@/components/DownloadCV.vue";
+import StackComponent from "@/components/StackComponent.vue";
 
 
 const email = "arthur.desmonts@gmail.com";
@@ -149,6 +150,8 @@ const resetTypingAnimation = (element) => {
         </div>
       </div>
     </div>
+    <hr class="separateur">
+    <StackComponent></StackComponent>
     <hr class="separateur">
     <div id="hobbies" class="double-container">
         <div class="loisir">
