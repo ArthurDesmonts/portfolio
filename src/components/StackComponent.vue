@@ -144,7 +144,7 @@ onMounted(() => {
   width: 0;
   bottom: 0;
   transition: all var(--dur) ease 0s;
-  animation: start 1s ease 0s 2 alternate;
+  animation: start 1.2s ease 0s 2 alternate;
 }
 
 .stair-box:hover ul li:after {
