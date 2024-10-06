@@ -125,7 +125,8 @@ onMounted(() => {
   padding: 20px 0;
   position: relative;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 1em;
+  font-family: "Consolas", monospace;
 }
 
 .stair-box ul li:before {
