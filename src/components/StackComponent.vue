@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted} from 'vue';
+import { onMounted } from 'vue';
 
 //change the background color the box depending on the theme selected
 onMounted(() => {
@@ -10,6 +10,21 @@ onMounted(() => {
   });
 
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  //reanimate the progress bar every time it's displayed
+  const intersectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      } else {
+        entry.target.classList.remove('animate');
+      }
+    });
+  });
+
+  document.querySelectorAll('.stair-box ul li').forEach(el => {
+    intersectionObserver.observe(el);
+  });
 });
 
 </script>
@@ -98,7 +113,6 @@ onMounted(() => {
 .stair-box ul {
   list-style: none;
   padding: 10px;
-
 }
 
 /* Major part from : https://codepen.io/andrew-wiggins/pen/ExVQjQv */
@@ -144,7 +158,14 @@ onMounted(() => {
   width: 0;
   bottom: 0;
   transition: all var(--dur) ease 0s;
-  animation: start 1.2s ease 0s 2 alternate;
+}
+
+.stair-box ul li:hover:after {
+  width: calc(calc(var(--per) * 1%) - 2px);
+}
+
+.stair-box ul li.animate:after {
+  animation: start 1s ease 0s 2 alternate;
 }
 
 .stair-box:hover ul li:after {
