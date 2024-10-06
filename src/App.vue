@@ -163,9 +163,11 @@ const resetTypingAnimation = (element) => {
         <div id="contact" class="contact">
           <h2><span class="icon">#</span> Me Contacter</h2>
           <p class="justify-content">Je suis actuellement en <span class="icon">recherche d'un premier emploi</span> dans le domaine du développement <span class="icon">Front-End</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
-          <div class="mail-succes-listener">
-            <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
-            <DownloadButton class="innerParagraphButton contact"></DownloadButton>
+          <div class="mail-message">
+            <div class="mail-succes-listener">
+              <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
+              <DownloadButton class="innerParagraphButton contact"></DownloadButton>
+            </div>
             <p id="email-event" class="event-content"></p>
           </div>
         </div>
@@ -363,6 +365,30 @@ button:hover {
   50% { border-color: transparent; }
 }
 
+@media (max-width: 1010px) {
+  .card-alignement {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .double-container {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .loisir {
+    margin: 0;
+  }
+
+  .contact {
+    margin: 0;
+  }
+
+  .innerParagraphButton {
+    margin : 1em;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 1em;
@@ -381,14 +407,6 @@ button:hover {
     margin: 0;
   }
 
-  .contact {
-    margin: 0;
-  }
-
-  .loisir {
-    margin: 0;
-  }
-
   .separateur {
     margin: 1em;
   }
@@ -398,21 +416,17 @@ button:hover {
   }
 
   .mail-succes-listener {
-    flex-direction: column-reverse;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .mail-message {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   .description-split {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .card-alignement {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .double-container {
     flex-direction: column;
     gap: 1em;
   }
