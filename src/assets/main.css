@@ -72,3 +72,48 @@ body.dark-theme {
     max-width: 100%;
   }
 }
+
+.appears-left {
+  animation: appearLeft 1s ease-out;
+}
+
+@keyframes appearLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.appears-right{
+  animation: appearRight 1s ease-out;
+}
+
+@keyframes appearRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.appears-top {
+  animation: appearTop 1s ease-out;
+}
+
+@keyframes appearTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
