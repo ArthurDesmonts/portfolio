@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, ref, watch} from "vue";
+import {onMounted, ref} from "vue";
 import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
@@ -7,9 +7,10 @@ import Footer from "@/components/Footer.vue";
 import DownloadButton from "@/components/DownloadCV.vue";
 import StackComponent from "@/components/StackComponent.vue";
 import { globalAppearsController, typingEffect } from "@/utils/AnimationObserverController.js";
-
+import MailSender from "@/components/MailSender.vue";
 
 const email = "arthur.desmonts@gmail.com";
+const showMailSender = ref(false);
 
 const copyToClipboard = () => {
   navigator.clipboard.writeText(email).then(() => {
@@ -17,6 +18,7 @@ const copyToClipboard = () => {
     setTimeout(() => {
       document.getElementById("email-event").innerHTML = "";
     }, 1800);
+    showMailSender.value = !showMailSender.value;
   }).catch(err => {
     document.getElementById("email-event").innerHTML = "Erreur lors de la copie de l'email";
     setTimeout(() => {
@@ -63,9 +65,6 @@ onMounted(() => {
   //observer for appears animation
   globalAppearsController();
 });
-
-
-
 </script>
 
 <template>
@@ -161,6 +160,13 @@ onMounted(() => {
             <p id="email-event" class="event-content"></p>
           </div>
         </div>
+    </div>
+    <div id="mail-div" v-if="showMailSender === true" class="appears-bot">
+      <hr class="separateur">
+      <div class="presentation">
+        <h2><span class="icon">#</span> M'envoyer un mail</h2>
+        <MailSender></MailSender>
+      </div>
     </div>
     <Footer></Footer>
   </div>
