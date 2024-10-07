@@ -6,7 +6,7 @@ import Card from "@/components/Card.vue";
 import Footer from "@/components/Footer.vue";
 import DownloadButton from "@/components/DownloadCV.vue";
 import StackComponent from "@/components/StackComponent.vue";
-import {appearsBot, appearsLeft, appearsRight, appearsTop} from "@/utils/AppearsController.js";
+import { globalAppearsController, typingEffect } from "@/utils/AnimationObserverController.js";
 
 
 const email = "arthur.desmonts@gmail.com";
@@ -58,29 +58,13 @@ onMounted(() => {
   });
 
   //observer for typing animation
-  const typingEffectElement = document.querySelector('.typing-effect');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        resetTypingAnimation(entry.target);
-      }
-    });
-  });
+  typingEffect();
 
-  observer.observe(typingEffectElement);
-
-  appearsTop();
-  appearsBot();
-  appearsLeft();
-  appearsRight();
+  //observer for appears animation
+  globalAppearsController();
 });
 
-//for re-casting typing animation
-const resetTypingAnimation = (element) => {
-  element.style.animation = 'none';
-  element.offsetHeight; // trigger reflow
-  element.style.animation = '';
-};
+
 
 </script>
 
@@ -97,7 +81,7 @@ const resetTypingAnimation = (element) => {
           conception, développement,
           validation</p>
       </div>
-      <ProfilPicComponent class="profilPic"></ProfilPicComponent>
+      <ProfilPicComponent class="profilPic appears-scale-increase"></ProfilPicComponent>
     </div>
     <hr id="about" class="separateur">
     <div class="presentation">

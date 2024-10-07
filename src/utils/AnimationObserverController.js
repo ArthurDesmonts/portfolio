@@ -62,4 +62,50 @@ function appearsRight() {
     });
 }
 
-export { appearsTop, appearsBot, appearsLeft, appearsRight };
+function appearsScaleIncrease() {
+    const appearsObserverScaleIncrease = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appears-scale-increase');
+            } else {
+                entry.target.classList.remove('appears-scale-increase');
+            }
+        });
+    });
+
+    document.querySelectorAll('.appears-scale-increase').forEach(el => {
+        appearsObserverScaleIncrease.observe(el);
+    });
+}
+
+function typingEffect() {
+    const typingEffectElement = document.querySelector('.typing-effect');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                resetTypingAnimation(entry.target);
+            }
+        });
+    });
+
+    observer.observe(typingEffectElement);
+}
+
+//for re-casting typing animation
+const resetTypingAnimation = (element) => {
+    element.style.animation = 'none';
+    element.offsetHeight; // trigger reflow
+    element.style.animation = '';
+};
+
+
+//global controller for all appears
+function globalAppearsController() {
+    appearsTop();
+    appearsBot();
+    appearsLeft();
+    appearsRight();
+    appearsScaleIncrease();
+}
+
+export { globalAppearsController, typingEffect };
