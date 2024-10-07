@@ -9,22 +9,10 @@ import StackComponent from "@/components/StackComponent.vue";
 import { globalAppearsController, typingEffect } from "@/utils/AnimationObserverController.js";
 import MailSender from "@/components/MailSender.vue";
 
-const email = "arthur.desmonts@gmail.com";
 const showMailSender = ref(false);
 
 const copyToClipboard = () => {
-  navigator.clipboard.writeText(email).then(() => {
-    document.getElementById("email-event").innerHTML = "Email copié dans le presse-papier";
-    setTimeout(() => {
-      document.getElementById("email-event").innerHTML = "";
-    }, 1800);
     showMailSender.value = !showMailSender.value;
-  }).catch(err => {
-    document.getElementById("email-event").innerHTML = "Erreur lors de la copie de l'email";
-    setTimeout(() => {
-      document.getElementById("email-event").innerHTML = "";
-    }, 1800);
-  });
 };
 
 const handleCardExpansion = (titleText) => {
@@ -154,7 +142,7 @@ onMounted(() => {
           <p class="justify-content">Je suis actuellement en <span class="icon">recherche d'un premier emploi</span> dans le domaine du développement <span class="icon">Front-End</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
           <div class="mail-message">
             <div class="mail-succes-listener">
-              <button class="innerParagraphButton contact" @click="copyToClipboard">Mon mail</button>
+              <button class="innerParagraphButton contact" @click="copyToClipboard">Contacter</button>
               <DownloadButton class="innerParagraphButton contact"></DownloadButton>
             </div>
             <p id="email-event" class="event-content"></p>

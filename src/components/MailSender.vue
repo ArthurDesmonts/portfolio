@@ -13,6 +13,8 @@ const adjustTextareaHeight = () => {
 onMounted(() => {
   ThemeBackGroundObserver('.mail-box-component');
 });
+
+const email = "arthur.desmonts@gmail.com";
 </script>
 
 <template>
