@@ -161,7 +161,7 @@ onMounted(() => {
           </div>
         </div>
     </div>
-    <div id="mail-div" v-if="showMailSender === true" class="appears-bot">
+    <div id="mail-div" v-show="showMailSender === true" class="appears-bot">
       <hr class="separateur">
       <div class="presentation">
         <h2><span class="icon">#</span> M'envoyer un mail</h2>
