@@ -6,6 +6,7 @@ import Card from "@/components/Card.vue";
 import Footer from "@/components/Footer.vue";
 import DownloadButton from "@/components/DownloadCV.vue";
 import StackComponent from "@/components/StackComponent.vue";
+import {appearsBot, appearsLeft, appearsRight, appearsTop} from "@/utils/AppearsController.js";
 
 
 const email = "arthur.desmonts@gmail.com";
@@ -67,6 +68,11 @@ onMounted(() => {
   });
 
   observer.observe(typingEffectElement);
+
+  appearsTop();
+  appearsBot();
+  appearsLeft();
+  appearsRight();
 });
 
 //for re-casting typing animation
@@ -151,7 +157,7 @@ const resetTypingAnimation = (element) => {
       </div>
     </div>
     <hr class="separateur">
-    <StackComponent class="appears-top"></StackComponent>
+    <StackComponent class="appears-bot"></StackComponent>
     <hr class="separateur">
     <div id="hobbies" class="double-container">
         <div class="loisir appears-left">
