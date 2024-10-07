@@ -2,6 +2,14 @@
 import {onMounted} from "vue";
 import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
 
+const adjustTextareaHeight = () => {
+  const textarea = document.getElementById('mailContent');
+  if (textarea) {
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  }
+};
+
 onMounted(() => {
   ThemeBackGroundObserver('.mail-box-component');
 });
@@ -19,7 +27,7 @@ onMounted(() => {
     <hr class="soft-edge" />
     <div class="main-corps">
       <input class="subject" type="text" placeholder="Sujet" />
-      <textarea class="content" placeholder="Contenu"></textarea>
+      <textarea id="mailContent" class="content" placeholder="Contenu" @input="adjustTextareaHeight"></textarea>
     </div>
     <div class="button-position">
       <button>Envoyer</button>
