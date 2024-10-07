@@ -99,7 +99,7 @@ p{
 }
 
 .menu.light-theme {
-  background-color: rgb(247, 242, 240, 0.8);
+  background-color: rgb(230, 219, 216, 0.8);
 }
 
 .menu.dark-theme {

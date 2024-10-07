@@ -157,7 +157,7 @@ const closeCard = () => {
 }
 
 .light-background {
-  background-color: #e1e3e1;
+  background-color: #a8b2bd;
   color: black;
   transition: background-color 0.2s;
 }
