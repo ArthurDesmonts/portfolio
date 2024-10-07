@@ -1,15 +1,10 @@
 <script setup>
 import { onMounted } from 'vue';
+import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
 
 //change the background color the box depending on the theme selected
 onMounted(() => {
-  const observer = new MutationObserver(() => {
-    document.querySelectorAll('.stair-box').forEach(box => {
-      box.style.backgroundColor = document.body.classList.contains('dark-theme') ? '#3c424d' : '#e1e3e1';
-    });
-  });
-
-  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  ThemeBackGroundObserver('.stair-box');
 
   //reanimate the progress bar every time it's displayed
   const intersectionObserver = new IntersectionObserver(entries => {
