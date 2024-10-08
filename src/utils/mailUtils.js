@@ -5,7 +5,7 @@ export const mailCheck = ref(false);
 export const buttonSendStateListener = () => {
     const sendButton = document.querySelector('.send-button');
     if (sendButton) {
-        if (mailCheck.value) {
+        if (mailCheck.value && checkConditions()) {
             sendButton.disabled = false;
             sendButton.style.backgroundColor = '#c16ed2';
             sendButton.style.color = '#3c424d';
@@ -33,3 +33,10 @@ export const isMailAdress = () => {
         }
     }
 };
+
+export const checkConditions = () => {
+    const condition = document.getElementById('cond');
+    if (condition) {
+        return condition.checked;
+    }
+}

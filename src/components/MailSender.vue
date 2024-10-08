@@ -2,7 +2,7 @@
 import {onMounted, ref} from "vue";
 import emailjs from 'emailjs-com';
 import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
-import { buttonSendStateListener, isMailAdress, mailCheck } from "@/utils/mailUtils";
+import { buttonSendStateListener, isMailAdress, mailCheck, checkConditions } from "@/utils/mailUtils";
 
 const adjustTextareaHeight = () => {
   const textarea = document.getElementById('mailContent');
@@ -71,6 +71,11 @@ const sendMail = () => {
     <div class="main-corps">
       <input class="subject" type="text" v-model="subject" placeholder="Sujet" />
       <textarea id="mailContent" class="content" placeholder="Contenu" v-model="content" @input="adjustTextareaHeight"></textarea>
+      <div class="check-conditions">
+        <input type="checkbox" id="cond" @input="buttonSendStateListener">
+        <p class="tiny-font">En cochant cette case, vous acceptez que je reçoive les informations que vous avez renseignées plus haut pour que je vous recontacte. Mais également que celle-ci apparaisse dans un historique sur un compte privé.
+          <span class="icon">EmailJS.</span></p>
+      </div>
     </div>
     <div class="button-position">
       <button class="send-button" :disabled="!mailCheck" @click="sendMail">Envoyer</button>
@@ -172,5 +177,12 @@ button {
   display: flex;
   justify-content: end;
   padding: 20px;
+}
+
+.check-conditions {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 1em;
 }
 </style>

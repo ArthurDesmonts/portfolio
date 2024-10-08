@@ -147,3 +147,7 @@ body.dark-theme {
         transform: scale(1);
     }
 }
+
+.tiny-font {
+  font-size: 0.8rem;
+}
