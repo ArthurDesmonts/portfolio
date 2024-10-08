@@ -1,6 +1,7 @@
 <script setup>
-import {onMounted} from "vue";
+import {onMounted, ref} from "vue";
 import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
+import { buttonSendStateListener, isMailAdress, sendMail, mailCheck } from "@/utils/mailUtils";
 
 const adjustTextareaHeight = () => {
   const textarea = document.getElementById('mailContent');
@@ -12,9 +13,9 @@ const adjustTextareaHeight = () => {
 
 onMounted(() => {
   ThemeBackGroundObserver('.mail-box-component');
+  buttonSendStateListener();
 });
 
-const email = "arthur.desmonts@gmail.com";
 </script>
 
 <template>
@@ -24,7 +25,7 @@ const email = "arthur.desmonts@gmail.com";
         <input class="name" type="text" placeholder="Nom" />
         <input class="firstname" type="text" placeholder="Prénom" />
       </div>
-        <input class="extern-mail" type="text" placeholder="Votre e-mail" />
+        <input class="extern-mail" type="text" placeholder="Votre e-mail" @input="isMailAdress"/>
     </div>
     <hr class="soft-edge" />
     <div class="main-corps">
@@ -32,7 +33,7 @@ const email = "arthur.desmonts@gmail.com";
       <textarea id="mailContent" class="content" placeholder="Contenu" @input="adjustTextareaHeight"></textarea>
     </div>
     <div class="button-position">
-      <button>Envoyer</button>
+      <button class="send-button" :disabled="!mailCheck" @click="sendMail">Envoyer</button>
     </div>
   </div>
 </template>
@@ -121,7 +122,7 @@ button {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #c16ed2;
+  background-color: gray;
   color: var(--background-color);
   font-weight: bold;
   cursor: pointer;
