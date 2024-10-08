@@ -80,8 +80,8 @@ const sendMail = () => {
       <textarea id="mailContent" class="content" placeholder="Contenu" v-model="content" @input="adjustTextareaHeight"></textarea>
       <div class="check-conditions">
         <input type="checkbox" id="cond" @input="buttonSendStateListener">
-        <p class="tiny-font">En cochant cette case, vous acceptez que je reçoive les informations que vous avez renseignées plus haut pour que je vous recontacte. Mais également que celle-ci apparaisse dans un historique sur un compte privé.
-          <span class="icon">EmailJS.</span></p>
+        <p class="tiny-font">En cochant cette case, vous acceptez que je reçoive les informations que vous avez renseignées plus haut pour que je vous recontacte. Mais également que celle-ci apparaisse dans un historique sur un compte privé
+          <span class="icon"> EmailJS.</span></p>
       </div>
     </div>
     <div class="button-position">
