@@ -2,7 +2,9 @@
 import {onMounted, ref} from "vue";
 import emailjs from 'emailjs-com';
 import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
-import { buttonSendStateListener, isMailAdress, mailCheck, checkConditions } from "@/utils/mailUtils";
+import { buttonSendStateListener, isMailAdress, mailCheck } from "@/utils/mailUtils";
+import CustomAlert from '@/components/CustomAlert.vue';
+
 
 const adjustTextareaHeight = () => {
   const textarea = document.getElementById('mailContent');
@@ -25,6 +27,19 @@ const adress = ref('');
 const subject = ref('');
 const content = ref('');
 
+const visibleAlert = ref(false);
+const emited = ref('');
+const kind = ref(true);
+
+const showAlert = (message, success) => {
+  emited.value = message;
+  kind.value = success;
+  visibleAlert.value = true;
+  setTimeout(() => {
+    visibleAlert.value = false;
+  }, 3000);
+};
+
 const sendMail = () => {
   const templateParams = {
     name: name.value,
@@ -42,7 +57,7 @@ const sendMail = () => {
   ).then(
       (response) => {
         console.log('Email envoyé avec succès!', response.status, response.text);
-        alert('Email envoyé avec succès!');
+        showAlert('Email envoyé avec succès!',true);
         name.value = '';
         firstName.value = '';
         adress.value = '';
@@ -51,7 +66,7 @@ const sendMail = () => {
       },
       (error) => {
         console.log('Erreur lors de l\'envoi de l\'email...', error);
-        alert('Erreur lors de l\'envoi de l\'email');
+        showAlert('Erreur lors de l\'envoi de l\'email',false);
       }
   );
 };
@@ -60,6 +75,9 @@ const sendMail = () => {
 
 <template>
   <div class="mail-box-component">
+    <div class="alert-position">
+      <CustomAlert v-if="visibleAlert" :message="emited" :kind="kind"/>
+    </div>
     <div class="info-box">
       <div class="ID-part">
         <input class="name" type="text" v-model="name" placeholder="Nom" />
@@ -84,6 +102,12 @@ const sendMail = () => {
 </template>
 
 <style scoped>
+.alert-position {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 .mail-box-component {
   background-color: #3c424d;
   border-radius: 10px;
