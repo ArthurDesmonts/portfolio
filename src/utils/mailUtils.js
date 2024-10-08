@@ -40,3 +40,16 @@ export const checkConditions = () => {
         return condition.checked;
     }
 }
+
+export const visibleAlert = ref(false);
+export const emited = ref('');
+export const kind = ref(true);
+
+export const showAlert = (message, success) => {
+    emited.value = message;
+    kind.value = success;
+    visibleAlert.value = true;
+    setTimeout(() => {
+        visibleAlert.value = false;
+    }, 3000);
+};
