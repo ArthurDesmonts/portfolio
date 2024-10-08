@@ -185,4 +185,17 @@ button {
   padding: 10px;
   gap: 1em;
 }
+
+.send-button:disabled {
+  cursor: not-allowed;
+}
+
+.send-button:disabled:hover {
+  transform: scale(1);
+}
+
+.send-button:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
 </style>
