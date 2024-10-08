@@ -33,21 +33,3 @@ export const isMailAdress = () => {
         }
     }
 };
-
-export const sendMail = () => {
-    const name = document.querySelector('.name');
-    const firstname = document.querySelector('.firstname');
-    const mail = document.querySelector('.extern-mail');
-    const subject = document.querySelector('.subject');
-    const content = document.querySelector('.content');
-
-    if (mailCheck.value) {
-        console.log('Nom :', name.value);
-        console.log('Prénom :', firstname.value);
-        console.log('E-mail :', mail.value);
-        console.log('Sujet :', subject.value);
-        console.log('Contenu :', content.value);
-    } else {
-        console.log('Veuillez renseigner un e-mail valide');
-    }
-};

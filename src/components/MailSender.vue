@@ -1,7 +1,8 @@
 <script setup>
 import {onMounted, ref} from "vue";
+import emailjs from 'emailjs-com';
 import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
-import { buttonSendStateListener, isMailAdress, sendMail, mailCheck } from "@/utils/mailUtils";
+import { buttonSendStateListener, isMailAdress, mailCheck } from "@/utils/mailUtils";
 
 const adjustTextareaHeight = () => {
   const textarea = document.getElementById('mailContent');
@@ -16,21 +17,60 @@ onMounted(() => {
   buttonSendStateListener();
 });
 
+//EMAILJS
+
+const name = ref('');
+const firstName = ref('');
+const adress = ref('');
+const subject = ref('');
+const content = ref('');
+
+const sendMail = () => {
+  const templateParams = {
+    name: name.value,
+    firstName: firstName.value,
+    adress: adress.value,
+    subject: subject.value,
+    content: content.value,
+  };
+
+  emailjs.send(
+      'service_ftho9n8',
+      'template_e2ztnon',
+      templateParams,
+      'zn7l75sBmwYRr5hmu'
+  ).then(
+      (response) => {
+        console.log('Email envoyé avec succès!', response.status, response.text);
+        alert('Email envoyé avec succès!');
+        name.value = '';
+        firstName.value = '';
+        adress.value = '';
+        subject.value = '';
+        content.value = '';
+      },
+      (error) => {
+        console.log('Erreur lors de l\'envoi de l\'email...', error);
+        alert('Erreur lors de l\'envoi de l\'email');
+      }
+  );
+};
+
 </script>
 
 <template>
   <div class="mail-box-component">
     <div class="info-box">
       <div class="ID-part">
-        <input class="name" type="text" placeholder="Nom" />
-        <input class="firstname" type="text" placeholder="Prénom" />
+        <input class="name" type="text" v-model="name" placeholder="Nom" />
+        <input class="firstname" type="text" v-model="firstName" placeholder="Prénom" />
       </div>
-        <input class="extern-mail" type="text" placeholder="Votre e-mail" @input="isMailAdress"/>
+        <input class="extern-mail" type="text" placeholder="Votre e-mail" v-model="adress" @input="isMailAdress"/>
     </div>
     <hr class="soft-edge" />
     <div class="main-corps">
-      <input class="subject" type="text" placeholder="Sujet" />
-      <textarea id="mailContent" class="content" placeholder="Contenu" @input="adjustTextareaHeight"></textarea>
+      <input class="subject" type="text" v-model="subject" placeholder="Sujet" />
+      <textarea id="mailContent" class="content" placeholder="Contenu" v-model="content" @input="adjustTextareaHeight"></textarea>
     </div>
     <div class="button-position">
       <button class="send-button" :disabled="!mailCheck" @click="sendMail">Envoyer</button>
