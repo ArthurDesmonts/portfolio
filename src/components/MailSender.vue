@@ -2,7 +2,7 @@
 import {onMounted, ref} from "vue";
 import emailjs from 'emailjs-com';
 import {ThemeBackGroundObserver} from "@/utils/DivBackgroundThemeObserver";
-import { buttonSendStateListener, isMailAdress, mailCheck } from "@/utils/mailUtils";
+import { buttonSendStateListener, isMailAdress, mailCheck, kind, emited, visibleAlert, showAlert } from "@/utils/mailUtils";
 import CustomAlert from '@/components/CustomAlert.vue';
 
 
@@ -17,6 +17,7 @@ const adjustTextareaHeight = () => {
 onMounted(() => {
   ThemeBackGroundObserver('.mail-box-component');
   buttonSendStateListener();
+  visibleAlert.value = false;
 });
 
 //EMAILJS
@@ -27,18 +28,6 @@ const adress = ref('');
 const subject = ref('');
 const content = ref('');
 
-const visibleAlert = ref(false);
-const emited = ref('');
-const kind = ref(true);
-
-const showAlert = (message, success) => {
-  emited.value = message;
-  kind.value = success;
-  visibleAlert.value = true;
-  setTimeout(() => {
-    visibleAlert.value = false;
-  }, 3000);
-};
 
 const sendMail = () => {
   const templateParams = {

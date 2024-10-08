@@ -30,16 +30,17 @@ const props = defineProps({
 }
 
 .alert-success {
-  background-color: green;
+  background-color: #41b56c;
 }
 
 .alert-error {
-  background-color: red;
+  background-color: #991a36;
 }
 
 .text {
   font-size: 1.2rem;
   font-weight: 500;
   padding: 10px;
+  font-family: "Consolas", monospace;
 }
 </style>
