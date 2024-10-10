@@ -17,7 +17,7 @@ function redirectToLinkedIn() {
   width: 420px;
   height: 420px;
   border-radius: 300px 210px 0 0;
-  background-color: var(--interactive-component-color);
+  background-color: var(--profile-background);
   display: flex;
   justify-content: center;
   align-items: center;

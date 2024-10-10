@@ -1,10 +1,23 @@
 @import './base.css';
 
 :root {
-  --background-color: #e6dbd8;
-  --text-color: #000000;
+  --background-color: color(display-p3 0.998 0.989 0.988);
+  --background-color-rgb: 255, 252, 252;
+  --text-color: color(display-p3 0.128 0.122 0.147);
   --text-color-rgb: 0, 0, 0;
-  --border-color: red;
+  --button-color: color(display-p3 0.569 0.639 0.916);
+  --button-color-hover: color(display-p3 0.276 0.384 0.837);
+  --interactive-component-color: color(display-p3 0.933 0.948 0.992);
+  --border-color: color(display-p3 0.767 0.814 0.995);
+  --tile-color: color(display-p3 0.276 0.384 0.837);
+  --icon-color: color(display-p3 0.15 0.44 0.84);
+
+  --stack-back-color: color(display-p3 0.569 0.639 0.916);
+  --stack-front-color: color(display-p3 0.276 0.384 0.837);
+
+  --profile-background: color(display-p3 0.721 0.727 0.955);
+
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -38,7 +51,7 @@ button {
 }
 
 .icon {
-  color: color(display-p3 0.57 0.373 0.791);
+  color: var(--icon-color);
   font-weight: bold;
 }
 
@@ -56,6 +69,14 @@ body.dark-theme {
   --interactive-component-color: color(display-p3 0.154 0.123 0.256);
   --border-color: color(display-p3 0.269 0.223 0.449);
   --tile-color: color(display-p3 0.417 0.341 0.784);
+  --icon-color: color(display-p3 0.57 0.373 0.791);
+
+  --stack-back-color: color(display-p3 0.224 0.137 0.297);
+  --stack-front-color: color(display-p3 0.57 0.373 0.791);
+
+  --profile-background: color(display-p3 0.154 0.123 0.256);
+
+  --shadow:rgba(255, 255, 255, 0.3);
 }
 
 .bodyElements {

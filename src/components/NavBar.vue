@@ -80,13 +80,13 @@ p{
     text-underline-offset: 0;
   }
   to {
-    text-decoration-color: color(display-p3 0.57 0.373 0.791);
+    text-decoration-color: var(--button-color);
     text-underline-offset: 5px;
   }
 }
 
 .hover-allowed:hover {
-  color: color(display-p3 0.57 0.373 0.791);
+  color: var(--icon-color);
   text-decoration: underline;
   animation: underlineAnimation 0.3s forwards;
 }

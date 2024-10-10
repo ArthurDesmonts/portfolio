@@ -106,9 +106,9 @@ const closeCard = () => {
 .card {
   position: relative;
   width: 245px;
-  border: 4px solid var(--border-color);
+  border: 4px solid var(--interactive-component-color);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow);
   background-size: cover;
   background-position: center;
 }
@@ -157,7 +157,7 @@ const closeCard = () => {
 }
 
 .light-background {
-  background-color: #a8b2bd;
+  background-color: var(--interactive-component-color);
   color: black;
   transition: background-color 0.2s;
 }

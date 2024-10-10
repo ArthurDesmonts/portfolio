@@ -90,7 +90,7 @@ onMounted(() => {
 }
 
 .stair-box:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px var(--shadow);
   transition: 0.3s;
   transform: scale(1.005);
 }
@@ -135,7 +135,7 @@ onMounted(() => {
   border-radius: 2px;
   border: 1px solid;
   border-color: #111 #323232 #323232 #111;
-  --track: var(--button-color-hover);
+  --track: var(--stack-back-color);
   background: linear-gradient(
       90deg,
       var(--track) calc(calc(var(--per) * 1%) + 4px),
@@ -147,9 +147,9 @@ onMounted(() => {
   content: "";
   height: 11px;
   margin: 0 0 2px 0;
-  background: var(--button-color);
+  background: var(--stack-front-color);
   position: absolute;
-  box-shadow: 0 0 10px 1px var(--button-color);
+  box-shadow: 0 0 10px 1px var(--stack-front-color);
   left: 3px;
   width: 0;
   bottom: 0;
@@ -182,8 +182,8 @@ onMounted(() => {
 .stair-box ul li.sk-ios { --per: 40; }
 .stair-box ul li.sk-html { --per: 90; }
 .stair-box ul li.sk-css { --per: 95; }
-.stair-box ul li.sk-js { --per: 70; }
-.stair-box ul li.sk-vue { --per: 70; }
+.stair-box ul li.sk-js { --per: 80; }
+.stair-box ul li.sk-vue { --per: 80; }
 .stair-box ul li.sk-oracle { --per: 60; }
 .stair-box ul li.sk-sqlserver { --per: 40; }
 .stair-box ul li.sk-postgresql { --per: 50; }
