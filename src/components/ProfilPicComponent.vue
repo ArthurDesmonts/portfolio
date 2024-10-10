@@ -17,7 +17,7 @@ function redirectToLinkedIn() {
   width: 420px;
   height: 420px;
   border-radius: 300px 210px 0 0;
-  background-color: #c16ed2;
+  background-color: var(--interactive-component-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ function redirectToLinkedIn() {
 .inner-circle {
   width: 100px;
   height: 100px;
-  background-color: #e9f288;
+  background-color: color(display-p3 1 0.77 0.26);
   border-radius: 50%;
   position: absolute;
   top: 30px;

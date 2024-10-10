@@ -216,7 +216,7 @@ onMounted(() => {
 .justify-content::after {
   content: '“';
   font-size: 2em;
-  color: #c16ed2;
+  color: var(--tile-color);
   position: absolute;
   font-weight: bold;
 }
@@ -260,7 +260,7 @@ onMounted(() => {
 
 .separateur {
   margin: 4em 5em;
-  border: 1px solid #c16ed2;
+  border: 1px solid var(--border-color);
 }
 
 .description-split {
@@ -280,7 +280,7 @@ onMounted(() => {
 }
 
 button {
-  background-color: #c16ed2;
+  background-color: var(--button-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -292,7 +292,7 @@ button {
 }
 
 button:hover {
-  background-color: #a44c9e;
+  background-color: var(--button-color-hover);
 }
 
 .mail-succes-listener {
@@ -310,7 +310,7 @@ button:hover {
 .event-content {
   margin-left: 1em;
   font-weight: bold;
-  color: #c16ed2;
+  color: var(--button-color);
 }
 
 .double-container {

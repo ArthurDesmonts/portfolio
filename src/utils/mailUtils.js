@@ -7,8 +7,8 @@ export const buttonSendStateListener = () => {
     if (sendButton) {
         if (mailCheck.value && checkConditions()) {
             sendButton.disabled = false;
-            sendButton.style.backgroundColor = '#c16ed2';
-            sendButton.style.color = '#3c424d';
+            sendButton.style.backgroundColor = 'var(--button-color)';
+            sendButton.style.color = 'var(--text-color)';
         } else {
             sendButton.disabled = true;
             sendButton.style.backgroundColor = 'gray';

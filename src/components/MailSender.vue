@@ -98,7 +98,7 @@ const sendMail = () => {
 }
 
 .mail-box-component {
-  background-color: #3c424d;
+  background-color: var(--interactive-component-color);
   border-radius: 10px;
   margin-top: 1em;
 }
@@ -210,5 +210,6 @@ button {
 .send-button:hover {
   transition: 0.3s;
   transform: scale(1.1);
+  background-color: var(--button-color-hover);
 }
 </style>

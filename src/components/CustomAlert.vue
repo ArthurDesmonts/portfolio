@@ -18,7 +18,7 @@ const props = defineProps({
 <style scoped>
 .custom-alert {
   border-radius: 5px;
-  color: white;
+  color: var(--text-color);
   width: 100%;
   min-height: 50px;
   height: auto;

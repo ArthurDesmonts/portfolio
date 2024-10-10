@@ -43,9 +43,6 @@ window.onscroll = function() {
 </template>
 <style scoped>
 /* CSS */
-.icon {
-  color: #c16ed2;
-}
 
 ul {
   display: flex;
@@ -83,13 +80,13 @@ p{
     text-underline-offset: 0;
   }
   to {
-    text-decoration-color: #c16ed2;
+    text-decoration-color: color(display-p3 0.57 0.373 0.791);
     text-underline-offset: 5px;
   }
 }
 
 .hover-allowed:hover {
-  color: #c16ed2;
+  color: color(display-p3 0.57 0.373 0.791);
   text-decoration: underline;
   animation: underlineAnimation 0.3s forwards;
 }
@@ -99,11 +96,11 @@ p{
 }
 
 .menu.light-theme {
-  background-color: rgb(230, 219, 216, 0.8);
+  background-color: rgb(var(--background-color-rgb), 0.8);
 }
 
 .menu.dark-theme {
-  background-color: rgb(40, 43, 50, 0.8);
+  background-color: rgb(var(--background-color-rgb), 0.8);
 }
 
 @media (max-width: 1450px) {

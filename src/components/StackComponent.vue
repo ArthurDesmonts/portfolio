@@ -84,9 +84,9 @@ onMounted(() => {
 .stair-box {
   width: 23%;
   padding: 20px;
-  background-color: #3c424d;
+  background-color: var(--interactive-component-color);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(var(--text-color-rgb), 0.1);
 }
 
 .stair-box:hover {
@@ -127,7 +127,7 @@ onMounted(() => {
 .stair-box ul li:before {
   content: "";
   position: absolute;
-  background: #1c1c1c;
+  background: var(--interactive-component-color);
   height: 16px;
   width: 100%;
   left: 0;
@@ -135,7 +135,7 @@ onMounted(() => {
   border-radius: 2px;
   border: 1px solid;
   border-color: #111 #323232 #323232 #111;
-  --track: #5c3959;
+  --track: var(--button-color-hover);
   background: linear-gradient(
       90deg,
       var(--track) calc(calc(var(--per) * 1%) + 4px),
@@ -147,9 +147,9 @@ onMounted(() => {
   content: "";
   height: 11px;
   margin: 0 0 2px 0;
-  background: #c16ed2;
+  background: var(--button-color);
   position: absolute;
-  box-shadow: 0 0 10px 1px #a44c9e;
+  box-shadow: 0 0 10px 1px var(--button-color);
   left: 3px;
   width: 0;
   bottom: 0;

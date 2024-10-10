@@ -38,7 +38,7 @@ const toggleTheme = () => {
 }
 
 .toggle-container-checked {
-  background-color: #c16ed2;
+  background-color: color(display-p3 0.57 0.373 0.791);
 }
 
 .toggle-button {

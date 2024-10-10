@@ -106,7 +106,7 @@ const closeCard = () => {
 .card {
   position: relative;
   width: 245px;
-  border: 2px solid #c16ed2;
+  border: 4px solid var(--border-color);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-size: cover;
@@ -151,8 +151,8 @@ const closeCard = () => {
 }
 
 .dark-background {
-  background-color: #3c424d;
-  color: white;
+  background-color: var(--interactive-component-color);
+  color: var(--text-color);
   transition: background-color 0.2s;
 }
 
@@ -164,6 +164,7 @@ const closeCard = () => {
 
 .card:hover {
   box-shadow: 0 0 20px 4px rgba(var(--text-color-rgb), 0.5);
+  transition: 0.4s ease-in-out;
 }
 
 .card.expanded:hover {
@@ -175,8 +176,8 @@ const closeCard = () => {
 }
 
 .innerParagraphButton {
-  background-color: #c16ed2;
-  color: white;
+  background-color:  var(--button-color);
+  color: var(--text-color);
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -269,7 +270,7 @@ const closeCard = () => {
 }
 
 .closure-button:hover {
-  background-color: #c16ed2;
+  background-color: var(--button-color-hover);
   transform: scale(1.1);
   box-shadow: #181818 0px 0px 10px;
 }
