@@ -42,7 +42,8 @@ onMounted(() => {
         <ul>
           <li class="sk-java"><span>Java</span></li>
           <li class="sk-php"><span>PHP</span></li>
-          <li class="sk-springboot"><span>Springboot</span></li>
+          <li class="sk-node"><span>Node</span></li>
+          <li class="sk-express"><span>Express</span></li>
         </ul>
       </div>
       <div class="stair-box">
@@ -187,6 +188,8 @@ onMounted(() => {
 .stair-box ul li.sk-oracle { --per: 60; }
 .stair-box ul li.sk-sqlserver { --per: 40; }
 .stair-box ul li.sk-postgresql { --per: 50; }
+.stair-box ul li.sk-node { --per: 60; }
+.stair-box ul li.sk-express { --per: 50; }
 
 @media (max-width: 768px) {
   .stair-box-component {
