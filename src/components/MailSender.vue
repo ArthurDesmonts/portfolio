@@ -176,7 +176,7 @@ const sendMail = () => {
 }
 
 button {
-  width: 20%;
+  width: auto;
   padding: 10px;
   border-radius: 5px;
   border: none;
