@@ -158,7 +158,7 @@ const closeCard = () => {
 
 .light-background {
   background-color: var(--interactive-component-color);
-  color: black;
+  color: var(--text-color);
   transition: background-color 0.2s;
 }
 
@@ -177,7 +177,7 @@ const closeCard = () => {
 
 .innerParagraphButton {
   background-color:  var(--button-color);
-  color: var(--text-color);
+  color: var(--button-text-color);
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -185,6 +185,10 @@ const closeCard = () => {
   transition: background-color 0.2s;
   margin-top: 1em;
   font-weight: bold;
+}
+
+.innerParagraphButton:hover {
+  background-color: var(--button-color-hover);
 }
 
 .bottom-right {
@@ -267,6 +271,7 @@ const closeCard = () => {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--button-text-color);
 }
 
 .closure-button:hover {

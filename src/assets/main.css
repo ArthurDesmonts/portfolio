@@ -18,6 +18,8 @@
   --profile-background: color(display-p3 0.721 0.727 0.955);
 
   --shadow: rgba(0, 0, 0, 0.3);
+
+  --button-text-color: color(display-p3 0.998 0.989 0.988);
 }
 
 body {
@@ -77,6 +79,8 @@ body.dark-theme {
   --profile-background: color(display-p3 0.154 0.123 0.256);
 
   --shadow:rgba(255, 255, 255, 0.3);
+
+  --button-text-color: color(display-p3 0.998 0.989 0.988);
 }
 
 .bodyElements {
