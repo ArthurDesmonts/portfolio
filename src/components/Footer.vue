@@ -1,13 +1,5 @@
 <script setup>
-
-function GithubRedirect() {
-  window.location.href="https://github.com/ArthurDesmonts";
-}
-
-function redirectToLinkedIn() {
-  window.location.href="https://www.linkedin.com/in/arthur-desmonts-53a78b259/";
-}
-
+import {redirectToLinkedIn, GithubRedirect} from "@/utils/redirectLink.js";
 </script>
 
 <template>

@@ -1,8 +1,5 @@
 <script setup>
-
-function redirectToLinkedIn() {
-  window.location.href = 'https://www.linkedin.com/in/arthur-desmonts-53a78b259/';
-}
+import {redirectToLinkedIn} from "@/utils/redirectLink.js";
 </script>
 
 <template>
