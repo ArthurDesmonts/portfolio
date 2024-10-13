@@ -35,7 +35,6 @@ function redirectToLinkedIn() {
   border-bottom-right-radius: 300px;
   transition: transform 0.4s ease-in-out;
   z-index: 1;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .circle:hover .profilPic {
