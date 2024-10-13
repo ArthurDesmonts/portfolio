@@ -26,7 +26,7 @@ onMounted(() => {
 
 <template>
   <div class="Stack">
-    <h2><span class="icon">#</span> Mes Stacks</h2>
+    <h2><span class="icon">#</span> Mes Stacks de prédilection</h2>
     <div class="stair-box-component">
       <div class="stair-box">
         <h3>Front-end</h3>

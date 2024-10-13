@@ -90,7 +90,7 @@ onMounted(() => {
     </div>
     <hr id="project" class="separateur">
     <div class="presentation appears-top">
-      <h2><span class="icon">#</span> Mes projets</h2>
+      <h2><span class="icon">#</span> Mes projets récents</h2>
       <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve <span class="icon">les plus aboutis et représentatifs de mes compétences actuelles</span>.</p>
       <div class="card-alignement">
         <div class="inner-text-card-align">
@@ -132,10 +132,8 @@ onMounted(() => {
     <hr class="separateur">
     <div id="hobbies" class="double-container">
         <div class="loisir appears-left">
-          <h2><span class="icon">#</span> Loisirs</h2>
-          <p class="justify-content">Passionné de <span class="icon">cyclisme</span> sur route, je trouve dans ce sport un excellent
-            moyen de me détendre, de me vider l’esprit, et de maintenir ma forme
-            physique.</p>
+          <h2><span class="icon">#</span> Côtés loisirs</h2>
+          <p class="justify-content">Le <span class="icon">cyclisme</span> sur route, c'est ma passion ! C’est pour moi une super façon de me détendre, de faire le vide et de garder la forme.</p>
         </div>
         <div id="contact" class="contact appears-right">
           <h2><span class="icon">#</span> Me Contacter</h2>
@@ -255,7 +253,7 @@ onMounted(() => {
 .loisir {
   margin-top: 2em;
   margin-left: 2em;
-  margin-right: 10%;
+  margin-right: 8%;
 }
 
 .separateur {
@@ -317,7 +315,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1em;
+  gap: 0.5em;
 }
 
 /* type effect */
