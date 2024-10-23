@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, ref} from "vue";
+import {onMounted, ref, watch} from "vue";
 import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
@@ -371,14 +371,24 @@ button:hover {
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 1em;
-  }
+@media (max-width: 1060px) {
   .HeadLine {
     margin-left: 0;
     text-align: center;
     flex-direction: column;
+  }
+
+  .typing-effect-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1em;
   }
 
   .profilPic {
@@ -439,12 +449,6 @@ button:hover {
 
   .no-before::before {
     content: none;
-  }
-
-  .typing-effect-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .typing-effect {
