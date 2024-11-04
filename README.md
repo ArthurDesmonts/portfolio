@@ -16,7 +16,7 @@ Pour plus de détails sur la partie avec EmailJS :
   - Labeliser les champs de votre formulaire en fonction des variables de votre template EmailJS.  
   - Le reste du traitement est complétement contrôlé par la fonction'send' de l'API.  
   
-L'utilisation de l'API et des méthodes aussi à l'envoi d'e-mails se trouve dans les fichiers **MailSender.vue** et **MailUtils.js**.
+L'utilisation de l'API et des méthodes relative à l'envoi d'e-mails se trouve dans les fichiers **MailSender.vue** et **MailUtils.js**.
 
 ### Pour me contacter :
 **arthur.desmonts@gmail.com**
