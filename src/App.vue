@@ -134,6 +134,8 @@ onMounted(() => {
                 second-block="<span class='underline'>Le projet se résume par les points suivants :</span>"
                 list-of-skills="Interface dynamique - Gestion des sessions - Gestion des utilisateurs - Stockage des scores - Gestion des graphiques - Gestion des erreurs - Gestion des performances - Mise en relation des données recueillies - Formulaire de connexion avec Hashage"
                 third-block="Ce projet était une envie personnelle plus que vraiment utilitaire. J'ai amélioré mes compétences en JS, en Node, en Express, en NOSQL. De façon générale, ce projet a éclairci ma vision du Full-Stack vis-à-vis de la séparation entre Front et Back lors de l'utilisation de Frameworks JS."
+                gitHubLink="https://github.com/ArthurDesmonts/typeFaster"
+                link = "https://arthurdesmonts.github.io/typeFaster/"
           ></Card>
         </div>
       </div>

@@ -10,7 +10,9 @@ const props = defineProps({
   firstBlock: String,
   secondBlock: String,
   listOfSkills: String,
-  thirdBlock: String
+  thirdBlock: String,
+  gitHubLink: String,
+  link: String
 });
 
 const emitExpand = defineEmits(['expandCard']);
