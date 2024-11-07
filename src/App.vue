@@ -91,7 +91,6 @@ onMounted(() => {
     <hr id="project" class="separateur">
     <div class="presentation appears-top">
       <h2><span class="icon">#</span> Mes projets récents</h2>
-      <p class="justify-content descriptionBox">Malheureusement, je n'ai pas utilisé mon compte GitHub pour mes projets professionnels. Cependant, je peux néanmoins vous décrire en détail ceux que je trouve <span class="icon">les plus aboutis et représentatifs de mes compétences actuelles</span>.</p>
       <div class="card-alignement">
         <div class="inner-text-card-align">
           <p class="vertical-align">IMAGERIE</p>
@@ -123,6 +122,20 @@ onMounted(() => {
                 second-block="<span class='underline'>Je peux synthétiser mon travail sur les points suivants :</span>"
                 list-of-skills="Développement de formulaires - Développement d'une SPA entièrement dynamique - Élaboration d'une API REST pour simuler des appels de formulaire sur le serveur (Spark : serveur, Axios : client) - Test des limites du framework - Gestion du déploiement - Rédaction de la documentation"
                 third-block="Ce projet fut ma première expérience de développement Web dans le milieu professionnel. J'ai pu découvrir les différentes méthodes de développement frontend. Enfin, l'utilisation de Vue3 m'a permis de mieux connaitre les frameworks JavaScript, et Vue en particulier me donne envie de continuer dans cette voix."
+          ></Card>
+        </div>
+      </div>
+      <div class="card-alignement margin-top">
+        <div class="inner-text-card-align">
+          <p class="vertical-align">TYPE FASTER</p>
+          <Card @expand-card="handleCardExpansion($event)" id="4" titleText="typefaster" html="Application <span class='underline'>Full-Stack</span>, jeu de type 'typing'. Express, Vue.JS, Mongo ..." image="typefasterLogo.png"
+                subTitle="Développement d'un jeu de typing avec <span class='icon'>stockage sur serveur</span>"
+                first-block="J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert <span class='icon'>Express</span>, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et <span class='icon'>MongoDB</span>."
+                second-block="<span class='underline'>Le projet se résume par les points suivants :</span>"
+                list-of-skills="Interface dynamique - Gestion des sessions - Gestion des utilisateurs - Stockage des scores - Gestion des graphiques - Gestion des erreurs - Gestion des performances - Mise en relation des données recueillies - Formulaire de connexion avec Hashage"
+                third-block="Ce projet était une envie personnelle plus que vraiment utilitaire. J'ai amélioré mes compétences en JS, en Node, en Express, en NOSQL. De façon générale, ce projet a éclairci ma vision du Full-Stack vis-à-vis de la séparation entre Front et Back lors de l'utilisation de Frameworks JS."
+                gitHubLink="https://github.com/ArthurDesmonts/typeFaster"
+                link = "https://arthurdesmonts.github.io/typeFaster/"
           ></Card>
         </div>
       </div>
@@ -177,6 +190,10 @@ onMounted(() => {
   font-weight: bold;
 }
 
+.margin-top {
+  margin-top: 2em;
+}
+
 .vertical-align::before {
   content: '';
   position: absolute;
@@ -188,6 +205,7 @@ onMounted(() => {
 }
 
 .inner-text-card-align {
+  margin-top: 2em;
   display: flex;
   flex-direction: row;
   gap: 0;
