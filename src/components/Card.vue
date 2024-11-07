@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import {ref, onMounted, computed} from 'vue';
 import { resizeImage } from '../utils/imageResizer';
 
 const props = defineProps({
@@ -76,12 +76,21 @@ const closeCard = () => {
 };
 
 const displayLinks = props.gitHubLink && props.link;
+
+const colorOfVisibility = computed(() => {
+  return displayLinks ? 'var(--text-color)' : 'red';
+});
 </script>
 
 <template>
   <div class="card" :class="{ 'png-background': isPng, 'expanded': showCardContent, 'card': closeCard}">
     <div v-if="showCardContent === false" class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 class="title" v-html="titleText"></h2>
+      <div class="visibility-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" :fill="colorOfVisibility">
+          <path d="M12 4.5C7.305 4.5 3.135 7.305 1.5 12c1.635 4.695 5.805 7.5 10.5 7.5s8.865-2.805 10.5-7.5c-1.635-4.695-5.805-7.5-10.5-7.5zm0 13c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zm0-7.5c-1.655 0-3 1.345-3 3s1.345 3 3 3 3-1.345 3-3-1.345-3-3-3z"/>
+        </svg>
+      </div>
     </div>
     <div id="card" class="card-body" :class="themeBackgroundClass">
       <div class="bottom-right">
@@ -227,6 +236,13 @@ const displayLinks = props.gitHubLink && props.link;
 .innerParagraphImage {
   width: 24px;
   height: 24px;
+}
+
+.visibility-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
 }
 
 @keyframes expand {
