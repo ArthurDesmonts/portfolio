@@ -128,9 +128,9 @@ onMounted(() => {
       <div class="card-alignement margin-top">
         <div class="inner-text-card-align">
           <p class="vertical-align">TYPE FASTER</p>
-          <Card @expand-card="handleCardExpansion($event)" id="3" titleText="vue.js" html="Application <span class='underline'>Full-Stack</span>, jeu de type 'typing'. Express, Vue.JS, Mongo ..." image="typefasterLogo.png"
+          <Card @expand-card="handleCardExpansion($event)" id="4" titleText="typefaster" html="Application <span class='underline'>Full-Stack</span>, jeu de type 'typing'. Express, Vue.JS, Mongo ..." image="typefasterLogo.png"
                 subTitle="Développement d'un jeu de typing avec <span class='icon'>stockage sur serveur</span>"
-                first-block="J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert Express, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et MongoDB."
+                first-block="J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert <span class='icon'>Express</span>, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et <span class='icon'>MongoDB</span>."
                 second-block="<span class='underline'>Le projet se résume par les points suivants :</span>"
                 list-of-skills="Interface dynamique - Gestion des sessions - Gestion des utilisateurs - Stockage des scores - Gestion des graphiques - Gestion des erreurs - Gestion des performances - Mise en relation des données recueillies - Formulaire de connexion avec Hashage"
                 third-block="Ce projet était une envie personnelle plus que vraiment utilitaire. J'ai amélioré mes compétences en JS, en Node, en Express, en NOSQL. De façon générale, ce projet a éclairci ma vision du Full-Stack vis-à-vis de la séparation entre Front et Back lors de l'utilisation de Frameworks JS."
@@ -203,6 +203,7 @@ onMounted(() => {
 }
 
 .inner-text-card-align {
+  margin-top: 2em;
   display: flex;
   flex-direction: row;
   gap: 0;
