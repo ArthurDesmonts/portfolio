@@ -150,7 +150,7 @@ onMounted(() => {
         </div>
         <div id="contact" class="contact appears-right">
           <h2><span class="icon">#</span> Me Contacter</h2>
-          <p class="justify-content">Je suis actuellement en <span class="icon">recherche d'un premier emploi</span> dans le domaine du développement <span class="icon">Full-Stack</span> ou  <span class="icon">Front-end</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
+          <p class="justify-content">Je suis actuellement à la <span class="icon">recherche d'un emploi</span> dans le domaine du développement <span class="icon">Full-Stack</span> ou  <span class="icon">Front-end</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
           <div class="mail-message">
             <div class="mail-succes-listener">
               <button class="innerParagraphButton contact" @click="copyToClipboard">Contacter</button>
