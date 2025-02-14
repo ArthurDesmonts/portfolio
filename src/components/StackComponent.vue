@@ -111,7 +111,6 @@ onMounted(() => {
   padding: 10px;
 }
 
-/* Major part from : https://codepen.io/andrew-wiggins/pen/ExVQjQv */
 
 .stair-box ul li {
   --per: 50; /* Default percentage */
