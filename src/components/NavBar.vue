@@ -95,14 +95,6 @@ p{
   cursor: default;
 }
 
-.menu.light-theme {
-  background-color: rgb(var(--background-color-rgb), 0.8);
-}
-
-.menu.dark-theme {
-  background-color: rgb(var(--background-color-rgb), 0.8);
-}
-
 @media (max-width: 1450px) {
   .menu {
     width: 80%;

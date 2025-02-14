@@ -6,8 +6,12 @@ const checked = ref(true);
 const toggleTheme = () => {
   if (checked.value) {
     document.body.classList.add('dark-theme');
+    document.body.classList.remove('gradient-background-light');
+    document.body.classList.add('gradient-background-dark');
   } else {
     document.body.classList.remove('dark-theme');
+    document.body.classList.remove('gradient-background-dark');
+    document.body.classList.add('gradient-background-light');
   }
 };
 

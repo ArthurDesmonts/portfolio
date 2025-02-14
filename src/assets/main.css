@@ -23,14 +23,12 @@
 }
 
 body {
-  background-color: var(--background-color);
   color: var(--text-color);
   max-width: 80%;
   margin: 0 auto;
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Open Sans', sans-serif;
 
-  background-image: url('@/assets/background_Clear.png');
   background-size: cover;
   background-repeat: repeat;
   background-position: center -60px;
@@ -84,13 +82,11 @@ body.dark-theme {
 }
 
 .bodyElements {
-  background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
 .footer {
-  background-color: var(--background-color);
   color: #6b6e6c;
   transition: background-color 0.3s, color 0.3s;
   margin-top: 2rem;
@@ -182,4 +178,28 @@ body.dark-theme {
 
 .tiny-font {
   font-size: 0.8rem;
+}
+
+.gradient-background-dark {
+  background: linear-gradient(287deg,#8e4ec6,#202248,#435db1);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-background-light {
+  background: linear-gradient(300deg,#ffffff,#ecd4f3,#b3d5dd);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
 }
