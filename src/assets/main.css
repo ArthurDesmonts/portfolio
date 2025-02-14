@@ -181,9 +181,9 @@ body.dark-theme {
 }
 
 .gradient-background-dark {
-  background: linear-gradient(287deg,#8e4ec6,#202248,#435db1);
-  background-size: 180% 180%;
-  animation: gradient-animation 15s ease infinite;
+  background: linear-gradient(287deg,#8e4ec6,#202248,#141726,#0e1944);
+  background-size: 240% 240%;
+  animation: gradient-animation 20s ease infinite;
 }
 
 @keyframes gradient-animation {
