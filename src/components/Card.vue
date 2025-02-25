@@ -93,8 +93,8 @@ const colorOfVisibility = computed(() => {
       </div>
     </div>
     <div id="card" class="card-body" :class="themeBackgroundClass">
+      <p class="short-desc" v-show="showCardContent === false" v-html="html"></p>
       <div class="bottom-right">
-        <p class="short-desc" v-show="showCardContent === false" v-html="html"></p>
         <button id="developButton" v-if="showCardContent === false" class="innerParagraphButton" @click="developCard()">Voir</button>
       </div>
       <div id="expanded-div" :class="['expanded-display-pos', { show: showCardContent, hide: isClosing }]">
@@ -171,6 +171,12 @@ const colorOfVisibility = computed(() => {
 .short-desc {
   line-height: 1.2;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
 }
 
 .dark-background {
