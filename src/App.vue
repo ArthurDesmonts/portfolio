@@ -74,15 +74,15 @@ onMounted(() => {
     <div class="presentation">
       <h2><span class="icon">#</span> Qui suis-je?</h2>
       <div class="description-split">
-        <p class="justify-content descriptionBox no-after appears-left">Bonjour, je m'appelle Arthur.
+        <p class="justify-content descriptionBox no-after appears-left">Salut, moi c'est Arthur.
 
-          Je suis développeur Web orienté <span class="icon">Full-Stack</span>, avec une préférence pour le <span class="icon">Front-End</span>. J'ai obtenu un BUT informatique à l'IUT Grand Ouest Ifs. Pendant mon cursus, j'ai pu acquérir de nombreuses compétences en développement, principalement en <span class="icon">Web</span>, en <span class="icon">bases de données</span>
+          Je suis développeur <span class="icon">Full-Stack</span>. J'ai obtenu un BUT informatique à l'université de Caen. Pendant mon cursus, j'ai obtenu de nombreuses compétences en développement, principalement en <span class="icon">Web</span>, en <span class="icon">bases de données</span>
           ainsi qu'en <span class="icon">applicatif</span>.
 
           J'ai perfectionné ces compétences au cours d'<span class="icon">une année d'alternance</span> dans une petite équipe de développeurs mobiles. En leur compagnie, j'ai pu travailler aussi bien sur <span class="icon">Android</span> que sur <span class="icon">iOS</span>. Enfin, l'occasion s'est présentée de contribuer à des projets de développement Web, plus particulièrement sur un large projet <span class="icon">Vue.js</span>.
         </p>
         <p class="justify-content descriptionBox no-before appears-right">
-          Pendant cette année, j'ai également manipulé plusieurs librairies d'<span class="icon">imagerie</span>, telles qu'<span class="icon">OpenCV</span>, <span class="icon">MLKit</span> ou encore <span class="icon">Apple Vision</span>. Cela m'a permis de clôturer cette expérience avec un projet basé sur de l'<span class="icon">OCR</span> (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
+          Pendant cette année, j'ai manipulé différentes librairies d'<span class="icon">imagerie</span>, telles qu'<span class="icon">OpenCV</span>, <span class="icon">MLKit</span> ou encore <span class="icon">Apple Vision</span>. Cela m'a permis de clôturer cette expérience avec un projet basé sur de l'<span class="icon">OCR</span> (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
           Ce que j'aime dans le développement, c'est avant tout l'élaboration de solutions créatives.
           Je suis <span class="icon">enthousiaste</span> et j'adore travailler avec des personnes passionnées. L’autonomie n’est pas un problème pour moi, même si j'apprécie les retours sur ce que je peux améliorer.
         </p>
@@ -94,7 +94,7 @@ onMounted(() => {
       <div class="card-alignement">
         <div class="inner-text-card-align">
           <p class="vertical-align">IMAGERIE</p>
-          <Card @expand-card="handleCardExpansion($event)" id="1" titleText="imagerie" html="Création d'un <span class='underline'>scanner de document</span> à l'aide d'un smartphone. Suppression <span class='underline'>automatique</span> de l'arrière-plan." image="openCv.png"
+          <Card @expand-card="handleCardExpansion($event)" id="1" titleText="imagerie" html="Scanner Automatique" image="openCv.png"
                 subTitle="Utilisation de <span class='icon'>OpenCV</span>"
                 first-block="Pour être plus précis, j'ai réalisé un détourage automatique à partir de la caméra d'un smartphone. C'est-à-dire que sur une photo, j'ai utilisé les différentes méthodes que propose OpenCV pour faire des traitements optiques.
                 Cela, dans le but de faire gagner du temps à l'utilisateur qui doit prendre de nombreuses photos tout au long de la journée (contexte de déplacement avec durée limitée), mais également pour une démarche de confort (suppression d'une tâche manuelle répétitive)."
@@ -104,7 +104,7 @@ onMounted(() => {
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">OCR</p>
-          <Card @expand-card="handleCardExpansion($event)" id="2" titleText="ocr" html="Utilisation d'un <span class='underline'>OCR</span> sur des documents scannés, <span class='underline'>interprétation</span> des résultats, <span class='underline'>algorithme de reconnaissance des erreurs</span>." image="mlkit.png"
+          <Card @expand-card="handleCardExpansion($event)" id="2" titleText="ocr" html="Reconnaissance optique" image="mlkit.png"
                 subTitle = "Utilisation de <span class='icon'>MLKit</span> et <span class='icon'>Apple Vision</span>"
                 first-block="J'ai travaillé sur un projet de reconnaissance de caractères. J'ai utilisé MLKit et Apple Vision pour interpréter des documents scannés. L'objectif de ce projet était dans un premier temps de rechercher les API d'OCR les plus performantes, fiables, maintenanables, et enfin adaptables sur les deux plateformes (iOS et Android). MLKIT étant une librairie Google, j'ai dû également me pencher sur Apple Vision pour la partie iOS.
                 Une fois mes recherches effectuées, j'ai dans un premier temps ajusté à l'aide de l'API, la réception des caractères sur l'image. Puis, j'ai implémenté différentes méthodes de traitement pour améliorer la qualité de la reconnaissance, telles qu'un score de confiance ou encore un score d'isolement des mots. Enfin, viens le développement d'un algorithme de reconnaissance des erreurs, pour ne conserver qu'une partie des éléments récupérés."
@@ -115,7 +115,7 @@ onMounted(() => {
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">VUE.JS</p>
-          <Card @expand-card="handleCardExpansion($event)" id="3" titleText="vue.js" html="Élaboration <span class='underline'>d'interfaces</span>, test des limites du framework, rédaction d'une documentation complète pour des novices." image="logo.svg"
+          <Card @expand-card="handleCardExpansion($event)" id="3" titleText="vue.js" html="Création d'une SPA" image="logo.svg"
                 subTitle="Développement d'interfaces avec <span class='icon'>Vue.js</span>"
                 first-block="Ce projet de développement frontend en Vue.js avait pour but de me laisser carte blanche quant à l'apprentissage de Vue3. L'objectif était de me familiariser avec le framework, de tester ses limites, et de rédiger une documentation complète pour les développeurs de l'équipe qui ne l'avaient jamais manipulé et qui, de plus, ne sont pas familiers avec JavaScript. Tout cela avec pour ocjectif de juger si le framework serait une bonne opportunité pour une migration de l'application Web actuelle.
                 J'ai donc développé plusieurs interfaces en utilisant les différentes fonctionnalités de Vue3, mais également, j'ai testé les différentes façons de remplacer les fonctionnalités de l'application actuelle, majoritairement liées à la création de formulaires dynamiques ou encore aux appels AJAX."
@@ -128,7 +128,7 @@ onMounted(() => {
       <div class="card-alignement margin-top">
         <div class="inner-text-card-align">
           <p class="vertical-align">TYPE FASTER</p>
-          <Card @expand-card="handleCardExpansion($event)" id="4" titleText="typefaster" html="Application <span class='underline'>Full-Stack</span>, jeu de type 'typing'. Express, Vue.JS, Mongo ..." image="typefasterLogo.png"
+          <Card @expand-card="handleCardExpansion($event)" id="4" titleText="typefaster" html="Typing Game" image="typefasterLogo.png"
                 subTitle="Développement d'un jeu de typing avec <span class='icon'>stockage sur serveur</span>"
                 first-block="J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert <span class='icon'>Express</span>, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et <span class='icon'>MongoDB</span>."
                 second-block="<span class='underline'>Le projet se résume par les points suivants :</span>"
@@ -150,7 +150,7 @@ onMounted(() => {
         </div>
         <div id="contact" class="contact appears-right">
           <h2><span class="icon">#</span> Me Contacter</h2>
-          <p class="justify-content">Je suis actuellement à la <span class="icon">recherche d'un emploi</span> dans le domaine du développement <span class="icon">Full-Stack</span> ou  <span class="icon">Front-end</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter aux alentours de <span class="icon">Caen</span> par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
+          <p class="justify-content">Je suis actuellement à la <span class="icon">recherche d'un emploi</span> dans le domaine du développement <span class="icon">Full-Stack</span>. Je suis ouvert à toutes les propositions que vous pouvez me présenter par mail. Je suis intéressé par des opportunités <span class="icon">full remote</span>. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter.</p>
           <div class="mail-message">
             <div class="mail-succes-listener">
               <button class="innerParagraphButton contact" @click="copyToClipboard">Contacter</button>
