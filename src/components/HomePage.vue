@@ -60,7 +60,6 @@ onMounted(() => {
 
 <template>
   <div class="container">
-    <NavBar></NavBar>
     <div class="HeadLine">
       <div>
         <div class="typing-effect-container">
@@ -77,7 +76,7 @@ onMounted(() => {
     <div class="presentation">
       <h2><span class="icon">#</span> Qui suis-je?</h2>
       <div class="description-split">
-        <p class="justify-content descriptionBox no-after appears-left">Salut, moi c'est Arthur.
+        <p class="justify-content descriptionBox no-after appears-left">Moi c'est Arthur.
 
           Je suis développeur <span class="icon">Full-Stack</span>. J'ai obtenu un BUT informatique à l'université de Caen. Pendant mon cursus, j'ai obtenu de nombreuses compétences en développement, principalement en <span class="icon">Web</span>, en <span class="icon">bases de données</span>
           ainsi qu'en <span class="icon">applicatif</span>.
