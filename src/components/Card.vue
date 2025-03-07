@@ -112,7 +112,7 @@ const colorOfVisibility = computed(() => {
             </svg>
           </a>
           <a :href="link" target="_blank" class="innerParagraphImage">
-            <img :src="imageUrl" alt="Typefaster Logo" width="24" height="24">
+            <img :src="imageUrl" alt="Project Logo" width="24" height="24">
           </a>
         </div>
         <div class="closure-button-container">

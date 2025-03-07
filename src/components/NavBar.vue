@@ -2,6 +2,9 @@
 
 import ToggleButton from "@/components/toggleButton.vue";
 import {ref} from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const isDarkTheme = ref(true);
 
@@ -32,7 +35,7 @@ window.onscroll = function() {
 <template>
   <div id="menu" :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
-      <li class="phoneHided no-cursor"><p class="restricted-display-responsive-bar">Arthur Desmonts</p></li>
+      <li class="phoneHided hover-allowed" @click="router.push('/portfolio/')"><p class="restricted-display-responsive-bar">Arthur Desmonts</p></li>
       <li class="phoneHided hover-allowed" @click="scrollToSection()"><span class="icon">#</span> Accueil</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><span class="icon">#</span> Qui suis-je?</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><span class="icon">#</span> Mes Projets</li>
@@ -89,10 +92,6 @@ p{
   color: var(--icon-color);
   text-decoration: underline;
   animation: underlineAnimation 0.3s forwards;
-}
-
-.no-cursor {
-  cursor: default;
 }
 
 @media (max-width: 1450px) {
