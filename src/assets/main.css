@@ -153,6 +153,11 @@ body.dark-theme {
   padding: 0 2em;
 }
 
+.intro-post-content {
+  width : 60%;
+  padding: 0 2em;
+}
+
 .vueIcon {
   color: #41B883;
 }
@@ -179,7 +184,7 @@ body.dark-theme {
   margin-right: 4px;
   background: url('expressjs-icon.svg') no-repeat center center;
   background-size: contain;
-  background-color: white; 
+  background-color: white;
   border-radius: 45%;
 }
 
@@ -197,9 +202,12 @@ body.dark-theme {
   background-size: contain;
 }
 
-.intro-post-content {
-  width : 60%;
-  padding: 0 2em;
+.structure-content {
+  margin: 2em;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
