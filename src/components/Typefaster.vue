@@ -1,15 +1,18 @@
 <template>
     <div class="container">
+        <p class="back-link">
+            <router-link to="/portfolio/">Retour</router-link>
+        </p>
         <div class="project-header">
             <h1>Nom du projet : <span class="icon">Type Faster</span></h1>
             <img class="project-preview" src="../assets/typefasterPreview.png" alt="Preview of the project">
         </div>
       <p>Développement d'un jeu de typing avec <span class='icon'>stockage sur serveur</span></p>
       <p>J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert <span class='icon'>Express</span>, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et <span class='icon'>MongoDB</span>.</p>
-      <h2 class="summary-title">Résumé du projet :</h2>
+      <h2 class="summary-title">Résumé du projet</h2>
       <div class="asided-list-content">
         <div class="list-container">
-            <p><span class='underline'>Le projet se résume par les points suivants :</span></p>
+            <p><span class='sub-title-prelist'>Le projet se résume par les points suivants :</span></p>
             <ul class="list">
                 <li>Interface dynamique</li>
                 <li>Gestion des sessions</li>
@@ -22,7 +25,13 @@
                 <li>Formulaire de connexion avec Hashage</li>
             </ul>
         </div>
-        <p class="summary">Ce projet était une envie personnelle plus que vraiment utilitaire. J'ai amélioré mes compétences en JS, en Node, en Express, en NOSQL. De façon générale, ce projet a éclairci ma vision du Full-Stack vis-à-vis de la séparation entre Front et Back lors de l'utilisation de Frameworks JS.</p>
+        <div class="summary justify-content ">
+            <p>Ce projet était une envie personnelle étant un grand fan de ce jeu. J'ai pue retravailler mon utilisation de JS, Node et NOSQL tout en apprenant
+                à utiliser Express.
+            </p>
+            <p>Enfin, j'ai progressé sur l'implémentation d'API REST, même dans le cadre d'un projet très simple.
+            </p>
+        </div>
       </div>
       <div class="link-button">
           <a href="https://github.com/ArthurDesmonts/typeFaster" target="_blank" class="innerParagraphIcon">
@@ -63,6 +72,7 @@
         margin: 2em;
         align-items: center;
         border-right: 1px solid var(--button-color);
+        cursor: default;
     }
 
     .list li {
@@ -80,7 +90,21 @@
     }
 
     .summary-title{
-        margin: 2em 0;
+       justify-content: center;
+       text-align: center;
+       margin: 2em;
+       font-size: 2em;
+    }
+    
+    .summary-title::before,
+    .summary-title::after {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 2px;
+        background-color: var(--text-color);
+        vertical-align: middle;
+        margin: 0 10px;
     }
 
     .asided-list-content {
@@ -96,7 +120,10 @@
     .summary {
         width: 50%;
         margin: 2em;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
     }
 
     .link-button {
@@ -111,5 +138,26 @@
     
     .innerParagraphIcon {
         fill: var(--text-color);
+    }
+
+    .bordered-test{
+        border: 1px solid red;
+    }
+
+    .back-link {
+        margin: 2em 1em;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .back-link a:visited,
+    .back-link a:active,
+    .back-link a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .back-link::before {
+        content: "← ";
     }
 </style>
