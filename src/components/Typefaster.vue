@@ -6,31 +6,29 @@
         <div class="project-header">
             <div>
                 <h1>Nom du projet : <span class="icon">Type Faster</span></h1>
-                <p>Développement d'un jeu Online de <span class='icon'>typing.</span></p>
+                <p>Développement d'un jeu online de <span class='icon'>typing.</span></p>
             </div>
             <img class="project-preview" src="../assets/typefasterPreview.png" alt="Preview of the project">
         </div>
         <div class="intro-project">
             <div class="intro-pre-content">
-                <p>Le but du jeu est de copier un texte de mots aléatoirs le plus rapidement possible.</p>
-                <p>Ce n'est pas un projet complexe, en revanche, pour se familiariser avec Javascript, c'est idéal.</p>
+                <p>Le but du jeu est de copier un texte de mots aléatoires le plus rapidement possible.</p>
+                <p>Ce n'est pas un projet complexe, mais pour se familiariser avec JavaScript, c'est idéal.</p>
             </div>
             <div class="intro-post-content">
-                <p>L'idée à travers la création de ce jeu été d'une part utiliser Javascript comme language principal, en commençant par une interface réactive, puis part l'utilisation d'une 
-                    API REST pour stocker les données utilisateurs.
-                </p>
+                <p>L'idée, à travers la création de ce jeu, était d'une part d'utiliser JavaScript comme langage principal, en commençant par une interface réactive, puis par l'utilisation d'une API REST pour stocker les données des utilisateurs.</p>
             </div>
         </div>
         <div>
-            <h2 class="summary-title">Structure du projet</h2>
+            <h2 class="summary-title">Structure</h2>
             <div class="structure-content">
                 <p class="subtitle-in-content">Le projet embarque une architecture simple et efficace, un client et une API.</p>
-                <p>Pour le client j'ai choisis d'utiliser <span class='vueIcon'>Vue.JS</span>, pour sa simplicité et son efficacité pour la création de SPA.</p>
-                <p>Quant à l'API, j'ai utilisé <span class="expressIcon">Express</span>. Dans la cas de la création d'une API rudimentaire, ce fut le framework parfait étant donné son stockage en NoSql.</p>
-                <p>Enfin, pour rendre l'interface plus chaleureuse et rendre concentrer mon développement sur les fonctionnalités, et non sur le design, j'ai utilisé <span class="tailwindIcon">TailwindCSS.</span></p>
+                <p>Pour le client, j'ai choisi d'utiliser <span class='vueIcon'>Vue.JS</span>, pour sa simplicité et son efficacité pour la création de SPA.</p>
+                <p>Quant à l'API, j'ai utilisé <span class="expressIcon">Express</span>. Dans le cas de la création d'une API rudimentaire, ce fut le framework parfait étant donné son stockage en NoSQL.</p>
+                <p>Enfin, pour rendre l'interface plus chaleureuse et me concentrer sur les fonctionnalités plutôt que sur le design, j'ai utilisé <span class="tailwindIcon">TailwindCSS.</span></p>
             </div>
         </div>
-      <h2 class="summary-title">Fonctionnalités du projet</h2>
+      <h2 class="summary-title">Fonctionnalités</h2>
       <div class="asided-list-content">
         <div class="list-container">
             <p><span class='sub-title-prelist'>Le projet se résume par les points suivants :</span></p>
@@ -47,11 +45,8 @@
             </ul>
         </div>
         <div class="summary justify-content ">
-            <p>Ce projet était une envie personnelle étant un grand fan de ce jeu. J'ai pue retravailler mon utilisation de JS, Node et NOSQL tout en apprenant
-                à utiliser Express.
-            </p>
-            <p>Enfin, j'ai progressé sur l'implémentation d'API REST, même dans le cadre d'un projet très simple.
-            </p>
+            <p>Ce projet était une envie personnelle, étant un grand fan de ce jeu. J'ai pu retravailler mon utilisation de JS, Node et NoSQL tout en apprenant à utiliser Express.</p>
+            <p>Enfin, j'ai progressé dans l'implémentation d'API REST, même dans le cadre d'un projet très simple.</p>
         </div>
       </div>
       <div class="link-button">
