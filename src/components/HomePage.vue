@@ -223,41 +223,7 @@ onMounted(() => {
   align-items: center;
 }
 
-.justify-content {
-  margin-top: 1em;
-  text-align: justify;
-  padding: 1em;
-  font-size: 16px;
-  position: relative;
-}
 
-.justify-content::before,
-.justify-content::after {
-  content: '“';
-  font-size: 2em;
-  color: var(--tile-color);
-  position: absolute;
-  font-weight: bold;
-}
-
-.justify-content::before {
-  left: -0.5em;
-  top: -0.5em;
-}
-
-.justify-content::after {
-  content: '”';
-  right: -0.5em;
-  bottom: -0.5em;
-}
-
-.no-after::after {
-  content: none;
-}
-
-.no-before::before {
-  content: none;
-}
 
 .presentation {
   margin-top: 2em;

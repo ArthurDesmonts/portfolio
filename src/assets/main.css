@@ -153,6 +153,50 @@ body.dark-theme {
   padding: 0 2em;
 }
 
+.vueIcon {
+  color: #41B883;
+}
+
+.vueIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('vue-svgrepo-com.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.expressIcon {
+  color: gray;
+}
+
+.expressIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('expressjs-icon.svg') no-repeat center center;
+  background-size: contain;
+  background-color: white; 
+  border-radius: 45%;
+}
+
+.tailwindIcon{
+  color: #06B6D4;
+}
+
+.tailwindIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('tailwind-svgrepo-com.svg') no-repeat center center;
+  background-size: contain;
+}
+
 .intro-post-content {
   width : 60%;
   padding: 0 2em;

@@ -24,6 +24,10 @@
         <div>
             <h2 class="summary-title">Structure du projet</h2>
             <div>
+                <p>Le projet embarque une architecture simple et efficace, un client et une API.</p>
+                <p>Pour le client j'ai choisis d'utiliser <span class='vueIcon'>Vue.JS</span>, pour sa simplicité et son efficacité pour la création de SPA.</p>
+                <p>Quant à l'API, j'ai utilisé <span class="expressIcon">Express</span>. Dans la cas de la création d'une API rudimentaire, ce fut le framework parfait étant donné son stockage en NoSql.</p>
+                <p>Enfin, pour rendre l'interface plus chaleureuse et rendre concentrer mon développement sur les fonctionnalités, et non sur le design, j'ai utilisé <span class="tailwindIcon">TailwindCSS.</span></p>
             </div>
         </div>
       <h2 class="summary-title">Fonctionnalités du projet</h2>
