@@ -4,12 +4,29 @@
             <router-link to="/portfolio/">Retour</router-link>
         </p>
         <div class="project-header">
-            <h1>Nom du projet : <span class="icon">Type Faster</span></h1>
+            <div>
+                <h1>Nom du projet : <span class="icon">Type Faster</span></h1>
+                <p>Développement d'un jeu Online de <span class='icon'>typing.</span></p>
+            </div>
             <img class="project-preview" src="../assets/typefasterPreview.png" alt="Preview of the project">
         </div>
-      <p>Développement d'un jeu de typing avec <span class='icon'>stockage sur serveur</span></p>
-      <p>J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert <span class='icon'>Express</span>, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et <span class='icon'>MongoDB</span>.</p>
-      <h2 class="summary-title">Résumé du projet</h2>
+        <div class="intro-project">
+            <div class="intro-pre-content">
+                <p>Le but du jeu est de copier un texte de mots aléatoirs le plus rapidement possible.</p>
+                <p>Ce n'est pas un projet complexe, en revanche, pour se familiariser avec Javascript, c'est idéal.</p>
+            </div>
+            <div class="intro-post-content">
+                <p>L'idée à travers la création de ce jeu été d'une part utiliser Javascript comme language principal, en commençant par une interface réactive, puis part l'utilisation d'une 
+                    API REST pour stocker les données utilisateurs.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2 class="summary-title">Structure du projet</h2>
+            <div>
+            </div>
+        </div>
+      <h2 class="summary-title">Fonctionnalités du projet</h2>
       <div class="asided-list-content">
         <div class="list-container">
             <p><span class='sub-title-prelist'>Le projet se résume par les points suivants :</span></p>

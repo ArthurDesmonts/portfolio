@@ -137,6 +137,27 @@ body.dark-theme {
   content: none;
 }
 
+.intro-project {
+  margin : 2em;
+  display : flex;
+  flex-direction: row;
+  text-align: justify;
+  padding: 1em 4em;
+  gap: 4em;
+}
+
+.intro-pre-content {
+  display: flex;
+  flex-direction: column;
+  width : 30%;
+  padding: 0 2em;
+}
+
+.intro-post-content {
+  width : 60%;
+  padding: 0 2em;
+}
+
 @media (max-width: 768px) {
   body {
     max-width: 100%;
