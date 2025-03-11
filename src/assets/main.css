@@ -150,12 +150,88 @@ body.dark-theme {
   display: flex;
   flex-direction: column;
   width : 30%;
-  padding: 0 2em;
+  border-top: 2px solid var(--tile-color);
+  border-left: 2px solid var(--tile-color);
+  padding-top: 2em;
+  padding-left: 2em;
 }
 
 .intro-post-content {
   width : 60%;
-  padding: 0 2em;
+  border-bottom: 2px solid var(--tile-color);
+  border-right: 2px solid var(--tile-color) ;
+  padding-right: 2em;
+  margin-top: 2em;
+}
+
+.javaIcon {
+  color: #007396;
+}
+
+.javaIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('java-svgrepo-com.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.iosIcon {
+  color: var(--text-color);
+}
+
+.iosIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('apple-logo-svgrepo-com.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.opencvIcon{
+  color: #5C3EE8;
+}
+
+.opencvIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('opencv-svgrepo-com.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.androidIcon{
+  color: #3DDC84;
+}
+
+.androidIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('icons8-android.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.objectivCicon {
+  color:gray;
+}
+
+.objectivCicon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('objectivec-svgrepo-com.svg') no-repeat center center;
+  background-size: contain;
 }
 
 .vueIcon {

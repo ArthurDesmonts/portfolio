@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/components/HomePage.vue';
 import Typefaster from '@/components/Typefaster.vue';
+import OpenCV from '@/components/OpenCV.vue';
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/portfolio/typefaster',
         name: 'Typefaster',
         component: Typefaster
+    },
+    {
+        path: '/portfolio/openCV',
+        name: 'OpenCV',
+        component: OpenCV
     }
 ];
 
