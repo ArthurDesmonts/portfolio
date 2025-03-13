@@ -12,12 +12,10 @@
         </div>
         <div class="intro-project">
             <div class="intro-pre-content">
-                <p>Ce projet fut mon premier projet durant mon alternance. L'objectif été de simplifier l'ajout de documents sur l'application, passant d'une prise manuel, à une prise automatique.</p>
-                <p>Le projet était complexes à réaliser. Il m'a fallut prendre en compte une grande quantité de cas de figures qui pouvait casser le fonctionnement de l'algorithme de capture.</p>
+                <p>J'ai travaillé sur un projet de reconnaissance de caractères. À travers l'utilisation de deux API, l'objectif était de traiter le contenu textuel de documents scannés. Dans un premier temps, j'ai dû rechercher les API d'OCR (<span class="icon">O</span>ptical <span class="icon">C</span>haracter <span class="icon">R</span>ecognition) les plus performantes, fiables, maintenables, et enfin adaptables sur les deux plateformes (iOS et Android).</p>
             </div>
             <div class="intro-post-content">
-                <p>L'avantage que j'ai eu, c'est que j'ai été en total liberté pour l'implémentation, ce qui m'a permit d'être en confort sur ce premier projet.</p>
-                <p>Ainsi, j'ai pu établir un plan général du fonctionnement, en commençant par appliquer un traitement classique, puis modifier la capture en cas d'orientation du documents ou de mauvaise qualités de la capture.</p>
+                <p>Une fois mes recherches effectuées, j'ai ajusté à l'aide de l'API, la réception des caractères sur l'image. Puis, j'ai implémenté différentes méthodes de traitement pour améliorer la qualité de la reconnaissance, telles qu'un score de confiance ou encore un score d'isolement des mots. Enfin, vient le développement d'un algorithme de reconnaissance des erreurs, pour ne conserver qu'une partie des éléments récupérés.</p>
             </div>
         </div>
         <div>
