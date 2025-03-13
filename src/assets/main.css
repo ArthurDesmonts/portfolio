@@ -206,6 +206,20 @@ body.dark-theme {
   background-size: contain;
 }
 
+.mlkitIcon {
+  color: #06B6D4;
+}
+
+.mlkitIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('mlkitLogo.png') no-repeat center center;
+  background-size: contain;
+}
+
 .androidIcon{
   color: #3DDC84;
 }
