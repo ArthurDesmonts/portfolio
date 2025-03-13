@@ -48,8 +48,8 @@
             </ul>
         </div>
         <div class="summary justify-content ">
-            <p>Comme dit précédemment, je ne peux pas fournir de preuve physique de ce projet, appartenant à mon ancienne entreprise.</p>
-            <p>Néanmoins, je peux conclure sur le fait que ce projet fut ma première expérience en termes de projet professionnel avec des exigences. J'ai fait face à un algorithme complexe face aux exigences imposées. Enfin, j'ai eu un réel aperçu de la résolution de bugs et de l'optimisation de performances.</p>
+            <p>Ce projet a été une première en termes de recherche d'API et de développement d'algorithmes de reconnaissance. J'ai pu découvrir les différentes méthodes de traitement de texte et de la gestion des contextes.</p>
+            <p>Enfin, j'ai réellement pu être autonome sur ce projet en ce qui concerne la recherche de solutions et la mise en place de ces dernières.</p>
         </div>
       </div>
       <div class="link-button">
