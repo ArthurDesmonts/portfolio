@@ -36,20 +36,20 @@
         <div class="list-container">
             <p><span class='sub-title-prelist'>Le projet se résume par les points suivants :</span></p>
             <ul class="list">
-                <li>Interface dynamique</li>
-                <li>Gestion des sessions</li>
-                <li>Gestion des utilisateurs</li>
-                <li>Stockage des scores</li>
-                <li>Gestion des graphiques</li>
-                <li>Gestion des erreurs</li>
-                <li>Gestion des performances</li>
-                <li>Mise en relation des données recueillies</li>
-                <li>Formulaire de connexion avec Hashage</li>
+                <li>Isolation de structures récurrentes</li>
+                <li>Traitement d'images</li>
+                <li>Contrôle d'orientation</li>
+                <li>Algorithme de réorientation</li>
+                <li>Capture dynamique à spectre variable</li>
+                <li>Décompression par superposition</li>
+                <li>Capture en flux continue</li>
+                <li>Optimisation des performances</li>
+                <li>Optimisation des ressources</li>
             </ul>
         </div>
         <div class="summary justify-content ">
-            <p>Ce projet était une envie personnelle, étant un grand fan de ce jeu. J'ai pu retravailler mon utilisation de JS, Node et NoSQL tout en apprenant à utiliser Express.</p>
-            <p>Enfin, j'ai progressé dans l'implémentation d'API REST, même dans le cadre d'un projet très simple.</p>
+            <p>Comme dit précédemment, je ne peux pas fournir de preuve physique de ce projet, appartenant à mon ancienne entreprise.</p>
+            <p>Néanmoins, je peux conclure sur le fait que ce projet fut ma première expérience en termes de projet professionnel avec des exigences. J'ai fait face à un algorithme complexe face aux exigences imposées. Enfin, j'ai eu un réel aperçu de la résolution de bugs et de l'optimisation de performances.</p>
         </div>
       </div>
       <div class="link-button">
@@ -57,9 +57,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.335-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.125-.305-.535-1.54.115-3.205 0 0 1.005-.32 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.55 3.285-1.23 3.285-1.23.655 1.665.245 2.9.12 3.205.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.62-5.475 5.92.43.37.81 1.1.81 2.22v3.285c0 .32.215.695.825.575C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-          </a>
-          <a href="https://arthurdesmonts.github.io/typeFaster/" target="_blank" class="innerParagraphImage">
-            <img src="../assets/typefasterLogo.png" alt="Typefaster Logo" width="24" height="24">
           </a>
         </div>
     </div>
