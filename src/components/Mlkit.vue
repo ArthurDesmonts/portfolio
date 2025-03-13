@@ -36,17 +36,17 @@
         <div class="list-container">
             <p><span class='sub-title-prelist'>Le projet se résume par les points suivants :</span></p>
             <ul class="list">
-                <li>Isolation de structures récurrentes</li>
-                <li>Traitement d'images</li>
-                <li>Contrôle d'orientation</li>
-                <li>Algorithme de réorientation</li>
-                <li>Capture dynamique à spectre variable</li>
-                <li>Décompression par superposition</li>
-                <li>Capture en flux continue</li>
-                <li>Optimisation des performances</li>
-                <li>Optimisation des ressources</li>
+                <li>Recherche d'API les plus performantes</li>
+                <li>Développement de l'UI</li>
+                <li>Création de l'algorithme principal</li>
+                <li>Optimisation de l'algorithme</li>
+                <li>Amélioration des performances</li>
+                <li>Processus de détection d'erreurs</li>
+                <li>Instauration de contextes linguistiques</li>
+                <li>Développement multi-plateforme</li>
             </ul>
         </div>
+
         <div class="summary justify-content ">
             <p>Ce projet a été une première en termes de recherche d'API et de développement d'algorithmes de reconnaissance. J'ai pu découvrir les différentes méthodes de traitement de texte et de la gestion des contextes.</p>
             <p>Enfin, j'ai réellement pu être autonome sur ce projet en ce qui concerne la recherche de solutions et la mise en place de ces dernières.</p>
