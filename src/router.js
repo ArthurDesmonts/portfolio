@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/components/HomePage.vue';
 import Typefaster from '@/components/Typefaster.vue';
 import OpenCV from '@/components/OpenCV.vue';
+import MLKit from '@/components/Mlkit.vue';
 
 const routes = [
     {
@@ -18,6 +19,11 @@ const routes = [
         path: '/portfolio/openCV',
         name: 'OpenCV',
         component: OpenCV
+    },
+    {
+        path: '/portfolio/mlkit',
+        name: 'MLKit',
+        component: MLKit
     }
 ];
 

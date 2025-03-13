@@ -5,8 +5,8 @@
         </p>
         <div class="project-header">
             <div>
-                <h1>Projet : <span class="icon">Scanner avec OpenCV</span></h1>
-                <p>Création d'un algorithme de scanne par <span class='icon'>camera</span>.</p>
+                <h1>Projet : <span class="icon">Interpréteur de texte</span></h1>
+                <p>Lecture optique et isolation de termes spécifiques via une <span class='icon'>image</span>.</p>
             </div>
             <img class="project-preview" src="../assets/openCVpreview.png" alt="Preview of the project">
         </div>

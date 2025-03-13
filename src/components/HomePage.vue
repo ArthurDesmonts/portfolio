@@ -171,7 +171,7 @@ onMounted(() => {
     </div>
     <Footer></Footer>
   </div>
-  <button @click="router.push('/portfolio/opencv')"></button>
+  <button @click="router.push('/portfolio/mlkit')"></button>
 </template>
 
 <style scoped>
