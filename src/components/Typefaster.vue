@@ -6,7 +6,7 @@
         <div class="project-header">
             <div>
                 <h1>Nom du projet : <span class="icon">Type Faster</span></h1>
-                <p>Développement d'un jeu online de <span class='icon'>typing.</span></p>
+                <p>Développement d'un jeu online de <span class='icon'>typing</span>.</p>
             </div>
             <img class="project-preview" src="../assets/typefasterPreview.png" alt="Preview of the project">
         </div>

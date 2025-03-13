@@ -8,7 +8,7 @@
                 <h1>Projet : <span class="icon">Interpréteur de texte</span></h1>
                 <p>Lecture optique et isolation de termes spécifiques via une <span class='icon'>image</span>.</p>
             </div>
-            <img class="project-preview" src="../assets/openCVpreview.png" alt="Preview of the project">
+            <img class="project-preview" src="../assets/mlkitPreview.png" alt="Preview of the project">
         </div>
         <div class="intro-project">
             <div class="intro-pre-content">
