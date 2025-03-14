@@ -21,14 +21,22 @@
         <div>
             <h2 class="summary-title">Structure</h2>
             <div class="structure-content">
-                <p class="subtitle-in-content">Le module a été implémenter sur mobile, en langage natif et donc sans aucun framework de développement multi-plateforme.</p>
-                <p>Le module a été conçu en <span class="javaIcon">Java</span>(<span class="androidIcon">Androïd</span>) et en <span class="objectivCicon">Objectiv-C</span>(<span class="iosIcon">iOS</span>).</p>
-                <p>Pour le développement de l'algorithme, le choix s'est tourné vers <span class="opencvIcon">OpenCV</span>.</p>
+                <p class="subtitle-in-content">Le module a été implémenté sur mobile, en langage natif et donc sans aucun framework de développement multi-plateforme.</p>
+                <p>Le module a été conçu en <span class="javaIcon">Java</span> (<span class="androidIcon">Android</span>) et en <span class="objectivCicon">Objective-C</span> (<span class="iosIcon">iOS</span>).</p>
+                <p>Pour le développement de l'algorithme, j'ai utilisé deux API différentes, <span class="mlkitIcon">MLKit</span> sur <span class="androidIcon">Android</span>, et <span class="iosIcon">Apple Vision Kit</span> pour le module <span class="iosIcon">iOS</span> car <span class="mlkitIcon">MLKit</span> est une exclusivité de Google.</p>
                 <br>
-                <p>Pour décrire l'algorithme dans les grandes lignes (et pour cause, impossible de fournir le code), on effectue dans un premier tant une détection des coins du document avec le flux direct de la caméra(sans prise de photos manuel).</p>
-                <p>Ensuite, si les coins ne sont pas cohérents, alors on utilise un algorithme qui recalcul l'orientation des coins du documents, peu importe la position dans laquelle il a était capturé, pour effectuer des permutations afin d'obtenir l'image sans aucune orientation. Dans ce cas on re-effectue la capture classique.</p>
+                <p>Pour décrire le fonctionnement du module, on utilise les deux API pour récupérer le texte sur la photo reçue.</p>
+                <p>Une fois le texte récupéré, il est découpé dans une architecture avec le schéma d'objet suivant :</p>
+                <p class="architectureListe">Page -> Paragraphe -> Ligne -> Mot</p>
+                <p>Chaque objet contient un ensemble des sous-objets. De plus, chaque objet se voit attribuer un score de confiance.</p>
+                <p>L'objectif étant d'isoler certains mots, on utilise un algorithme qui compare chaque mot avec un score de confiance suffisant, pour le comparer à un ensemble de mots à potentiellement retrouver.</p>
+                <br>
+                <p>S'il y a correspondances, on crée un objet qui associe les deux matchs.</p>
+                <br>
+                <p>Enfin, une fois cette liste récupérée, on analyse si chaque objet est valide en fonction de son contexte de capture. C'est-à-dire, si les mots autour de celui-ci permettent d'identifier quel est le type d'information que donne ce terme (par exemple un nom, une adresse, etc.).</p>
             </div>
         </div>
+
       <h2 class="summary-title">Fonctionnalités</h2>
       <div class="asided-list-content">
         <div class="list-container">
@@ -183,5 +191,9 @@
         text-align: center;
         margin-bottom: 1em;
         font-size: 1.5em;
+    }
+
+    .architectureListe {
+        margin: 2em;
     }
 </style>

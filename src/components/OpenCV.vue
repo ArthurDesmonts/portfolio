@@ -24,7 +24,7 @@
             <h2 class="summary-title">Structure</h2>
             <div class="structure-content">
                 <p class="subtitle-in-content">Le module a été implémenter sur mobile, en langage natif et donc sans aucun framework de développement multi-plateforme.</p>
-                <p>Le module a été conçu en <span class="javaIcon">Java</span>(<span class="androidIcon">Androïd</span>) et en <span class="objectivCicon">Objectiv-C</span>(<span class="iosIcon">iOS</span>).</p>
+                <p>Le module a été conçu en <span class="javaIcon">Java</span>(<span class="androidIcon">Androïd</span>) et en <span class="objectivCicon">Objective-C</span>(<span class="iosIcon">iOS</span>).</p>
                 <p>Pour le développement de l'algorithme, le choix s'est tourné vers <span class="opencvIcon">OpenCV</span>.</p>
                 <br>
                 <p>Pour décrire l'algorithme dans les grandes lignes (et pour cause, impossible de fournir le code), on effectue dans un premier tant une détection des coins du document avec le flux direct de la caméra(sans prise de photos manuel).</p>
