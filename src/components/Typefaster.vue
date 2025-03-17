@@ -49,6 +49,9 @@
             <p>Enfin, j'ai progressé dans l'implémentation d'API REST, même dans le cadre d'un projet très simple.</p>
         </div>
       </div>
+    <p class="back-link">
+        <router-link to="/portfolio/">Retour</router-link>
+    </p>
       <div class="link-button">
           <a href="https://github.com/ArthurDesmonts/typeFaster" target="_blank" class="innerParagraphIcon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

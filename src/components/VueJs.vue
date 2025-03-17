@@ -52,6 +52,9 @@
             <p>J'ai pu découvrir les différentes méthodes de développement frontend. Enfin, l'utilisation de Vue 3 m'a permis de mieux connaître les frameworks JavaScript, et Vue en particulier me donne envie de continuer dans cette voie.</p>
         </div>
       </div>
+      <p class="back-link">
+        <router-link to="/portfolio/">Retour</router-link>
+      </p>
       <div class="link-button">
           <a href="https://github.com/ArthurDesmonts/typeFaster" target="_blank" class="innerParagraphIcon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
