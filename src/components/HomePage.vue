@@ -18,24 +18,6 @@ const copyToClipboard = () => {
     showMailSender.value = !showMailSender.value;
 };
 
-const handleCardExpansion = (titleText) => {
-  document.querySelectorAll('.card').forEach(card => {
-    const developButton = card.querySelector('#developButton');
-    if (titleText === "reset") {
-      card.style.display = 'block';
-      if (developButton) {
-        developButton.style.display = 'block';
-      }
-      return;
-    }
-    if (card.querySelector('h2').innerText !== titleText) {
-      if (developButton) {
-        developButton.style.display = 'none';
-      }
-    }
-  });
-};
-
 //responsive before line for vertical-align title in card
 onMounted(() => {
   const verticalAlignElements = document.querySelectorAll('.vertical-align');
@@ -96,49 +78,23 @@ onMounted(() => {
       <div class="card-alignement">
         <div class="inner-text-card-align">
           <p class="vertical-align">IMAGERIE</p>
-          <Card @expand-card="handleCardExpansion($event)" id="1" titleText="imagerie" html="Scanner Automatique" image="openCv.png"
-                subTitle="Utilisation de <span class='icon'>OpenCV</span>"
-                first-block="Pour être plus précis, j'ai réalisé un détourage automatique à partir de la caméra d'un smartphone. C'est-à-dire que sur une photo, j'ai utilisé les différentes méthodes que propose OpenCV pour faire des traitements optiques.
-                Cela, dans le but de faire gagner du temps à l'utilisateur qui doit prendre de nombreuses photos tout au long de la journée (contexte de déplacement avec durée limitée), mais également pour une démarche de confort (suppression d'une tâche manuelle répétitive)."
-                second-block="<span class='underline'>J'ai notamment axé mon développement sur les points suivants :</span>"
-                listOfSkills="Développement de l'interface utilisateur - Création de l'algorithme principal - Optimisation de l'algorithme, amélioration des performances - Conversion vers iOS (l'application métier étant en natif)"
-                third-block="Comme dit précédemment, je ne peux pas fournir de preuve physique de ce projet, appartenant à mon ancienne entreprise. Néanmoins, je peux conclure sur le fait que ce projet fut ma première expérience en terme de projet professionnel avec des exigences. J'ai fait face à un algorithme complexe vis-à-vis des exigences imposées. Enfin, j'ai eu un réel aperçu de la résolution de bugs et de l'optimisation de performances."></Card>
+          <Card id="1" titleText="imagerie" html="Scanner Automatique" image="openCv.png" route="/portfolio/opencv"></Card>
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">OCR</p>
-          <Card @expand-card="handleCardExpansion($event)" id="2" titleText="ocr" html="Reconnaissance optique" image="mlkit.png"
-                subTitle = "Utilisation de <span class='icon'>MLKit</span> et <span class='icon'>Apple Vision</span>"
-                first-block="J'ai travaillé sur un projet de reconnaissance de caractères. J'ai utilisé MLKit et Apple Vision pour interpréter des documents scannés. L'objectif de ce projet était dans un premier temps de rechercher les API d'OCR les plus performantes, fiables, maintenanables, et enfin adaptables sur les deux plateformes (iOS et Android). MLKIT étant une librairie Google, j'ai dû également me pencher sur Apple Vision pour la partie iOS.
-                Une fois mes recherches effectuées, j'ai dans un premier temps ajusté à l'aide de l'API, la réception des caractères sur l'image. Puis, j'ai implémenté différentes méthodes de traitement pour améliorer la qualité de la reconnaissance, telles qu'un score de confiance ou encore un score d'isolement des mots. Enfin, viens le développement d'un algorithme de reconnaissance des erreurs, pour ne conserver qu'une partie des éléments récupérés."
-                second-block="<span class='underline'>Dans la globalité, j'ai pu travailler sur les points suivants :</span>"
-                listOfSkills="Recherche des API les plus performantes - Développement de l'interface utilisateur - Création de l'algorithme principal - Optimisation de l'algorithme, amélioration des performances - Algorithme de détection des erreurs (instauration de contextes) - Conversion vers iOS (l'application métier étant en natif)"
-                third-block="Ce projet a été une première en termes de recherche d'API et de développement d'algorithmes de reconnaissance. J'ai pu découvrir les différentes méthodes de traitement de texte et de la gestion des contextes. Enfin, j'ai réellement pu être autonome sur ce projet en ce qui concerne la recherche de solutions et la mise en place de ces dernières."
-          ></Card>
+          <Card id="2" titleText="ocr" html="Reconnaissance optique" image="mlkit.png" route="/portfolio/mlkit"></Card>
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">VUE.JS</p>
           <Card @expand-card="handleCardExpansion($event)" id="3" titleText="vue.js" html="Création d'une SPA" image="logo.svg"
-                subTitle="Développement d'interfaces avec <span class='icon'>Vue.js</span>"
-                first-block="Ce projet de développement frontend en Vue.js avait pour but de me laisser carte blanche quant à l'apprentissage de Vue3. L'objectif était de me familiariser avec le framework, de tester ses limites, et de rédiger une documentation complète pour les développeurs de l'équipe qui ne l'avaient jamais manipulé et qui, de plus, ne sont pas familiers avec JavaScript. Tout cela avec pour ocjectif de juger si le framework serait une bonne opportunité pour une migration de l'application Web actuelle.
-                J'ai donc développé plusieurs interfaces en utilisant les différentes fonctionnalités de Vue3, mais également, j'ai testé les différentes façons de remplacer les fonctionnalités de l'application actuelle, majoritairement liées à la création de formulaires dynamiques ou encore aux appels AJAX."
-                second-block="<span class='underline'>Je peux synthétiser mon travail sur les points suivants :</span>"
-                list-of-skills="Développement de formulaires - Développement d'une SPA entièrement dynamique - Élaboration d'une API REST pour simuler des appels de formulaire sur le serveur (Spark : serveur, Axios : client) - Test des limites du framework - Gestion du déploiement - Rédaction de la documentation"
-                third-block="Ce projet fut ma première expérience de développement Web dans le milieu professionnel. J'ai pu découvrir les différentes méthodes de développement frontend. Enfin, l'utilisation de Vue3 m'a permis de mieux connaitre les frameworks JavaScript, et Vue en particulier me donne envie de continuer dans cette voix."
-          ></Card>
+                route="/portfolio/vuejs"></Card>
         </div>
       </div>
       <div class="card-alignement margin-top">
         <div class="inner-text-card-align">
           <p class="vertical-align">TYPE FASTER</p>
           <Card @expand-card="handleCardExpansion($event)" id="4" titleText="typefaster" html="Typing Game" image="typefasterLogo.png"
-                subTitle="Développement d'un jeu de typing avec <span class='icon'>stockage sur serveur</span>"
-                first-block="J’avais cette idée de projet depuis un moment, mais je n’avais pas trouvé la techno que je ne maitrisais pas qui serait intéressante pour ce projet. C'est pourquoi, quand j'ai découvert <span class='icon'>Express</span>, je me suis dit que l'occasion était parfaite pour me lancer. J'ai donc développé un jeu de typing, stockant les scores sur un serveur, embarquant des session et des comptes utilisateurs, des graphiques, etc. Le but était de renforcer mes compétences en JS (à travers le fonctionnement du jeu), mais surtout de me rapprocher du Fullstack en utilisant Express et <span class='icon'>MongoDB</span>."
-                second-block="<span class='underline'>Le projet se résume par les points suivants :</span>"
-                list-of-skills="Interface dynamique - Gestion des sessions - Gestion des utilisateurs - Stockage des scores - Gestion des graphiques - Gestion des erreurs - Gestion des performances - Mise en relation des données recueillies - Formulaire de connexion avec Hashage"
-                third-block="Ce projet était une envie personnelle plus que vraiment utilitaire. J'ai amélioré mes compétences en JS, en Node, en Express, en NOSQL. De façon générale, ce projet a éclairci ma vision du Full-Stack vis-à-vis de la séparation entre Front et Back lors de l'utilisation de Frameworks JS."
-                gitHubLink="https://github.com/ArthurDesmonts/typeFaster"
-                link = "https://arthurdesmonts.github.io/typeFaster/"
-          ></Card>
+                route="/portfolio/typefaster"></Card>
         </div>
       </div>
     </div>
@@ -171,7 +127,6 @@ onMounted(() => {
     </div>
     <Footer></Footer>
   </div>
-  <button @click="router.push('/portfolio/vuejs')"></button>
 </template>
 
 <style scoped>
