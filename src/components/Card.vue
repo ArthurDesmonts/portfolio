@@ -44,6 +44,7 @@ const navigateToRoute = () => {
 .card {
   position: relative;
   width: 245px;
+  height: 300px;
   border: 1px solid var(--interactive-component-color);
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -78,8 +79,15 @@ const navigateToRoute = () => {
   padding: 1rem;
 }
 
+.card {
+  transition: width 0.3s, height 0.3s, box-shadow 0.3s;
+}
+
 .card:hover {
   cursor: pointer;
+  width: 280px;
+  height: 350px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .short-desc {
@@ -91,6 +99,11 @@ const navigateToRoute = () => {
   text-align: justify;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
+  transition: font-size 0.1s;
+}
+
+.card:hover .short-desc {
+  font-size: 19px;
 }
 
 .png-background .card-header {
