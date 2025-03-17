@@ -86,15 +86,13 @@ onMounted(() => {
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">VUE.JS</p>
-          <Card id="3" titleText="vue.js" html="Création d'une SPA" image="logo.svg"
-                route="/portfolio/vuejs"></Card>
+          <Card id="3" titleText="vue.js" html="Création d'une SPA" image="logo.svg" route="/portfolio/vuejs"></Card>
         </div>
       </div>
       <div class="card-alignement margin-top">
         <div class="inner-text-card-align">
           <p class="vertical-align">TYPE FASTER</p>
-          <Card id="4" titleText="typefaster" html="Typing Game" image="typefasterLogo.png"
-                route="/portfolio/typefaster"></Card>
+          <Card id="4" titleText="typefaster" html="Typing Game" image="typefasterLogo.png" route="/portfolio/typefaster"></Card>
         </div>
       </div>
     </div>
