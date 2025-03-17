@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-project">
         <p class="back-link">
             <router-link to="/portfolio/">Retour</router-link>
         </p>
@@ -62,20 +62,7 @@
     </div>
   </template>
 
-<style scoped>
-    .container {
-        padding: 5em 1em 0 1em;
-    }
-
-    .project-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 2em;
-        margin-bottom: 4em;
-        padding-bottom: 2em;
-    }
-
+<style>
     .project-preview {
         width: auto;
         height: 400px;
@@ -84,110 +71,5 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .list {
-        list-style-type: none;
-        padding-right: 3em;
-        margin: 2em;
-        align-items: center;
-        border-right: 1px solid var(--button-color);
-        cursor: default;
-    }
-
-    .list li {
-        margin: 1em 0;
-        border: 1px solid var(--button-color);
-        width: auto;
-        padding: 1em;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-        text-align: center;
-    }
-
-    .list li:hover {
-        transform: translateY(-5px);
-    }
-
-    .summary-title{
-       justify-content: center;
-       text-align: center;
-       margin: 2em;
-       font-size: 2em;
-    }
-    
-    .summary-title::before,
-    .summary-title::after {
-        content: "";
-        display: inline-block;
-        width: 100px;
-        height: 2px;
-        background-color: var(--text-color);
-        vertical-align: middle;
-        margin: 0 10px;
-    }
-
-    .asided-list-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .list-container {
-        width: 50%;
-    }
-
-    .summary {
-        width: 50%;
-        margin: 2em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2em;
-    }
-
-    .link-button {
-        display: flex;
-        flex-direction: row;
-        gap : 2em;
-        margin-top: 1em;
-        margin-left: auto;
-        width: auto;
-        justify-content: center;
-    }
-    
-    .innerParagraphIcon {
-        fill: var(--text-color);
-    }
-
-    .bordered-test{
-        border: 1px solid red;
-    }
-
-    .back-link {
-        margin: 2em 1em;
-        list-style: none;
-        text-decoration: none;
-    }
-
-    .back-link a:visited,
-    .back-link a:active,
-    .back-link a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .back-link::before {
-        content: "← ";
-    }
-
-    .subtitle-in-content {
-        text-align: center;
-        margin-bottom: 1em;
-        font-size: 1.5em;
-    }
-
-    .architectureListe {
-        margin: 2em;
     }
 </style>
