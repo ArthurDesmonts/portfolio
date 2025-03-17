@@ -62,7 +62,7 @@
     </div>
   </template>
 
-<style>
+<style scoped>
     .project-preview {
         width: auto;
         height: 400px;
@@ -72,4 +72,20 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    @media(max-width: 1500px) {
+        .project-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4em;
+        }
+
+        .project-preview {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    
 </style>
