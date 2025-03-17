@@ -292,6 +292,48 @@ body.dark-theme {
   background-size: contain;
 }
 
+.sparkIcon {
+  color: #FFA500;
+}
+
+.sparkIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('Apache Spark.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.axiosIcon {
+  color: #5C3EE8;
+}
+
+.axiosIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('axios.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.jqueryIcon {
+  color: #0769AD;
+}
+
+.jqueryIcon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url('jquery-4.svg') no-repeat center center;
+  background-size: contain;
+}
+
 .structure-content {
   margin: 2em;
   padding: 2em;

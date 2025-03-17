@@ -3,6 +3,7 @@ import Home from '@/components/HomePage.vue';
 import Typefaster from '@/components/Typefaster.vue';
 import OpenCV from '@/components/OpenCV.vue';
 import MLKit from '@/components/Mlkit.vue';
+import vuejs from '@/components/VueJs.vue';
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: '/portfolio/mlkit',
         name: 'MLKit',
         component: MLKit
+    },
+    {
+        path: '/portfolio/vuejs',
+        name: 'VueJs',
+        component: vuejs
     }
 ];
 
