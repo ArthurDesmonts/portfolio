@@ -86,14 +86,14 @@ onMounted(() => {
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">VUE.JS</p>
-          <Card @expand-card="handleCardExpansion($event)" id="3" titleText="vue.js" html="Création d'une SPA" image="logo.svg"
+          <Card id="3" titleText="vue.js" html="Création d'une SPA" image="logo.svg"
                 route="/portfolio/vuejs"></Card>
         </div>
       </div>
       <div class="card-alignement margin-top">
         <div class="inner-text-card-align">
           <p class="vertical-align">TYPE FASTER</p>
-          <Card @expand-card="handleCardExpansion($event)" id="4" titleText="typefaster" html="Typing Game" image="typefasterLogo.png"
+          <Card id="4" titleText="typefaster" html="Typing Game" image="typefasterLogo.png"
                 route="/portfolio/typefaster"></Card>
         </div>
       </div>

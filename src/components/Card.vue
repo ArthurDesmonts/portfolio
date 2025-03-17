@@ -30,15 +30,12 @@ const navigateToRoute = () => {
 </script>
 
 <template>
-  <div class="card" :class="{ 'png-background': isPng }">
+  <div class="card" :class="{ 'png-background': isPng }" @click="navigateToRoute">
     <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
       <h2 class="title" v-html="titleText"></h2>
     </div>
     <div class="card-body">
       <p class="short-desc" v-html="html"></p>
-      <div class="bottom-right">
-        <button class="innerParagraphButton" @click="navigateToRoute">Voir</button>
-      </div>
     </div>
   </div>
 </template>
@@ -47,9 +44,9 @@ const navigateToRoute = () => {
 .card {
   position: relative;
   width: 245px;
-  border: 4px solid var(--interactive-component-color);
+  border: 1px solid var(--interactive-component-color);
   border-radius: 5px;
-  box-shadow: 0 2px 4px var(--shadow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-position: center;
 }
@@ -81,6 +78,10 @@ const navigateToRoute = () => {
   padding: 1rem;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .short-desc {
   line-height: 1.2;
   font-size: 16px;
@@ -94,27 +95,5 @@ const navigateToRoute = () => {
 
 .png-background .card-header {
   background-color: white;
-}
-
-.innerParagraphButton {
-  background-color: var(--button-color);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  margin-top: 1em;
-  font-weight: bold;
-}
-
-.innerParagraphButton:hover {
-  background-color: var(--button-color-hover);
-}
-
-.bottom-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 </style>
