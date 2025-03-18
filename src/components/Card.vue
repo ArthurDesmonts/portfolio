@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { defineProps, onMounted } from 'vue';
+import { onMounted } from 'vue';
 
 const props = defineProps({
   titleText: String,

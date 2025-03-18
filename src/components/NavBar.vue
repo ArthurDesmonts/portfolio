@@ -15,9 +15,21 @@ const toggleTheme = () => {
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+    if(window.location.pathname === "/portfolio/") {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/portfolio/#${sectionId}`);
+    }
   } else {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if(window.location.pathname === "/portfolio/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }else {
+      if(sectionId) {
+        router.push(`/portfolio/#${sectionId}`);
+      } else {
+        router.push("/portfolio/");
+      }
+    }
   }
 };
 
@@ -35,7 +47,7 @@ window.onscroll = function() {
 <template>
   <div id="menu" :class="['menu', isDarkTheme ? 'dark-theme' : 'light-theme']">
     <ul>
-      <li class="phoneHided hover-allowed" @click="router.push('/portfolio/')"><p class="restricted-display-responsive-bar">Arthur Desmonts</p></li>
+      <li class="phoneHided no-hover-allowed"><p class="restricted-display-responsive-bar">Arthur Desmonts</p></li>
       <li class="phoneHided hover-allowed" @click="scrollToSection()"><span class="icon">#</span> Accueil</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('about')"><span class="icon">#</span> Qui suis-je?</li>
       <li class="phoneHided hover-allowed" @click="scrollToSection('project')"><span class="icon">#</span> Mes Projets</li>
@@ -92,6 +104,10 @@ p{
   color: var(--icon-color);
   text-decoration: underline;
   animation: underlineAnimation 0.3s forwards;
+}
+
+.no-hover-allowed:hover {
+  cursor: default;
 }
 
 @media (max-width: 1450px) {
