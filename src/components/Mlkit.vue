@@ -1,8 +1,8 @@
 <template>
     <div class="container-project">
         <p class="back-link">
-            <router-link to="/portfolio/">Retour</router-link>
-        </p>
+        <router-link to="/portfolio/#projects-div">Retour</router-link>
+      </p>
         <div class="project-header">
             <div>
                 <h1>Projet : <span class="icon">Interpréteur de texte</span></h1>
@@ -59,7 +59,7 @@
         </div>
       </div>
       <p class="back-link">
-        <router-link to="/portfolio/">Retour</router-link>
+        <router-link to="/portfolio/#projects-div">Retour</router-link>
       </p>
       <div class="link-button">
           <a href="https://github.com/ArthurDesmonts/typeFaster" target="_blank" class="innerParagraphIcon">

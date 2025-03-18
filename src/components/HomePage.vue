@@ -73,7 +73,7 @@ onMounted(() => {
       </div>
     </div>
     <hr id="project" class="separateur">
-    <div class="presentation appears-top">
+    <div id="projects-div" class="presentation appears-top">
       <h2><span class="icon">#</span> Mes projets récents</h2>
       <div class="card-alignement">
         <div class="inner-text-card-align">
