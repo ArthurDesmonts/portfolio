@@ -8,7 +8,7 @@
                 <h1>Projet : <span class="icon">Création d'une SPA</span></h1>
                 <p>Création d'une Web app avec <span class='icon'>VueJS</span> et <span class='icon'>Spark</span>.</p>
             </div>
-            <img class="project-preview" src="../assets/logo.svg" alt="Preview of the project">
+            <img class="project-preview" src="../assets/logoVue.svg" alt="Preview of the project">
         </div>
         <div class="intro-project">
             <div class="intro-pre-content">
