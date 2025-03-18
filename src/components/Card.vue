@@ -80,7 +80,7 @@ const navigateToRoute = () => {
 }
 
 .card {
-  transition: width 0.3s, height 0.3s, box-shadow 0.3s;
+  transition: width 0.3s 0.2s, height 0.3s 0.2s, box-shadow 0.3s 0.2s;
 }
 
 .card:hover {
@@ -99,12 +99,8 @@ const navigateToRoute = () => {
   text-align: justify;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-  transition: font-size 0.1s;
 }
 
-.card:hover .short-desc {
-  font-size: 19px;
-}
 
 .png-background .card-header {
   background-color: white;

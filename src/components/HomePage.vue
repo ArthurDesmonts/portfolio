@@ -1,6 +1,5 @@
 <script setup>
 import {onMounted, ref, watch} from "vue";
-import NavBar from "@/components/NavBar.vue";
 import ProfilPicComponent from "@/components/ProfilPicComponent.vue";
 import Card from "@/components/Card.vue";
 import Footer from "@/components/Footer.vue";
