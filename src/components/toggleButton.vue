@@ -1,27 +1,29 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
 
-const checked = ref(true);
+const checked = ref(localStorage.getItem('theme') === 'dark');
 
 const toggleTheme = () => {
   if (checked.value) {
     document.body.classList.add('dark-theme');
     document.body.classList.remove('gradient-background-light');
     document.body.classList.add('gradient-background-dark');
+    localStorage.setItem('theme', 'dark');
   } else {
     document.body.classList.remove('dark-theme');
     document.body.classList.remove('gradient-background-dark');
     document.body.classList.add('gradient-background-light');
+    localStorage.setItem('theme', 'light');
   }
 };
 
-  watch(checked, (newVal) => {
-    toggleTheme();
-  });
+watch(checked, () => {
+  toggleTheme();
+});
 
-  onMounted(() => {
-    toggleTheme();
-  });
+onMounted(() => {
+  toggleTheme();
+});
 </script>
 
 <template>
