@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
 
-const checked = ref(localStorage.getItem('theme') === 'dark');
+const checked = ref(localStorage.getItem('theme') !== 'light');
 
 const toggleTheme = () => {
   if (checked.value) {
