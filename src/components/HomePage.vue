@@ -85,7 +85,7 @@ onMounted(() => {
         </div>
         <div class="inner-text-card-align">
           <p class="vertical-align">VUE.JS</p>
-          <Card id="3" titleText="vue.js" html="Création d'une SPA" image="vue-svgrepo-com.svg" route="/portfolio/vuejs"></Card>
+          <Card id="3" titleText="vue.js" html="Création d'une SPA" image="Vue.js.png" route="/portfolio/vuejs"></Card>
         </div>
       </div>
       <div class="card-alignement margin-top">
