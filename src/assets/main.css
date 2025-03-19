@@ -458,8 +458,7 @@ body.dark-theme {
 
 @media (max-width: 768px) {
   .container-project {
-      padding:1em 1em 0 1em;
-      margin-right: 1em;
+      padding:1em;
   }
 
   .asided-list-content {
@@ -517,10 +516,6 @@ body.dark-theme {
 @media (max-width: 768px) {
   body {
     max-width: 100%;
-  }
-
-  .container{
-    margin-right: 1em;
   }
 }
 
