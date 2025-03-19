@@ -585,7 +585,7 @@ body.dark-theme {
 }
 
 .appears-scale-increase {
-    animation: appearScaleIncrease 0.7s ease-out;
+    animation: appearScaleIncrease 0.7s 0.05s ease-out;
 }
 
 @keyframes appearScaleIncrease {
