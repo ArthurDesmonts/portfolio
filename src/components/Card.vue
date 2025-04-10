@@ -6,7 +6,7 @@ const props = defineProps({
   titleText: String,
   html: String,
   image: String,
-  black: Boolean,
+  black: String,
   route: String
 });
 
@@ -39,6 +39,8 @@ const navigateToRoute = () => {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
 .card {
   position: relative;
   width: 280px;
@@ -81,23 +83,20 @@ const navigateToRoute = () => {
   left: 0;
   bottom: 0;
   line-height: 1.2;
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   align-items: left;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 0.5em;
   margin-left: 0.7em;
   margin-bottom: 0.7em;
   color: white;
-  background-color: rgba(255,255,255, 0.15);
 }
 
 .black-text {
   color: black;
-  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .png-background .card-header {
