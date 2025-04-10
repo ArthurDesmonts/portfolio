@@ -79,7 +79,7 @@ onMounted(() => {
           <Card id="1" titleText="imagerie" html="Scanner Automatique" image="openCv.png" black="true" route="/portfolio/opencv"></Card>
         </div>
         <div class="inner-text-card-align">
-          <Card id="2" titleText="ocr" html="Reconnaissance optique" image="mlkit.png" black="true" route="/portfolio/mlkit"></Card>
+          <Card id="2" titleText="ocr" html="Reconnaissance optique (OCR)" image="mlkit.png" black="true" route="/portfolio/mlkit"></Card>
         </div>
         <div class="inner-text-card-align">
           <Card id="3" titleText="vue.js" html="Création d'une SPA" image="Vue.js.png" black="true" route="/portfolio/vuejs"></Card>
