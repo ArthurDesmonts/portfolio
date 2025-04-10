@@ -32,9 +32,6 @@ const navigateToRoute = () => {
 <template>
   <div class="card" :class="{ 'png-background': isPng }" @click="navigateToRoute">
     <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
-      <h2 class="title" v-html="titleText"></h2>
-    </div>
-    <div class="card-body">
       <p class="short-desc" v-html="html"></p>
     </div>
   </div>
@@ -43,13 +40,13 @@ const navigateToRoute = () => {
 <style scoped>
 .card {
   position: relative;
-  width: 245px;
-  height: 300px;
+  width: 280px;
+  height: 260px;
   border: 1px solid var(--interactive-component-color);
-  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
 }
 
 .title {
@@ -63,20 +60,13 @@ const navigateToRoute = () => {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 205px;
+  height: 260px;
   font-size: 20px;
+  border-radius: 20px;
 }
 
-.card-header h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
 
 .card-body {
-  padding: 1rem;
 }
 
 .card {
@@ -85,8 +75,7 @@ const navigateToRoute = () => {
 
 .card:hover {
   cursor: pointer;
-  width: 280px;
-  height: 350px;
+  width: 300px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
