@@ -6,6 +6,7 @@ const props = defineProps({
   titleText: String,
   html: String,
   image: String,
+  black: Boolean,
   route: String
 });
 
@@ -32,7 +33,7 @@ const navigateToRoute = () => {
 <template>
   <div class="card" :class="{ 'png-background': isPng }" @click="navigateToRoute">
     <div class="card-header" :style="{ backgroundImage: `url(${imageUrl})` }">
-      <p class="short-desc" v-html="html"></p>
+      <p class="short-desc" :class="{ 'black-text': props.black }" v-html="html"></p>
     </div>
   </div>
 </template>
@@ -65,10 +66,6 @@ const navigateToRoute = () => {
   border-radius: 20px;
 }
 
-
-.card-body {
-}
-
 .card {
   transition: width 0.3s 0.2s, height 0.3s 0.2s, box-shadow 0.3s 0.2s;
 }
@@ -80,16 +77,28 @@ const navigateToRoute = () => {
 }
 
 .short-desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   line-height: 1.2;
   font-size: 16px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
+  align-items: left;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  margin-left: 0.7em;
+  margin-bottom: 0.7em;
+  color: white;
+  background-color: rgba(255,255,255, 0.15);
 }
 
+.black-text {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.15);
+}
 
 .png-background .card-header {
   background-color: white;
