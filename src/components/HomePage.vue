@@ -59,16 +59,16 @@ onMounted(() => {
       <div class="description-split">
         <p class="justify-content descriptionBox no-after appears-left">Moi c'est Arthur.
 
-          Je suis développeur <span class="icon">Full-Stack</span>. J'ai obtenu un BUT informatique à l'université de Caen. Pendant mon cursus, j'ai obtenu de nombreuses compétences en développement, principalement en <span class="icon">Web</span>, en <span class="icon">bases de données</span>
-          ainsi qu'en <span class="icon">applicatif</span>.
+Je suis développeur <span class="icon">Full-Stack</span>, passionné par la création d’expériences numériques à la fois utiles et élégantes. Diplômé d’un BUT Informatique à l’université de Caen, j’y ai acquis de solides bases en <span class="icon">développement Web</span>, en <span class="icon">bases de données</span> et en <span class="icon">développement applicatif</span>.
 
-          J'ai perfectionné ces compétences au cours d'<span class="icon">une année d'alternance</span> dans une petite équipe de développeurs mobiles. En leur compagnie, j'ai pu travailler aussi bien sur <span class="icon">Android</span> que sur <span class="icon">iOS</span>. Enfin, l'occasion s'est présentée de contribuer à des projets de développement Web, plus particulièrement sur un large projet <span class="icon">Vue.js</span>.
-        </p>
-        <p class="justify-content descriptionBox no-before appears-right">
-          Pendant cette année, j'ai manipulé différentes librairies d'<span class="icon">imagerie</span>, telles qu'<span class="icon">OpenCV</span>, <span class="icon">MLKit</span> ou encore <span class="icon">Apple Vision</span>. Cela m'a permis de clôturer cette expérience avec un projet basé sur de l'<span class="icon">OCR</span> (reconnaissance optique de caractères) pour développer différents algorithmes de reconnaissance.
-          Ce que j'aime dans le développement, c'est avant tout l'élaboration de solutions créatives.
-          Je suis <span class="icon">enthousiaste</span> et j'adore travailler avec des personnes passionnées. L’autonomie n’est pas un problème pour moi, même si j'apprécie les retours sur ce que je peux améliorer.
-        </p>
+J’ai ensuite approfondi ces compétences au cours d’<span class="icon">une année d’alternance</span> au sein d’une équipe de développeurs mobiles. Cette expérience m’a permis de travailler sur des applications <span class="icon">Android</span> et <span class="icon">iOS</span>, tout en contribuant à un ambitieux projet Web en <span class="icon">Vue.js</span>.
+</p>
+
+<p class="justify-content descriptionBox no-before appears-right">
+Au fil de cette année, j’ai exploré diverses librairies d’<span class="icon">imagerie</span> telles qu’<span class="icon">OpenCV</span>, <span class="icon">MLKit</span> et <span class="icon">Apple Vision</span>. Ces outils m’ont conduit à concevoir un projet d’<span class="icon">OCR</span> (reconnaissance optique de caractères), où j’ai développé plusieurs algorithmes de détection et de reconnaissance.
+
+Ce qui me motive dans le développement, c’est la recherche de solutions ingénieuses à des problèmes concrets. Je suis <span class="icon">curieux</span>, <span class="icon">enthousiaste</span> et j’aime collaborer avec des personnes animées par la même passion du code. Travailler en autonomie ne me fait pas peur, mais j’accorde toujours une grande valeur aux échanges et aux retours constructifs.
+</p>
       </div>
     </div>
     <hr id="project" class="separateur">

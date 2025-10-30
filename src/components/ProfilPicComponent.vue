@@ -1,11 +1,10 @@
 <script setup>
-import {redirectToLinkedIn} from "@/utils/redirectLink.js";
 </script>
 
 <template>
-  <div class="circle" @click="redirectToLinkedIn">
+  <div class="circle">
     <div class="inner-circle"></div>
-    <img class="profilPic" src="@/assets/profilPic.png" alt="profilPicture">
+    <img class="profilPic" src="@/assets/2025_fd.png" alt="profilPicture">
   </div>
 </template>
 
@@ -21,7 +20,6 @@ import {redirectToLinkedIn} from "@/utils/redirectLink.js";
   margin-right: 15%;
   position: relative;
   overflow: hidden;
-  cursor: url("@/assets/linkedin-Logo.png"), auto;
 }
 
 .profilPic {
